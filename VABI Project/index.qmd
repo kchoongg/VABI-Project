@@ -1,0 +1,10 @@
+---
+title: "VABI Project"
+---
+
+# Sailor Swift: Her Career and Impact
+![Sailor Shift](images/sailorshift.png){fig-align="center"}
+
+## Project Overview
+
+This project explores the rise of Sailor Shift and the global influence of Oceanus Folk music.
