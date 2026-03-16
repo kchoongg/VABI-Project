@@ -1,1 +1,416 @@
-/* css styles */
+/* === VABI Project — Full-Width Polished Styles === */
+
+/* ---------- Color Palette ---------- */
+:root {
+  --pink: #e197bb;
+  --blue: #92d0db;
+  --green: #b8c9b3;
+  --light-blue: #cadae6;
+  --orange: #f1c09c;
+  --pink-dark: #b56e93;
+  --blue-dark: #4d95a3;
+  --green-dark: #8aa882;
+  --text-dark: #2c3e50;
+  --text-body: #3d4f5f;
+  --text-muted: #6b7c8a;
+  --bg-page: #f5f7f9;
+  --bg-white: #ffffff;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.07);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.09);
+  --radius: 10px;
+}
+
+/* ---------- Reset & Base ---------- */
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-body);
+  background-color: var(--bg-page);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Full-width layout fix ---------- */
+#quarto-content > * {
+  max-width: 100%;
+}
+
+.page-columns .content {
+  max-width: 100%;
+}
+
+#quarto-content {
+  padding-top: 0;
+}
+
+/* Container for body content sections */
+.section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 3rem;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+h1 { font-size: 2rem; }
+
+h2 {
+  font-size: 1.45rem;
+  color: var(--pink-dark);
+  border-left: 4px solid var(--pink);
+  padding-left: 0.7rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  color: var(--blue-dark);
+}
+
+h4 {
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  margin-top: 0.4rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+strong {
+  color: var(--text-dark);
+}
+
+/* ---------- Section Header ---------- */
+.section-header {
+  text-align: center;
+}
+
+.section-header h2 {
+  border-left: none !important;
+  padding-left: 0 !important;
+  color: var(--blue-dark);
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, var(--pink), var(--blue));
+  margin: 0.4rem auto 0;
+  border-radius: 2px;
+}
+
+/* ---------- Hide Quarto anchor links on all headings ---------- */
+.anchor-section-link,
+a.anchor-section-link,
+h1 .header-section-number,
+h2 .header-section-number,
+h1 a.anchorjs-link,
+h2 a.anchorjs-link,
+h3 a.anchorjs-link,
+h4 a.anchorjs-link,
+.quarto-section-identifier,
+a[href^="#"]:has(svg),
+h2 a[aria-hidden="true"],
+h1 a[aria-hidden="true"],
+.heading-anchor,
+a.anchor {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Also target the Quarto-specific anchor pattern */
+h1 a, h2 a, h3 a, h4 a {
+  pointer-events: none;
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+h1 a::after, h2 a::after, h3 a::after, h4 a::after {
+  display: none !important;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: linear-gradient(135deg, #3d8a97, var(--pink-dark)) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.65rem 2rem;
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.navbar .nav-link:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Hero Image (Home) ---------- */
+.hero-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  text-align: center;
+  background: var(--bg-page);
+}
+
+.hero-image p {
+  margin: 0;
+  line-height: 0;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+/* ---------- Cards Grid ---------- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.card-item {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 3px solid var(--blue);
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.card-item:nth-child(1) { border-bottom-color: var(--blue); }
+.card-item:nth-child(2) { border-bottom-color: var(--pink); }
+.card-item:nth-child(3) { border-bottom-color: var(--green); }
+.card-item:nth-child(4) { border-bottom-color: var(--orange); }
+
+.card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-item h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ---------- Team Grid ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-member {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-top: 3px solid var(--light-blue);
+  transition: box-shadow 0.2s ease;
+}
+
+.team-member:nth-child(1) { border-top-color: var(--blue); }
+.team-member:nth-child(2) { border-top-color: var(--pink); }
+.team-member:nth-child(3) { border-top-color: var(--green); }
+.team-member:nth-child(4) { border-top-color: var(--orange); }
+
+.team-member:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Proposal & general content pages ---------- */
+.page-columns:not(.page-full) .content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+}
+
+/* ---------- Images ---------- */
+.quarto-figure img,
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  margin: 1.5rem 0;
+}
+
+/* ---------- Lists ---------- */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+li::marker {
+  color: var(--pink-dark);
+}
+
+ol li::marker {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--blue-dark);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--pink-dark);
+  text-decoration: underline;
+}
+
+/* ---------- Table of Contents ---------- */
+#TOC {
+  border-left: 3px solid var(--blue);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.88rem;
+}
+
+#TOC a {
+  color: var(--text-muted);
+}
+
+#TOC a:hover {
+  color: var(--pink-dark);
+}
+
+/* ---------- Blockquotes ---------- */
+blockquote {
+  border-left: 4px solid var(--green);
+  background: rgba(184, 201, 179, 0.1);
+  padding: 1rem 1.2rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1.5rem 0;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ---------- Horizontal Rule ---------- */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--pink), var(--blue), var(--green), var(--orange));
+  border-radius: 2px;
+  margin: 2.5rem 0;
+}
+
+/* ---------- Footer ---------- */
+.nav-footer {
+  background: linear-gradient(135deg, #3d8a97, var(--pink-dark));
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.82rem;
+}
+
+/* ---------- Hide title on full-width home page ---------- */
+.page-layout-full #title-block-header {
+  display: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  .section-container {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding: 3rem 1.5rem 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .section-container {
+    padding: 1.5rem 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}

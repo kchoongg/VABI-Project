@@ -1,59 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "VABI Project",
-    "section": "",
-    "text": "Sailor Shift: Her Career and Impact\n\n\n\nSailor Shift"
-  },
-  {
     "objectID": "proposal.html",
     "href": "proposal.html",
     "title": "Project Proposal",
     "section": "",
     "text": "Oceanus Folk is a music genre that gained global recognition largely due to the success of Oceanus artist Sailor Shift. Beginning her career in the early 2020s as a member of the all-female band Ivy Echoes, Sailor later pursued a solo career and achieved a major breakthrough in 2028 when one of her singles reached the top of the global charts. Since then, she has continued to grow in popularity while collaborating with artists across multiple genres.\nAs Sailor’s influence expanded, attention also grew around Oceanus Folk and its impact on the wider music ecosystem. To study this phenomenon, journalist Silas Reed compiled a knowledge graph dataset containing information about artists, albums, songs, collaborations, and musical influences.\nHowever, the interconnected nature of this dataset makes it difficult to analyze using traditional methods. This project aims to develop an interactive visual analytics application using Tableau that allows Silas to explore Sailor Shift’s career, her collaborations, and the broader spread of Oceanus Folk within the music industry."
-  },
-  {
-    "objectID": "proposal.html#project-objective",
-    "href": "proposal.html#project-objective",
-    "title": "Project Overview",
-    "section": "Project Objective",
-    "text": "Project Objective"
-  },
-  {
-    "objectID": "proposal.html#data",
-    "href": "proposal.html#data",
-    "title": "Project Overview",
-    "section": "Data",
-    "text": "Data"
-  },
-  {
-    "objectID": "proposal.html#scope-of-work",
-    "href": "proposal.html#scope-of-work",
-    "title": "Project Proposal",
-    "section": "Scope of Work",
-    "text": "Scope of Work\nThis project focuses on building an interactive Tableau application that allows exploration of the dataset compiled by Silas Reed. The work will involve three main stages:\n\nData Preparation The dataset will be examined and structured to support analysis of relationships between artists, songs, genres, collaborations, and influences.\nVisualization Development Interactive visualizations will be created to support exploration of artist influence, collaboration patterns, genre relationships, and artist career trajectories.\nInsight Generation The visualizations will be used to analyze patterns related to Sailor Shift’s career and the spread of Oceanus Folk, helping Silas Reed develop insights for his article Oceanus Folk: Then-and-Now."
-  },
-  {
-    "objectID": "proposal.html#timeline",
-    "href": "proposal.html#timeline",
-    "title": "Project Proposal",
-    "section": "Timeline",
-    "text": "Timeline"
-  },
-  {
-    "objectID": "index.html#project-overview",
-    "href": "index.html#project-overview",
-    "title": "VABI Project",
-    "section": "",
-    "text": "This project explores the rise of Sailor Shift and the global influence of Oceanus Folk music."
   },
   {
     "objectID": "proposal.html#overview",
@@ -77,10 +28,59 @@
     "text": "Objectives\nThe objective of this project is to develop a Tableau-based visual analytics system that enables Silas Reed to explore the rise of Sailor Shift and the growing influence of Oceanus Folk within the global music landscape. The system will support exploration of the following questions relevant to Silas Reed’s article Oceanus Folk: Then-and-Now:\n\nWho has influenced Sailor Shift over the course of her career\nWhich artists she has collaborated with and who she has influenced in return\nHow Oceanus Folk has spread across the broader music world\nWhether the influence of Oceanus Folk expanded gradually or through key breakthrough periods\nWhich genres and artists have been most influenced by Oceanus Folk\nHow Oceanus Folk itself has evolved with Sailor Shift’s rise\nWhat patterns characterize artists who emerge as rising stars in the music industry\nHow the careers of selected artists compare in terms of popularity and influence"
   },
   {
+    "objectID": "proposal.html#scope-of-work",
+    "href": "proposal.html#scope-of-work",
+    "title": "Project Proposal",
+    "section": "Scope of Work",
+    "text": "Scope of Work\nThis project focuses on building an interactive Tableau application that allows exploration of the dataset compiled by Silas Reed. The work will involve three main stages:\n\nData Preparation The dataset will be examined and structured to support analysis of relationships between artists, songs, genres, collaborations, and influences.\nVisualization Development Interactive visualizations will be created to support exploration of artist influence, collaboration patterns, genre relationships, and artist career trajectories.\nInsight Generation The visualizations will be used to analyze patterns related to Sailor Shift’s career and the spread of Oceanus Folk, helping Silas Reed develop insights for his article Oceanus Folk: Then-and-Now."
+  },
+  {
     "objectID": "proposal.html#timeline---gnatt-chart",
     "href": "proposal.html#timeline---gnatt-chart",
     "title": "Project Proposal",
     "section": "Timeline - Gnatt Chart",
     "text": "Timeline - Gnatt Chart\n\n\n\nGnatt Chart"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "VABI Project",
+    "section": "",
+    "text": "A visual analytics study of how Sailor Shift transformed a regional genre into a global music phenomenon — tracing influence, collaborations, and career trajectories through interactive data exploration.\nVAST Challenge 2025 · Mini-Challenge 1"
+  },
+  {
+    "objectID": "index.html#about-this-project",
+    "href": "index.html#about-this-project",
+    "title": "VABI Project",
+    "section": "About This Project",
+    "text": "About This Project"
+  },
+  {
+    "objectID": "index.html#team",
+    "href": "index.html#team",
+    "title": "VABI Project",
+    "section": "Team",
+    "text": "Team"
+  },
+  {
+    "objectID": "index (1).html",
+    "href": "index (1).html",
+    "title": "VABI Project",
+    "section": "",
+    "text": "A visual analytics study of how Sailor Shift transformed a regional genre into a global music phenomenon — tracing influence, collaborations, and career trajectories through interactive data exploration.\nVAST Challenge 2025 · Mini-Challenge 1"
+  },
+  {
+    "objectID": "index (1).html#about-this-project",
+    "href": "index (1).html#about-this-project",
+    "title": "VABI Project",
+    "section": "About This Project",
+    "text": "About This Project"
+  },
+  {
+    "objectID": "index (1).html#team",
+    "href": "index (1).html#team",
+    "title": "VABI Project",
+    "section": "Team",
+    "text": "Team"
   }
 ]
