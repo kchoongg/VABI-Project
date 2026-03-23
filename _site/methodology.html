@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>VABI Project</title>
+<title>Methodology – VABI Project</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -93,12 +93,16 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.qmd"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./proposal.html"> 
 <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./methodology.html" aria-current="page"> 
+<span class="menu-text">Methodology</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -108,21 +112,44 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-overview" id="toc-data-overview" class="nav-link active" data-scroll-target="#data-overview">Data Overview</a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data Wrangling</a>
+  <ul class="collapse">
+  <li><a href="#operations-performed" id="toc-operations-performed" class="nav-link" data-scroll-target="#operations-performed">Operations Performed</a></li>
+  <li><a href="#key-entities-identified" id="toc-key-entities-identified" class="nav-link" data-scroll-target="#key-entities-identified">Key Entities Identified</a></li>
+  </ul></li>
+  <li><a href="#output-tables" id="toc-output-tables" class="nav-link" data-scroll-target="#output-tables">Output Tables</a>
+  <ul class="collapse">
+  <li><a href="#table-1-sailor_shift_career.csv-38-rows" id="toc-table-1-sailor_shift_career.csv-38-rows" class="nav-link" data-scroll-target="#table-1-sailor_shift_career.csv-38-rows">Table 1: <code>sailor_shift_career.csv</code> (38 rows)</a></li>
+  <li><a href="#table-2-sailor_shift_influences.csv-33-rows" id="toc-table-2-sailor_shift_influences.csv-33-rows" class="nav-link" data-scroll-target="#table-2-sailor_shift_influences.csv-33-rows">Table 2: <code>sailor_shift_influences.csv</code> (33 rows)</a></li>
+  <li><a href="#table-3-sailor_shift_collaborators.csv-77-rows" id="toc-table-3-sailor_shift_collaborators.csv-77-rows" class="nav-link" data-scroll-target="#table-3-sailor_shift_collaborators.csv-77-rows">Table 3: <code>sailor_shift_collaborators.csv</code> (77 rows)</a></li>
+  <li><a href="#table-4-oceanus_folk_spread.csv-601-rows" id="toc-table-4-oceanus_folk_spread.csv-601-rows" class="nav-link" data-scroll-target="#table-4-oceanus_folk_spread.csv-601-rows">Table 4: <code>oceanus_folk_spread.csv</code> (601 rows)</a></li>
+  <li><a href="#table-5-oceanus_folk_timeline.csv-305-rows" id="toc-table-5-oceanus_folk_timeline.csv-305-rows" class="nav-link" data-scroll-target="#table-5-oceanus_folk_timeline.csv-305-rows">Table 5: <code>oceanus_folk_timeline.csv</code> (305 rows)</a></li>
+  <li><a href="#table-6-artist_careers.csv-872-rows" id="toc-table-6-artist_careers.csv-872-rows" class="nav-link" data-scroll-target="#table-6-artist_careers.csv-872-rows">Table 6: <code>artist_careers.csv</code> (872 rows)</a></li>
+  </ul></li>
+  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools Used</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">VABI Project</h1>
+<h1 class="title">Methodology</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page">
+<div class="quarto-title-meta">
 
     
   
@@ -134,79 +161,154 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="hero-section">
-<section id="mapping-the-rise-of-oceanus-folk" class="level1 hero-title hero-content">
-<h1 class="hero-title">Mapping the Rise of Oceanus Folk</h1>
-<p><span class="hero-desc">A visual analytics study of how Sailor Shift transformed a regional genre into a global music phenomenon — tracing influence, collaborations, and career trajectories through interactive data exploration.</span></p>
-<p><span class="hero-badge">VAST Challenge 2025 · Mini-Challenge 1</span></p>
+<section id="data-overview" class="level2">
+<h2 class="anchored" data-anchor-id="data-overview">Data Overview</h2>
+<p>The raw dataset was provided as part of the <a href="https://vast-challenge.github.io/2025/MC1.html">VAST Challenge 2025 Mini-Challenge 1</a> and consists of a knowledge graph representing the music industry, delivered as two CSV files:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 32%">
+<col style="width: 46%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Records</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mc1_nodes.csv</code></td>
+<td>17,412</td>
+<td>All entities in the graph — Person (11,361), Song (3,615), RecordLabel (1,217), Album (996), MusicalGroup (223)</td>
+</tr>
+<tr class="even">
+<td><code>mc1_edges.csv</code></td>
+<td>37,857</td>
+<td>All relationships — PerformerOf, ComposerOf, LyricistOf, ProducerOf, RecordedBy, DistributedBy, InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples, LyricalReferenceTo, MemberOf</td>
+</tr>
+</tbody>
+</table>
 </section>
-</div>
-<div class="section-container">
-<section id="about-this-project" class="level2 section-header">
-<h2 class="anchored" data-anchor-id="about-this-project">About This Project</h2>
+<section id="data-wrangling" class="level2">
+<h2 class="anchored" data-anchor-id="data-wrangling">Data Wrangling</h2>
+<p>The graph-structured data (nodes + edges) needed to be <strong>reshaped into flat tables</strong> for Tableau to consume. A Python script (<code>wrangle.py</code>) was written using only the standard library (<code>csv</code> and <code>collections</code> modules) to perform this transformation.</p>
+<p><strong>No data was deleted, modified, imputed, or fabricated.</strong> All values in the output tables originate directly from the source files.</p>
+<section id="operations-performed" class="level3">
+<h3 class="anchored" data-anchor-id="operations-performed">Operations Performed</h3>
+<p>The wrangling consisted of five standard operations:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 54%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Filter</strong></td>
+<td>Select rows matching criteria (e.g., genre = “Oceanus Folk”, Sailor Shift’s edges, influence-type edges)</td>
+</tr>
+<tr class="even">
+<td><strong>Join / Lookup</strong></td>
+<td>Match edge source/target IDs to node attributes like name, genre, and release year — equivalent to a SQL JOIN</td>
+</tr>
+<tr class="odd">
+<td><strong>Aggregate / Count</strong></td>
+<td>Count occurrences such as number of songs per artist, influence references per song, and collaborators per work</td>
+</tr>
+<tr class="even">
+<td><strong>Reshape / Flatten</strong></td>
+<td>Convert the graph structure into flat tabular rows (e.g., one row per influence relationship instead of separate node and edge records)</td>
+</tr>
+<tr class="odd">
+<td><strong>Derive</strong></td>
+<td>Compute new fields from existing data (e.g., Career_Span = Last_Release − First_Release, Is_Oceanus_Folk flag)</td>
+</tr>
+</tbody>
+</table>
 </section>
-<p>This project investigates the rise of <strong>Sailor Shift</strong> and the <strong>Oceanus Folk</strong> genre using visual analytics. Through interactive Tableau dashboards, we explore a knowledge graph dataset compiled by journalist Silas Reed — uncovering how influence spreads through collaborations, musical inspiration, and genre evolution.</p>
-<hr>
-<div class="cards-grid">
-<div class="card-item">
-<div class="card-icon">
-<p>🎵</p>
-</div>
-<section id="artist-influence" class="level4">
-<h4 class="anchored" data-anchor-id="artist-influence">Artist Influence</h4>
-<p>Trace who influenced Sailor Shift and which artists she has shaped in return throughout her career.</p>
+<section id="key-entities-identified" class="level3">
+<h3 class="anchored" data-anchor-id="key-entities-identified">Key Entities Identified</h3>
+<p>Through filtering, the following key entities were identified for analysis:</p>
+<ul>
+<li><strong>Sailor Shift</strong> (Person, id=17255) — the central figure of the investigation</li>
+<li><strong>Sailor Shift’s works</strong> — 38 works (17 Songs + 21 Albums) linked via PerformerOf, ComposerOf, LyricistOf, and ProducerOf edges</li>
+<li><strong>Ivy Echos</strong> (MusicalGroup, id=17260) — Sailor Shift’s band, found via MemberOf edge</li>
+<li><strong>Oceanus Folk catalogue</strong> — 305 works filtered by genre = “Oceanus Folk”</li>
+</ul>
 </section>
-</div>
-<div class="card-item">
-<div class="card-icon">
-<p>🌊</p>
-</div>
-<section id="genre-evolution" class="level4">
-<h4 class="anchored" data-anchor-id="genre-evolution">Genre Evolution</h4>
-<p>Examine how Oceanus Folk grew from a regional sound into a globally recognised genre.</p>
 </section>
-</div>
-<div class="card-item">
-<div class="card-icon">
-<p>🤝</p>
-</div>
-<section id="collaboration-networks" class="level4">
-<h4 class="anchored" data-anchor-id="collaboration-networks">Collaboration Networks</h4>
-<p>Map the web of creative partnerships across genres that accelerated Oceanus Folk’s spread.</p>
+<section id="output-tables" class="level2">
+<h2 class="anchored" data-anchor-id="output-tables">Output Tables</h2>
+<p>The wrangling produced <strong>6 Tableau-ready CSV files</strong>, each designed to answer specific questions from the VAST Challenge task:</p>
+<section id="table-1-sailor_shift_career.csv-38-rows" class="level3">
+<h3 class="anchored" data-anchor-id="table-1-sailor_shift_career.csv-38-rows">Table 1: <code>sailor_shift_career.csv</code> (38 rows)</h3>
+<p>Sailor Shift’s full discography with release year, genre, collaborators, record label, and what influenced each work. Supports the <strong>career profile timeline</strong> visualisation.</p>
+<p><strong>Columns:</strong> Song, Type, Genre, Release_Year, Notable, Single, Record_Label, Performers, Composers, Lyricists, Num_Collaborators, Influenced_By, Num_Influences</p>
 </section>
-</div>
-<div class="card-item">
-<div class="card-icon">
-<p>📊</p>
-</div>
-<section id="career-trajectories" class="level4">
-<h4 class="anchored" data-anchor-id="career-trajectories">Career Trajectories</h4>
-<p>Compare popularity and influence patterns of rising stars in the music industry.</p>
+<section id="table-2-sailor_shift_influences.csv-33-rows" class="level3">
+<h3 class="anchored" data-anchor-id="table-2-sailor_shift_influences.csv-33-rows">Table 2: <code>sailor_shift_influences.csv</code> (33 rows)</h3>
+<p>All influence relationships to and from Sailor Shift — who influenced her (26 edges) and who she influenced (7 edges). Answers: <em>“Who has she been most influenced by over time?”</em></p>
+<p><strong>Columns:</strong> Direction, Influence_Type, Sailor_Song, Sailor_Song_Year, Other_Song, Other_Song_Genre, Other_Song_Year, Other_Artist</p>
 </section>
-</div>
-</div>
-<hr>
-<section id="team" class="level2 section-header">
-<h2 class="anchored" data-anchor-id="team">Team</h2>
+<section id="table-3-sailor_shift_collaborators.csv-77-rows" class="level3">
+<h3 class="anchored" data-anchor-id="table-3-sailor_shift_collaborators.csv-77-rows">Table 3: <code>sailor_shift_collaborators.csv</code> (77 rows)</h3>
+<p>Every collaborator on Sailor Shift’s works with their role. Answers: <em>“Who has she collaborated with?”</em></p>
+<p><strong>Columns:</strong> Song, Release_Year, Genre, Collaborator, Role</p>
 </section>
-<p><strong>Group VABI</strong> · SMU School of Computing and Information Systems</p>
-<div class="team-grid">
-<div class="team-member">
-<p><strong>Member 1</strong></p>
-</div>
-<div class="team-member">
-<p><strong>Member 2</strong></p>
-</div>
-<div class="team-member">
-<p><strong>Member 3</strong></p>
-</div>
-<div class="team-member">
-<p><strong>Member 4</strong></p>
-</div>
-</div>
-</div>
+<section id="table-4-oceanus_folk_spread.csv-601-rows" class="level3">
+<h3 class="anchored" data-anchor-id="table-4-oceanus_folk_spread.csv-601-rows">Table 4: <code>oceanus_folk_spread.csv</code> (601 rows)</h3>
+<p>All influence flows in and out of the Oceanus Folk genre. Tracks how the genre’s influence spread over time and which genres were most affected. Answers: <em>“How has the influence of Oceanus Folk spread through the musical world?”</em></p>
+<p><strong>Columns:</strong> Direction, Influence_Type, OF_Song, OF_Song_Year, OF_Artist, Other_Song, Other_Genre, Other_Year, Other_Artist</p>
+</section>
+<section id="table-5-oceanus_folk_timeline.csv-305-rows" class="level3">
+<h3 class="anchored" data-anchor-id="table-5-oceanus_folk_timeline.csv-305-rows">Table 5: <code>oceanus_folk_timeline.csv</code> (305 rows)</h3>
+<p>All Oceanus Folk songs with metadata for building the genre’s growth timeline. Flags Sailor Shift’s contributions.</p>
+<p><strong>Columns:</strong> Song, Release_Year, Notable, Single, Artist, Record_Label, Draws_From_Count, Influenced_Others_Count, Is_Sailor_Shift</p>
+</section>
+<section id="table-6-artist_careers.csv-872-rows" class="level3">
+<h3 class="anchored" data-anchor-id="table-6-artist_careers.csv-872-rows">Table 6: <code>artist_careers.csv</code> (872 rows)</h3>
+<p>Career profiles for all artists/groups with 3+ songs. Includes song count, genre, career span, influence score, and collaborator count. Supports <strong>rising star comparison</strong> and <strong>prediction</strong> tasks.</p>
+<p><strong>Columns:</strong> Artist, Node_Type, Num_Songs, Primary_Genre, All_Genres, First_Release, Last_Release, Career_Span, Notable_Songs, Influence_Score, Num_Collaborators, Is_Oceanus_Folk</p>
+</section>
+</section>
+<section id="tools-used" class="level2">
+<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Python 3</strong> (standard library only)</td>
+<td>Data wrangling — reshaping graph data into flat tables</td>
+</tr>
+<tr class="even">
+<td><strong>Gephi</strong></td>
+<td>Network exploration — discovering patterns, communities, and key entities</td>
+</tr>
+<tr class="odd">
+<td><strong>Tableau</strong></td>
+<td>Interactive dashboard creation — final deliverable visualisations</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

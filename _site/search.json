@@ -42,13 +42,6 @@
     "text": "Timeline - Gnatt Chart\n\n\n\nGnatt Chart"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "VABI Project",
-    "section": "",
-    "text": "A visual analytics study of how Sailor Shift transformed a regional genre into a global music phenomenon — tracing influence, collaborations, and career trajectories through interactive data exploration.\nVAST Challenge 2025 · Mini-Challenge 1"
-  },
-  {
     "objectID": "index.html#about-this-project",
     "href": "index.html#about-this-project",
     "title": "VABI Project",
@@ -63,24 +56,45 @@
     "text": "Team"
   },
   {
-    "objectID": "index (1).html",
-    "href": "index (1).html",
-    "title": "VABI Project",
+    "objectID": "methodology.html",
+    "href": "methodology.html",
+    "title": "Methodology",
     "section": "",
-    "text": "A visual analytics study of how Sailor Shift transformed a regional genre into a global music phenomenon — tracing influence, collaborations, and career trajectories through interactive data exploration.\nVAST Challenge 2025 · Mini-Challenge 1"
+    "text": "The raw dataset was provided as part of the VAST Challenge 2025 Mini-Challenge 1 and consists of a knowledge graph representing the music industry, delivered as two CSV files:\n\n\n\n\n\n\n\n\nFile\nRecords\nDescription\n\n\n\n\nmc1_nodes.csv\n17,412\nAll entities in the graph — Person (11,361), Song (3,615), RecordLabel (1,217), Album (996), MusicalGroup (223)\n\n\nmc1_edges.csv\n37,857\nAll relationships — PerformerOf, ComposerOf, LyricistOf, ProducerOf, RecordedBy, DistributedBy, InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples, LyricalReferenceTo, MemberOf"
   },
   {
-    "objectID": "index (1).html#about-this-project",
-    "href": "index (1).html#about-this-project",
-    "title": "VABI Project",
-    "section": "About This Project",
-    "text": "About This Project"
+    "objectID": "methodology.html#data-overview",
+    "href": "methodology.html#data-overview",
+    "title": "Methodology",
+    "section": "",
+    "text": "The raw dataset was provided as part of the VAST Challenge 2025 Mini-Challenge 1 and consists of a knowledge graph representing the music industry, delivered as two CSV files:\n\n\n\n\n\n\n\n\nFile\nRecords\nDescription\n\n\n\n\nmc1_nodes.csv\n17,412\nAll entities in the graph — Person (11,361), Song (3,615), RecordLabel (1,217), Album (996), MusicalGroup (223)\n\n\nmc1_edges.csv\n37,857\nAll relationships — PerformerOf, ComposerOf, LyricistOf, ProducerOf, RecordedBy, DistributedBy, InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples, LyricalReferenceTo, MemberOf"
   },
   {
-    "objectID": "index (1).html#team",
-    "href": "index (1).html#team",
-    "title": "VABI Project",
-    "section": "Team",
-    "text": "Team"
+    "objectID": "methodology.html#data-wrangling",
+    "href": "methodology.html#data-wrangling",
+    "title": "Methodology",
+    "section": "Data Wrangling",
+    "text": "Data Wrangling\nThe graph-structured data (nodes + edges) needed to be reshaped into flat tables for Tableau to consume. A Python script (wrangle.py) was written using only the standard library (csv and collections modules) to perform this transformation.\nNo data was deleted, modified, imputed, or fabricated. All values in the output tables originate directly from the source files.\n\nOperations Performed\nThe wrangling consisted of five standard operations:\n\n\n\n\n\n\n\nOperation\nDescription\n\n\n\n\nFilter\nSelect rows matching criteria (e.g., genre = “Oceanus Folk”, Sailor Shift’s edges, influence-type edges)\n\n\nJoin / Lookup\nMatch edge source/target IDs to node attributes like name, genre, and release year — equivalent to a SQL JOIN\n\n\nAggregate / Count\nCount occurrences such as number of songs per artist, influence references per song, and collaborators per work\n\n\nReshape / Flatten\nConvert the graph structure into flat tabular rows (e.g., one row per influence relationship instead of separate node and edge records)\n\n\nDerive\nCompute new fields from existing data (e.g., Career_Span = Last_Release − First_Release, Is_Oceanus_Folk flag)\n\n\n\n\n\nKey Entities Identified\nThrough filtering, the following key entities were identified for analysis:\n\nSailor Shift (Person, id=17255) — the central figure of the investigation\nSailor Shift’s works — 38 works (17 Songs + 21 Albums) linked via PerformerOf, ComposerOf, LyricistOf, and ProducerOf edges\nIvy Echos (MusicalGroup, id=17260) — Sailor Shift’s band, found via MemberOf edge\nOceanus Folk catalogue — 305 works filtered by genre = “Oceanus Folk”"
+  },
+  {
+    "objectID": "methodology.html#output-tables",
+    "href": "methodology.html#output-tables",
+    "title": "Methodology",
+    "section": "Output Tables",
+    "text": "Output Tables\nThe wrangling produced 6 Tableau-ready CSV files, each designed to answer specific questions from the VAST Challenge task:\n\nTable 1: sailor_shift_career.csv (38 rows)\nSailor Shift’s full discography with release year, genre, collaborators, record label, and what influenced each work. Supports the career profile timeline visualisation.\nColumns: Song, Type, Genre, Release_Year, Notable, Single, Record_Label, Performers, Composers, Lyricists, Num_Collaborators, Influenced_By, Num_Influences\n\n\nTable 2: sailor_shift_influences.csv (33 rows)\nAll influence relationships to and from Sailor Shift — who influenced her (26 edges) and who she influenced (7 edges). Answers: “Who has she been most influenced by over time?”\nColumns: Direction, Influence_Type, Sailor_Song, Sailor_Song_Year, Other_Song, Other_Song_Genre, Other_Song_Year, Other_Artist\n\n\nTable 3: sailor_shift_collaborators.csv (77 rows)\nEvery collaborator on Sailor Shift’s works with their role. Answers: “Who has she collaborated with?”\nColumns: Song, Release_Year, Genre, Collaborator, Role\n\n\nTable 4: oceanus_folk_spread.csv (601 rows)\nAll influence flows in and out of the Oceanus Folk genre. Tracks how the genre’s influence spread over time and which genres were most affected. Answers: “How has the influence of Oceanus Folk spread through the musical world?”\nColumns: Direction, Influence_Type, OF_Song, OF_Song_Year, OF_Artist, Other_Song, Other_Genre, Other_Year, Other_Artist\n\n\nTable 5: oceanus_folk_timeline.csv (305 rows)\nAll Oceanus Folk songs with metadata for building the genre’s growth timeline. Flags Sailor Shift’s contributions.\nColumns: Song, Release_Year, Notable, Single, Artist, Record_Label, Draws_From_Count, Influenced_Others_Count, Is_Sailor_Shift\n\n\nTable 6: artist_careers.csv (872 rows)\nCareer profiles for all artists/groups with 3+ songs. Includes song count, genre, career span, influence score, and collaborator count. Supports rising star comparison and prediction tasks.\nColumns: Artist, Node_Type, Num_Songs, Primary_Genre, All_Genres, First_Release, Last_Release, Career_Span, Notable_Songs, Influence_Score, Num_Collaborators, Is_Oceanus_Folk"
+  },
+  {
+    "objectID": "methodology.html#tools-used",
+    "href": "methodology.html#tools-used",
+    "title": "Methodology",
+    "section": "Tools Used",
+    "text": "Tools Used\n\n\n\n\n\n\n\nTool\nPurpose\n\n\n\n\nPython 3 (standard library only)\nData wrangling — reshaping graph data into flat tables\n\n\nGephi\nNetwork exploration — discovering patterns, communities, and key entities\n\n\nTableau\nInteractive dashboard creation — final deliverable visualisations"
+  },
+  {
+    "objectID": "proposal.html#timeline---gantt-chart",
+    "href": "proposal.html#timeline---gantt-chart",
+    "title": "Project Proposal",
+    "section": "Timeline - Gantt Chart",
+    "text": "Timeline - Gantt Chart\n\n\n\nGantt Chart"
   }
 ]

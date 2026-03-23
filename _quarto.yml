@@ -9,6 +9,8 @@ website:
         text: Home
       - href: proposal.qmd
         text: Proposal
+      - href: methodology.qmd
+        text: Methodology
 
 format:
   html:

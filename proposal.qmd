@@ -46,5 +46,5 @@ Interactive visualizations will be created to support exploration of artist infl
 The visualizations will be used to analyze patterns related to Sailor Shift’s career and the spread of Oceanus Folk, helping Silas Reed develop insights for his article Oceanus Folk: Then-and-Now.
 
 
-## Timeline - Gnatt Chart
-![Gnatt Chart](images/GnattChart.png){fig-align="center"}
+## Timeline - Gantt Chart
+![Gantt Chart](images/GnattChart.png){fig-align="center"}
