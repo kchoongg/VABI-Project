@@ -4,7 +4,7 @@ title: "Methodology"
 
 ## Data Overview
 
-The raw dataset was provided as part of the [VAST Challenge 2025 Mini-Challenge 1](https://vast-challenge.github.io/2025/MC1.html) and consists of a knowledge graph representing the music industry, delivered as two CSV files:
+The raw dataset was provided as part of the [VAST Challenge 2025 Mini-Challenge 1](https://vast-challenge.github.io/2025/MC1.html) and consists of a knowledge graph representing the music industry, delivered as a JSON file and then split into two CSV files:
 
 | File | Records | Description |
 |------|---------|-------------|
@@ -84,4 +84,3 @@ Career profiles for all artists/groups with 3+ songs. Includes song count, genre
 |------|---------|
 | **Python 3** (standard library only) | Data wrangling — reshaping graph data into flat tables |
 | **Gephi** | Network exploration — discovering patterns, communities, and key entities |
-| **Tableau** | Interactive dashboard creation — final deliverable visualisations |
