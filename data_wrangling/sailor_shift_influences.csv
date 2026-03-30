@@ -1,34 +1,41 @@
-Direction,Influence_Type,Sailor_Song,Sailor_Song_Year,Other_Song,Other_Song_Genre,Other_Song_Year,Other_Artist
-Influenced Sailor Shift,CoverOf,Melancholy Circuitry,2033,Twilight's Threshold,Synthwave,2007,"Fang Ding, Kimberly Estrada, Ming Long, Phantom Roots"
-Influenced Sailor Shift,InStyleOf,Electric Reverie,2038,Folklore's Heartbeat,Blues Rock,2020,"Brooke Olson, Tao Hu"
-Influenced Sailor Shift,InterpolatesFrom,Electric Reverie,2038,Reflejo Interior,Americana,1983,"Jason Aguirre, Sheryl Roman"
-Influenced Sailor Shift,InterpolatesFrom,Tides of Echos,2029,Weathered Miles,Doom Metal,2023,"Debra Graham, Dylan Schwartz, James Henderson, Joel Long, Michael Nixon, Nathan Jones"
-Influenced Sailor Shift,InStyleOf,Tides of Echos,2029,The Long Way Home,Dream Pop,2023,Na Ye
-Influenced Sailor Shift,DirectlySamples,The Kelp Forest Canticles,2024,Hallowed Transaction,Doom Metal,2017,Naoko Sato
-Influenced Sailor Shift,CoverOf,The Kelp Forest Canticles,2024,Für uns alle zusammen,Alternative Rock,2017,"Herbert Mcfarland, Joseph Ponce, Rachel Montes, Rebecca Wise"
-Influenced Sailor Shift,InStyleOf,Salty Dreams,2030,Susurros de Pasión,Synthwave,2004,"Gang Shao, Juan Zhou, Jun Zhou, Min Long, Qiang Yuan, Ursus, Yang Zhao"
-Influenced Sailor Shift,CoverOf,Salty Dreams,2030,Partisan's Lament,Indie Pop,2030,Samantha Bullock
-Influenced Sailor Shift,CoverOf,Coral Beats,2034,Harvest Dance at Ler Valley,Psychedelic Rock,2010,Simone Säuberlich
-Influenced Sailor Shift,InStyleOf,Coral Beats,2034,Sacred Fragments,Synthwave,2003,"Juan Shi, Min Cao, Ming Zhou, Yang Peng"
-Influenced Sailor Shift,LyricalReferenceTo,Oceanbound,2038,Bold Without Apology,Indie Rock,2010,Jing Kang
-Influenced Sailor Shift,LyricalReferenceTo,Oceanbound,2038,Altitude of Mistakes,Americana,2015,"Jun Qiao, Ming Huang, Qiang Liu, Xiulan Fang, Yong Dong"
-Influenced Sailor Shift,InterpolatesFrom,High Tide Heartbeat,2028,Addicted to Your Heartache,Southern Gothic Rock,2004,Urszula Stochmal
-Influenced Sailor Shift,CoverOf,Electric Eel Love,2028,The Crown We Wear,Indie Rock,2022,"Joanna Avery, Judy Yang, Miss Jennifer Williams, Molly Gonzalez, William Robinson"
-Influenced Sailor Shift,InStyleOf,Electric Eel Love,2028,Twelve Bells of Augsburg,Psychedelic Rock,2026,"Jeremiah Love, Robert Woods, Zachary Francis"
-Influenced Sailor Shift,InStyleOf,Driftwood Lullaby,2030,Echoes of Forgotten Light,Alternative Rock,2004,Igor Dyś
-Influenced Sailor Shift,InStyleOf,Saltwater Hymn,2032,Parallel Memories,Dream Pop,2028,"Guiying Ren, Lei Shi, Tao Wen, Wei Liang"
-Influenced Sailor Shift,LyricalReferenceTo,Moon Over the Tide,2034,Silent Steps in the Forest's Embrace,Avant-Garde Folk,2023,Tao Gao
-Influenced Sailor Shift,InterpolatesFrom,Moon Over the Tide,2034,Divergent Memories,Indie Folk,2017,Joshua Taylor
-Influenced Sailor Shift,InStyleOf,Barnacle Heart,2034,Our Inevitable Path,Indie Folk,2017,Shannon Harvey
-Influenced Sailor Shift,InterpolatesFrom,Fog & Fiddle,2036,Coastal Whispers of Biscay,Alternative Rock,2031,"James Medina, Linda Burns, Matthew Best"
-Influenced Sailor Shift,InStyleOf,Fog & Fiddle,2036,Provence Aria,Indie Rock,2023,"Daniel Mccormick, Lei Fu, Lei Jin, Ming Ren, Yan Dai"
-Influenced Sailor Shift,DirectlySamples,Stormsong,2038,Exoskeleton Dissolve,Indie Rock,2020,"Amico Luciani, David Reese, Elmo Calbo, Ryan Dunlap"
-Influenced Sailor Shift,InStyleOf,Stormsong,2038,When the Bar Lights Go Up,Emo/Pop Punk,2000,Lori Massey
-Influenced Sailor Shift,CoverOf,Tidesworn Ballads,2031,Dreamscape of Judgment,Symphonic Metal,2023,"Sandra Burke, Trevor Bass, Xia Yuan, Xiuying Du, Yan Li"
-Sailor Shift Influenced,InStyleOf,Sailor Shift (person),,Cassette Future,NA,NA,Cassette Future
-Sailor Shift Influenced,LyricalReferenceTo,Sailor Shift (person),,Silver Veil,NA,NA,Silver Veil
-Sailor Shift Influenced,InterpolatesFrom,Sailor Shift (person),,The Phantom Operators,NA,NA,The Phantom Operators
-Sailor Shift Influenced,InStyleOf,Sailor Shift (person),,The Hollow Monarchs,NA,NA,The Hollow Monarchs
-Sailor Shift Influenced,LyricalReferenceTo,Sailor Shift (person),,Cassian Storm,NA,NA,Cassian Storm
-Sailor Shift Influenced,InterpolatesFrom,Sailor Shift (person),,Claire Holmes,NA,NA,Claire Holmes
-Sailor Shift Influenced,DirectlySamples,Sailor Shift (person),,Copper Canyon Ghosts,NA,NA,Copper Canyon Ghosts
+direction,influence_type,source_id,source_name,source_display_name,source_type,source_genre,source_year,target_id,target_name,target_display_name,target_type,target_genre,target_year
+Other -> Sailor,DirectlySamples,17112,Embers & Echoes,Embers & Echoes,Album,Post-Apocalyptic Folk,2031,17268,Deepsea Fireflies,Deepsea Fireflies,Song,Oceanus Folk,2025
+Other -> Sailor,InStyleOf,17022,Cassette Future,Cassette Future,MusicalGroup,,,17255,Sailor Shift,Sailor Shift,Person,,
+Other -> Sailor,LyricalReferenceTo,17032,Silver Veil,Silver Veil,MusicalGroup,,,17255,Sailor Shift,Sailor Shift,Person,,
+Other -> Sailor,InterpolatesFrom,17063,The Phantom Operators,The Phantom Operators,MusicalGroup,,,17255,Sailor Shift,Sailor Shift,Person,,
+Other -> Sailor,InStyleOf,17110,The Hollow Monarchs,The Hollow Monarchs,MusicalGroup,,,17255,Sailor Shift,Sailor Shift,Person,,
+Other -> Sailor,LyricalReferenceTo,17126,Cassian Storm,Seraphina Vale,Person,,,17255,Sailor Shift,Sailor Shift,Person,,
+Other -> Sailor,InterpolatesFrom,17155,Claire Holmes,Jaye Finch,Person,,,17255,Sailor Shift,Sailor Shift,Person,,
+Other -> Sailor,DirectlySamples,17361,Copper Canyon Ghosts,Copper Canyon Ghosts,MusicalGroup,,,17255,Sailor Shift,Sailor Shift,Person,,
+Sailor -> Other,DirectlySamples,17261,The Kelp Forest Canticles,The Kelp Forest Canticles,Album,Oceanus Folk,2024,2197,Hallowed Transaction,Hallowed Transaction,Album,Doom Metal,2017
+Sailor -> Other,CoverOf,17261,The Kelp Forest Canticles,The Kelp Forest Canticles,Album,Oceanus Folk,2024,9223,Für uns alle zusammen,Für uns alle zusammen,Song,Alternative Rock,2017
+Sailor -> Other,InterpolatesFrom,17270,Salt-Kissed Rhymes,Salt-Kissed Rhymes,Song,Oceanus Folk,2026,11859,Caught in the Cricket Crease,Caught in the Cricket Crease,Album,Lo-Fi Electronica,2014
+Sailor -> Other,InStyleOf,17270,Salt-Kissed Rhymes,Salt-Kissed Rhymes,Song,Oceanus Folk,2026,16209,The Void Inside,The Void Inside,Song,Dream Pop,2017
+Sailor -> Other,InterpolatesFrom,17279,High Tide Heartbeat,High Tide Heartbeat,Song,Oceanus Folk,2028,14658,Addicted to Your Heartache,Addicted to Your Heartache,Album,Southern Gothic Rock,2004
+Sailor -> Other,CoverOf,17280,Electric Eel Love,Electric Eel Love,Song,Oceanus Folk,2028,14933,The Crown We Wear,The Crown We Wear,Song,Indie Rock,2022
+Sailor -> Other,InStyleOf,17280,Electric Eel Love,Electric Eel Love,Song,Oceanus Folk,2028,10534,Twelve Bells of Augsburg,Twelve Bells of Augsburg,Song,Psychedelic Rock,2026
+Sailor -> Other,InterpolatesFrom,17231,Tides of Echos,Tides of Echos,Album,Oceanus Folk,2029,14352,Weathered Miles,Weathered Miles,Song,Doom Metal,2023
+Sailor -> Other,InStyleOf,17231,Tides of Echos,Tides of Echos,Album,Oceanus Folk,2029,14296,The Long Way Home,The Long Way Home,Album,Dream Pop,2023
+Sailor -> Other,InStyleOf,17273,Salty Dreams,Salty Dreams,Album,Oceanus Folk,2030,3881,Susurros de Pasión,Susurros de Pasión,Song,Synthwave,2004
+Sailor -> Other,InStyleOf,17285,Driftwood Lullaby,Driftwood Lullaby,Song,Oceanus Folk,2030,8207,Echoes of Forgotten Light,Echoes of Forgotten Light,Song,Alternative Rock,2004
+Sailor -> Other,CoverOf,17273,Salty Dreams,Salty Dreams,Album,Oceanus Folk,2030,9848,Partisan's Lament,Partisan's Lament,Song,Indie Pop,2030
+Sailor -> Other,CoverOf,17350,Tidesworn Ballads,Tidesworn Ballads,Album,Oceanus Folk,2031,10016,Dreamscape of Judgment,Dreamscape of Judgment,Song,Symphonic Metal,2023
+Sailor -> Other,InStyleOf,17286,Saltwater Hymn,Saltwater Hymn,Song,Oceanus Folk,2032,10903,Parallel Memories,Parallel Memories,Song,Dream Pop,2028
+Sailor -> Other,CoverOf,16999,Melancholy Circuitry,Melancholy Circuitry,Album,Americana,2033,14893,Twilight's Threshold,Twilight's Threshold,Song,Synthwave,2007
+Sailor -> Other,InStyleOf,17275,Coral Beats,Coral Beats,Album,Oceanus Folk,2034,15855,Sacred Fragments,Sacred Fragments,Song,Synthwave,2003
+Sailor -> Other,CoverOf,17275,Coral Beats,Coral Beats,Album,Oceanus Folk,2034,16312,Harvest Dance at Ler Valley,Harvest Dance at Ler Valley,Song,Psychedelic Rock,2010
+Sailor -> Other,InterpolatesFrom,17287,Moon Over the Tide,Moon Over the Tide,Song,Oceanus Folk,2034,11254,Divergent Memories,Divergent Memories,Song,Indie Folk,2017
+Sailor -> Other,InStyleOf,17289,Barnacle Heart,Barnacle Heart,Song,Oceanus Folk,2034,5574,Our Inevitable Path,Our Inevitable Path,Song,Indie Folk,2017
+Sailor -> Other,LyricalReferenceTo,17287,Moon Over the Tide,Moon Over the Tide,Song,Oceanus Folk,2034,13589,Silent Steps in the Forest's Embrace,Silent Steps in the Forest's Embrace,Song,Avant-Garde Folk,2023
+Sailor -> Other,InStyleOf,17290,Fog & Fiddle,Fog & Fiddle,Song,Oceanus Folk,2036,12237,Provence Aria,Provence Aria,Song,Indie Rock,2023
+Sailor -> Other,InterpolatesFrom,17290,Fog & Fiddle,Fog & Fiddle,Song,Oceanus Folk,2036,12685,Coastal Whispers of Biscay,Coastal Whispers of Biscay,Song,Alternative Rock,2031
+Sailor -> Other,InterpolatesFrom,17049,Electric Reverie,Electric Reverie,Album,Oceanus Folk,2038,7026,Reflejo Interior,Reflejo Interior,Song,Americana,1983
+Sailor -> Other,InStyleOf,17292,Stormsong,Stormsong,Song,Oceanus Folk,2038,6592,When the Bar Lights Go Up,When the Bar Lights Go Up,Song,Emo/Pop Punk,2000
+Sailor -> Other,LyricalReferenceTo,17277,Oceanbound,Oceanbound,Album,Oceanus Folk,2038,876,Bold Without Apology,Bold Without Apology,Song,Indie Rock,2010
+Sailor -> Other,LyricalReferenceTo,17277,Oceanbound,Oceanbound,Album,Oceanus Folk,2038,3986,Altitude of Mistakes,Altitude of Mistakes,Song,Americana,2015
+Sailor -> Other,InStyleOf,17049,Electric Reverie,Electric Reverie,Album,Oceanus Folk,2038,14107,Folklore's Heartbeat,Folklore's Heartbeat,Song,Blues Rock,2020
+Sailor -> Other,DirectlySamples,17292,Stormsong,Stormsong,Song,Oceanus Folk,2038,13014,Exoskeleton Dissolve,Exoskeleton Dissolve,Song,Indie Rock,2020
+Sailor -> Other,DirectlySamples,17255,Sailor Shift,Sailor Shift,Person,,,17260,Ivy Echos,Ivy Echos,MusicalGroup,,
+Sailor -> Other,InStyleOf,17255,Sailor Shift,Sailor Shift,Person,,,17299,The Saltwater Weavers,The Saltwater Weavers,MusicalGroup,,
+Sailor -> Other,LyricalReferenceTo,17255,Sailor Shift,Sailor Shift,Person,,,17327,Drowned Harbor,Drowned Harbor,MusicalGroup,,
+Sailor -> Other,InStyleOf,17255,Sailor Shift,Sailor Shift,Person,,,17192,The Fiddle & The Fjord,The Fiddle & The Fjord,MusicalGroup,,

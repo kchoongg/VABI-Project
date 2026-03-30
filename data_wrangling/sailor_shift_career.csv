@@ -1,39 +1,47 @@
-Song,Type,Genre,Release_Year,Notable,Single,Record_Label,Performers,Composers,Lyricists,Num_Collaborators,Influenced_By,Num_Influences
-The Kelp Forest Canticles,Album,Oceanus Folk,2024,TRUE,NA,Unknown,Ivy Echos,"Finn McGraw, Jade Thompson, Lila ""Lilly"" Hartman, Maya Jensen, William Tidewell","Rusty Riggins, Sailor Shift, Sophie Ramirez",8,Hallowed Transaction (Doom Metal); Für uns alle zusammen (Alternative Rock),2
-Luminescent Tides,Album,Oceanus Folk,2025,TRUE,NA,Unknown,Ivy Echos,"Jade Thompson, Lila ""Lilly"" Hartman, Maya Jensen","Sailor Shift, Sophie Ramirez",5,None,0
-Shoreline Sonnets,Album,Oceanus Folk,2026,TRUE,NA,Unknown,Ivy Echos,"Jade Thompson, Lila ""Lilly"" Hartman, Maya Jensen","Rusty Riggins, Sailor Shift, Sophie Ramirez",6,None,0
-High Tide Heartbeat,Song,Oceanus Folk,2028,FALSE,TRUE,Unknown,Sailor Shift,,,0,Addicted to Your Heartache (Southern Gothic Rock),1
-Chord of the Deep,Song,Oceanus Folk,2028,FALSE,FALSE,Unknown,Sailor Shift,,,0,None,0
-Tidal Pop Waves,Album,Oceanus Folk,2028,TRUE,NA,Unknown,Sailor Shift,"Fiona Mercer, Liam O'Sullivan",Sailor Shift,2,None,0
-Sun-Drenched Daydream,Song,Oceanus Folk,2028,FALSE,FALSE,Unknown,Sailor Shift,,,0,None,0
-Electric Eel Love,Song,Oceanus Folk,2028,TRUE,FALSE,Unknown,Sailor Shift,,,0,The Crown We Wear (Indie Rock); Twelve Bells of Augsburg (Psychedelic Rock),2
-Tides of Echos,Album,Oceanus Folk,2029,TRUE,NA,Unknown,The Wave Riders,,"Aiden Harper, Finn Morgan, Kai Reynolds, Sailor Shift, Skylar Brooks",5,Weathered Miles (Doom Metal); The Long Way Home (Dream Pop),2
-Driftwood Lullaby,Song,Oceanus Folk,2030,FALSE,FALSE,Unknown,Sailor Shift,,,0,Echoes of Forgotten Light (Alternative Rock),1
-Salty Dreams,Album,Oceanus Folk,2030,TRUE,NA,Unknown,Sailor Shift,,Sailor Shift,0,Susurros de Pasión (Synthwave); Partisan's Lament (Indie Pop),2
-Seashell Serenade,Song,Oceanus Folk,2030,TRUE,TRUE,Unknown,"Kai Reynolds, Sailor Shift",,,1,None,0
-Heart of the Habitat,Song,Oceanus Folk,2030,FALSE,TRUE,Unknown,Sailor Shift,,,0,None,0
-Reef Rhythm,Song,Oceanus Folk,2030,FALSE,FALSE,Unknown,Sailor Shift,,,0,None,0
-Neon Heartbeat,Album,Synthwave,2031,FALSE,NA,Unknown,Violet Engines,Iris Moon,"Sailor Shift, Zane Cruz",3,None,0
-Submerged Sonatas,Album,Oceanus Folk,2031,TRUE,NA,Unknown,"Daniel O'Connell, Sailor Shift",Daniel O'Connell,Sailor Shift,1,None,0
-Tidesworn Ballads,Album,Oceanus Folk,2031,TRUE,NA,Unknown,"Beatrice Albright, Sailor Shift",,"Beatrice Albright, Sailor Shift",1,Dreamscape of Judgment (Symphonic Metal),1
-Hidden Depths,Album,Oceanus Folk,2031,TRUE,NA,Unknown,Siren's Call,Lila Rivers,"Mia Waters, Sailor Shift",3,None,0
-Saltwater Hymn,Song,Oceanus Folk,2032,FALSE,FALSE,Unknown,Sailor Shift,,,0,Parallel Memories (Dream Pop),1
-The Current & The Chord,Album,Oceanus Folk,2032,TRUE,NA,Unknown,Sailor Shift,,Sailor Shift,0,None,0
-Ballads for the End of Time,Album,Oceanus Folk,2033,TRUE,NA,Unknown,Tidal Reverie,"Ethan Clarke, Sophie Bennett","Kara Lee, Michael Harris, Sailor Shift",5,None,0
-Melancholy Circuitry,Album,Americana,2033,TRUE,NA,Unknown,Crimson Carriage,"Lucas Bennett, Maya Torres, Olivia Carter",Sailor Shift,4,Twilight's Threshold (Synthwave),1
-Moon Over the Tide,Song,Oceanus Folk,2034,TRUE,FALSE,Unknown,Sailor Shift,,,0,Silent Steps in the Forest's Embrace (Avant-Garde Folk); Divergent Memories (Indie Folk),2
-Coral Beats,Album,Oceanus Folk,2034,TRUE,NA,Unknown,Sailor Shift,"Astrid Nørgaard, Freya Lindholm","Ewan MacCrae, Sailor Shift",3,Harvest Dance at Ler Valley (Psychedelic Rock); Sacred Fragments (Synthwave),2
-Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034,TRUE,NA,Unknown,The Brine Choir,"Cassian Rae, Elara May, Lyra Blaze, Orion Cruz","Arlo Sterling, Sailor Shift",6,None,0
-Barnacle Heart,Song,Oceanus Folk,2034,FALSE,FALSE,Unknown,Sailor Shift,,,0,Our Inevitable Path (Indie Folk),1
-Into the Current,Song,Oceanus Folk,2034,FALSE,TRUE,Unknown,Sailor Shift,,,0,None,0
-Artificial Sunsets,Album,Oceanus Folk,2035,TRUE,NA,Unknown,The Brine Choir,"Cassian Rae, Elara May, Lyra Blaze, Orion Cruz","Arlo Sterling, Sailor Shift",6,None,0
-Tides & Ballads,Album,Oceanus Folk,2036,TRUE,NA,Unknown,Sailor Shift,Coralia Bellweather,"Levi Holloway, Sailor Shift",2,None,0
-Fog & Fiddle,Song,Oceanus Folk,2036,TRUE,FALSE,Unknown,Sailor Shift,,,0,Coastal Whispers of Biscay (Alternative Rock); Provence Aria (Indie Rock),2
-The Fisherman's Prayer,Song,Oceanus Folk,2036,FALSE,TRUE,Unknown,Sailor Shift,,,0,None,0
-Ballads for the Low Tide,Album,Oceanus Folk,2037,TRUE,NA,Unknown,Selkie's Hollow,Maya Jensen,"Lia Grant, Sailor Shift, Zachary Cole",4,None,0
-Stormsong,Song,Oceanus Folk,2038,TRUE,TRUE,Unknown,Sailor Shift,,,0,Exoskeleton Dissolve (Indie Rock); When the Bar Lights Go Up (Emo/Pop Punk),2
-Electric Reverie,Album,Oceanus Folk,2038,TRUE,NA,Unknown,The Brine Choir,"Cassian Rae, Elara May, Lyra Blaze, Orion Cruz","Arlo Sterling, Sailor Shift",6,Folklore's Heartbeat (Blues Rock); Reflejo Interior (Americana),2
-Oceanbound,Album,Oceanus Folk,2038,TRUE,NA,Unknown,Sailor Shift,Freya Lindholm,"Ewan MacCrae, Sailor Shift",2,Bold Without Apology (Indie Rock); Altitude of Mistakes (Americana),2
-The Last Mariner,Song,Oceanus Folk,2040,FALSE,FALSE,Unknown,Sailor Shift,,,0,None,0
-Echoes of the Deep,Album,Oceanus Folk,2040,TRUE,NA,Unknown,Sailor Shift,Marin Thorne,"Jonah Calloway, Sailor Shift",2,None,0
-Salt in My Veins,Song,Oceanus Folk,2040,FALSE,FALSE,Unknown,Sailor Shift,,,0,None,0
+id,work_name,work_type,genre,release_year,written_year,notoriety_year,notable,single,is_oceanus_folk,performers,composers,lyricists,producers,num_performers,num_composers,num_lyricists,num_producers,recorded_by_labels,distributed_by_labels,num_recorded_by_labels,num_distributed_by_labels,draws_from_count,influenced_others_count,work_id,sailor_involvement_modes,sailor_roles,sailor_linked_groups,is_direct_person_work,is_group_membership_work,collaborators,num_distinct_collaborators
+17265,Dancer of the Dappled Light,Song,Oceanus Folk,2024,,,False,False,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,0,17265,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17264,Sunken Bell Song,Song,Oceanus Folk,2024,,,False,True,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,0,17264,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17261,The Kelp Forest Canticles,Album,Oceanus Folk,2024,2023,,True,,True,Ivy Echos,"Finn McGraw; Jade Thompson; Lila ""Lilly"" Hartman; Maya Jensen; William Tidewell",Rusty Riggins; Sailor Shift; Sophie Ramirez,,1,5,3,0,,,0,0,2,0,17261,direct_person_edge; via_group_membership,LyricistOf; PerformerOf,Ivy Echos,True,True,"Finn McGraw; Ivy Echos; Jade Thompson; Lila ""Lilly"" Hartman; Maya Jensen; Rusty Riggins; Sophie Ramirez; William Tidewell",8
+17266,Whispers in the Fronds,Song,Oceanus Folk,2024,,,False,False,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,0,17266,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17268,Deepsea Fireflies,Song,Oceanus Folk,2025,,,False,False,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,1,17268,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17262,Luminescent Tides,Album,Oceanus Folk,2025,2024,,True,,True,Ivy Echos,"Jade Thompson; Lila ""Lilly"" Hartman; Maya Jensen",Sailor Shift; Sophie Ramirez,,1,3,2,0,,,0,0,0,0,17262,direct_person_edge; via_group_membership,LyricistOf; PerformerOf,Ivy Echos,True,True,"Ivy Echos; Jade Thompson; Lila ""Lilly"" Hartman; Maya Jensen; Sophie Ramirez",5
+17267,The Angler's Lantern,Song,Oceanus Folk,2025,,,False,True,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,0,17267,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17270,Salt-Kissed Rhymes,Song,Oceanus Folk,2026,,,True,True,True,Ivy Echos,,,,1,0,0,0,,,0,0,2,0,17270,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17269,Sandpiper's Serenade,Song,Oceanus Folk,2026,,,False,False,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,0,17269,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17263,Shoreline Sonnets,Album,Oceanus Folk,2026,2025,,True,,True,Ivy Echos,"Jade Thompson; Lila ""Lilly"" Hartman; Maya Jensen",Rusty Riggins; Sailor Shift; Sophie Ramirez,,1,3,3,0,,,0,0,0,0,17263,direct_person_edge; via_group_membership,LyricistOf; PerformerOf,Ivy Echos,True,True,"Ivy Echos; Jade Thompson; Lila ""Lilly"" Hartman; Maya Jensen; Rusty Riggins; Sophie Ramirez",6
+17271,Tidepool Epigrams,Song,Oceanus Folk,2026,,,False,False,True,Ivy Echos,,,,1,0,0,0,,,0,0,0,0,17271,via_group_membership,PerformerOf,Ivy Echos,False,True,Ivy Echos,1
+17282,Chord of the Deep,Song,Oceanus Folk,2028,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17282,direct_person_edge,PerformerOf,,True,False,,0
+17280,Electric Eel Love,Song,Oceanus Folk,2028,,,True,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,2,0,17280,direct_person_edge,PerformerOf,,True,False,,0
+17279,High Tide Heartbeat,Song,Oceanus Folk,2028,,,False,True,True,Sailor Shift,,,,1,0,0,0,,,0,0,1,0,17279,direct_person_edge,PerformerOf,,True,False,,0
+17281,Sun-Drenched Daydream,Song,Oceanus Folk,2028,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17281,direct_person_edge,PerformerOf,,True,False,,0
+17272,Tidal Pop Waves,Album,Oceanus Folk,2028,2027,,True,,True,Sailor Shift,Fiona Mercer; Liam O'Sullivan,Sailor Shift,,1,2,1,0,,,0,0,0,0,17272,direct_person_edge,LyricistOf; PerformerOf,,True,False,Fiona Mercer; Liam O'Sullivan,2
+17231,Tides of Echos,Album,Oceanus Folk,2029,2028,,True,,True,The Wave Riders,,Aiden Harper; Finn Morgan; Kai Reynolds; Sailor Shift; Skylar Brooks,,1,0,5,0,,,0,0,2,0,17231,direct_person_edge,LyricistOf,,True,False,Aiden Harper; Finn Morgan; Kai Reynolds; Skylar Brooks; The Wave Riders,5
+17285,Driftwood Lullaby,Song,Oceanus Folk,2030,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,1,0,17285,direct_person_edge,PerformerOf,,True,False,,0
+17283,Heart of the Habitat,Song,Oceanus Folk,2030,,,False,True,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17283,direct_person_edge,PerformerOf,,True,False,,0
+17284,Reef Rhythm,Song,Oceanus Folk,2030,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17284,direct_person_edge,PerformerOf,,True,False,,0
+17273,Salty Dreams,Album,Oceanus Folk,2030,2029,,True,,True,Sailor Shift,,Sailor Shift,,1,0,1,0,,,0,0,2,0,17273,direct_person_edge,LyricistOf; PerformerOf,,True,False,,0
+17410,Seashell Serenade,Song,Oceanus Folk,2030,,2030,True,True,True,Kai Reynolds; Sailor Shift,,,,2,0,0,0,,,0,0,0,0,17410,direct_person_edge,PerformerOf,,True,False,Kai Reynolds,1
+17252,Hidden Depths,Album,Oceanus Folk,2031,2030,,True,,True,Siren's Call,Lila Rivers,Mia Waters; Sailor Shift,,1,1,2,0,,,0,0,0,0,17252,direct_person_edge,LyricistOf,,True,False,Lila Rivers; Mia Waters; Siren's Call,3
+16961,Neon Heartbeat,Album,Synthwave,2031,2030,,False,,False,Violet Engines,Iris Moon,Sailor Shift; Zane Cruz,,1,1,2,0,,,0,0,0,0,16961,direct_person_edge,LyricistOf,,True,False,Iris Moon; Violet Engines; Zane Cruz,3
+17356,Submerged Sonatas,Album,Oceanus Folk,2031,2030,,True,,True,Kael Storm; Sailor Shift,Kael Storm,Sailor Shift,,2,1,1,0,,,0,0,0,0,17356,direct_person_edge,LyricistOf; PerformerOf,,True,False,Kael Storm,1
+17350,Tidesworn Ballads,Album,Oceanus Folk,2031,2030,,True,,True,Bea Azure; Sailor Shift,,Bea Azure; Sailor Shift,,2,0,2,0,,,0,0,1,0,17350,direct_person_edge,LyricistOf; PerformerOf,,True,False,Bea Azure,1
+17286,Saltwater Hymn,Song,Oceanus Folk,2032,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,1,0,17286,direct_person_edge,PerformerOf,,True,False,,0
+17274,The Current & The Chord,Album,Oceanus Folk,2032,2031,,True,,True,Sailor Shift,,Sailor Shift,,1,0,1,0,,,0,0,0,0,17274,direct_person_edge,LyricistOf; PerformerOf,,True,False,,0
+16989,Ballads for the End of Time,Album,Oceanus Folk,2033,2032,,True,,True,Tidal Reverie,Luna Vibe; Maverick Storm,Axel Blaze; Jade Sky; Sailor Shift,,1,2,3,0,,,0,0,0,0,16989,direct_person_edge,LyricistOf,,True,False,Axel Blaze; Jade Sky; Luna Vibe; Maverick Storm; Tidal Reverie,5
+16999,Melancholy Circuitry,Album,Americana,2033,2032,,True,,False,Crimson Carriage,Echo Wilde; Lucas Bennett; Selene Noir,Sailor Shift,,1,3,1,0,,,0,0,1,0,16999,direct_person_edge,LyricistOf,,True,False,Crimson Carriage; Echo Wilde; Lucas Bennett; Selene Noir,4
+17289,Barnacle Heart,Song,Oceanus Folk,2034,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,1,0,17289,direct_person_edge,PerformerOf,,True,False,,0
+17275,Coral Beats,Album,Oceanus Folk,2034,2033,,True,,True,Sailor Shift,Astrid Nørgaard; Freya Lindholm,Ewan MacCrae; Sailor Shift,,1,2,2,0,,,0,0,2,0,17275,direct_person_edge,LyricistOf; PerformerOf,,True,False,Astrid Nørgaard; Ewan MacCrae; Freya Lindholm,3
+17047,Drifting Between the Stars and the Sea,Album,Oceanus Folk,2034,2033,,True,,True,The Brine Choir,Cassian Rae; Elara May; Lyra Blaze; Orion Cruz,Arlo Sterling; Sailor Shift,,1,4,2,0,,,0,0,0,0,17047,direct_person_edge,LyricistOf,,True,False,Arlo Sterling; Cassian Rae; Elara May; Lyra Blaze; Orion Cruz; The Brine Choir,6
+17288,Into the Current,Song,Oceanus Folk,2034,,,False,True,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17288,direct_person_edge,PerformerOf,,True,False,,0
+17287,Moon Over the Tide,Song,Oceanus Folk,2034,,,True,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,2,0,17287,direct_person_edge,PerformerOf,,True,False,,0
+17048,Artificial Sunsets,Album,Oceanus Folk,2035,2034,,True,,True,The Brine Choir,Cassian Rae; Elara May; Lyra Blaze; Orion Cruz,Arlo Sterling; Sailor Shift,,1,4,2,0,,,0,0,0,0,17048,direct_person_edge,LyricistOf,,True,False,Arlo Sterling; Cassian Rae; Elara May; Lyra Blaze; Orion Cruz; The Brine Choir,6
+17290,Fog & Fiddle,Song,Oceanus Folk,2036,,,True,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,2,0,17290,direct_person_edge,PerformerOf,,True,False,,0
+17291,The Fisherman's Prayer,Song,Oceanus Folk,2036,,,False,True,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17291,direct_person_edge,PerformerOf,,True,False,,0
+17276,Tides & Ballads,Album,Oceanus Folk,2036,2035,,True,,True,Sailor Shift,Coralia Bellweather,Levi Holloway; Sailor Shift,,1,1,2,0,,,0,0,0,0,17276,direct_person_edge,LyricistOf; PerformerOf,,True,False,Coralia Bellweather; Levi Holloway,2
+17121,Ballads for the Low Tide,Album,Oceanus Folk,2037,2036,,True,,True,Selkie's Hollow,Maya Jensen,Lia Grant; Sailor Shift; Zachary Cole,,1,1,3,0,,,0,0,0,0,17121,direct_person_edge,LyricistOf,,True,False,Lia Grant; Maya Jensen; Selkie's Hollow; Zachary Cole,4
+17049,Electric Reverie,Album,Oceanus Folk,2038,2037,,True,,True,The Brine Choir,Cassian Rae; Elara May; Lyra Blaze; Orion Cruz,Arlo Sterling; Sailor Shift,,1,4,2,0,,,0,0,2,0,17049,direct_person_edge,LyricistOf,,True,False,Arlo Sterling; Cassian Rae; Elara May; Lyra Blaze; Orion Cruz; The Brine Choir,6
+17277,Oceanbound,Album,Oceanus Folk,2038,2037,,True,,True,Sailor Shift,Freya Lindholm,Ewan MacCrae; Sailor Shift,,1,1,2,0,,,0,0,2,0,17277,direct_person_edge,LyricistOf; PerformerOf,,True,False,Ewan MacCrae; Freya Lindholm,2
+17292,Stormsong,Song,Oceanus Folk,2038,,,True,True,True,Sailor Shift,,,,1,0,0,0,,,0,0,2,0,17292,direct_person_edge,PerformerOf,,True,False,,0
+17278,Echoes of the Deep,Album,Oceanus Folk,2040,2039,,True,,True,Sailor Shift,Marin Thorne,Jonah Calloway; Sailor Shift,,1,1,2,0,,,0,0,0,0,17278,direct_person_edge,LyricistOf; PerformerOf,,True,False,Jonah Calloway; Marin Thorne,2
+17293,Salt in My Veins,Song,Oceanus Folk,2040,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17293,direct_person_edge,PerformerOf,,True,False,,0
+17294,The Last Mariner,Song,Oceanus Folk,2040,,,False,False,True,Sailor Shift,,,,1,0,0,0,,,0,0,0,0,17294,direct_person_edge,PerformerOf,,True,False,,0
