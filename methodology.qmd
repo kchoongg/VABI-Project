@@ -13,74 +13,110 @@ The raw dataset was provided as part of the [VAST Challenge 2025 Mini-Challenge 
 
 ## Data Wrangling
 
-The graph-structured data (nodes + edges) needed to be **reshaped into flat tables** for Tableau to consume. A Python script (`wrangle.py`) was written using only the standard library (`csv` and `collections` modules) to perform this transformation.
+The graph-structured data (nodes + edges) needed to be **reshaped into flat tables** for Tableau to consume. A Python script (`wrangle.py`) was written using **pandas** to perform this transformation.
 
 **No data was deleted, modified, imputed, or fabricated.** All values in the output tables originate directly from the source files.
 
-### Operations Performed
+### Approach: Normalised Bridge Tables
 
-The wrangling consisted of five standard operations:
+The revised wrangling script adopts a **normalised bridge table architecture** rather than producing a single large flattened table per question. This approach is safer for Tableau because it avoids row duplication caused by many-to-many relationships (e.g. a song with multiple performers and multiple influences would otherwise multiply rows unpredictably).
+
+The pipeline consists of four stages:
+
+**1. Node normalisation** — All node IDs and date fields (`release_date`, `written_date`, `notoriety_date`) are cast to integer types. A `display_name` field is derived from `stage_name` where available, falling back to `name`. Boolean flags (`is_work`, `is_person_or_group`, `is_oceanus_folk`) are added to each node for efficient downstream filtering.
+
+**2. Edge normalisation** — Source and target IDs are cast to integers, and a `key` column is added for multigraph disambiguation.
+
+**3. Edge enrichment** — A single enriched edge table is built by joining node attributes onto both the source and target of every edge (equivalent to two SQL LEFT JOINs). All subsequent tables are derived from this one enriched table, ensuring consistency.
+
+**4. Table construction** — Specialised functions derive each output table from the enriched edge table using aggregation, pivoting, and filtering.
+
+### Operations Performed
 
 | Operation | Description |
 |-----------|-------------|
-| **Filter** | Select rows matching criteria (e.g., genre = "Oceanus Folk", Sailor Shift's edges, influence-type edges) |
-| **Join / Lookup** | Match edge source/target IDs to node attributes like name, genre, and release year — equivalent to a SQL JOIN |
-| **Aggregate / Count** | Count occurrences such as number of songs per artist, influence references per song, and collaborators per work |
-| **Reshape / Flatten** | Convert the graph structure into flat tabular rows (e.g., one row per influence relationship instead of separate node and edge records) |
-| **Derive** | Compute new fields from existing data (e.g., Career_Span = Last_Release − First_Release, Is_Oceanus_Folk flag) |
+| **Filter** | Select rows matching criteria (e.g. genre = "Oceanus Folk", influence-type edges, Sailor Shift's edges) |
+| **Join / Enrich** | Attach node attributes (name, genre, release year) to both ends of every edge in a single enriched table — equivalent to two SQL LEFT JOINs |
+| **Pivot / Unstack** | Reshape role counts (PerformerOf, ComposerOf etc.) from long to wide format for the works master table |
+| **Aggregate** | Count occurrences such as number of performers per work, influence references per song, and collaborators per artist |
+| **Derive** | Compute new fields — `display_name` from stage name, `career_span_years` = last − first release year, `is_oceanus_folk_artist` flag, `draws_from_count` and `influenced_others_count` per work |
+| **Classify** | Assign directional labels to influence edges — `"Sailor -> Other"` vs `"Other -> Sailor"`, and `"OF -> Other"` vs `"Other -> OF"` vs `"OF -> OF"` |
 
 ### Key Entities Identified
 
 Through filtering, the following key entities were identified for analysis:
 
 - **Sailor Shift** (Person, id=17255) — the central figure of the investigation
-- **Sailor Shift's works** — 38 works (17 Songs + 21 Albums) linked via PerformerOf, ComposerOf, LyricistOf, and ProducerOf edges
-- **Ivy Echos** (MusicalGroup, id=17260) — Sailor Shift's band, found via MemberOf edge
+- **Sailor Shift's works** — 46 works linked to Sailor Shift either **directly** (via her own PerformerOf, ComposerOf, or LyricistOf edges) or **indirectly** (via her group memberships — e.g. Ivy Echos — through MemberOf edges). The v1 script captured only 38 works by missing group membership involvement; the revised script correctly captures all 46.
+- **Ivy Echos** (MusicalGroup) — Sailor Shift's primary band, found via a MemberOf edge from Sailor Shift's node
 - **Oceanus Folk catalogue** — 305 works filtered by genre = "Oceanus Folk"
 
 ## Output Tables
 
-The wrangling produced **6 Tableau-ready CSV files**, each designed to answer specific questions from the VAST Challenge task:
+The wrangling produces **9 Tableau-ready CSV files** across two tiers: four normalised base tables that can be joined in Tableau's data source editor, and five pre-aggregated summary tables ready to use directly in worksheets.
 
-### Table 1: `sailor_shift_career.csv` (38 rows)
+### Base Tables (join in Tableau)
 
-Sailor Shift's full discography with release year, genre, collaborators, record label, and what influenced each work. Supports the **career profile timeline** visualisation.
+#### `works_master.csv` (4,611 rows × 24 columns)
 
-**Columns:** Song, Type, Genre, Release_Year, Notable, Single, Record_Label, Performers, Composers, Lyricists, Num_Collaborators, Influenced_By, Num_Influences
+A single flat record for every Song and Album in the dataset. Contributor names (performers, composers, lyricists, producers) and label names are aggregated into semicolon-delimited strings per work, with separate numeric count columns for filtering. Influence counts (`draws_from_count`, `influenced_others_count`) are pre-joined from the influence bridge.
 
-### Table 2: `sailor_shift_influences.csv` (33 rows)
+**Key columns:** `id`, `work_name`, `work_type`, `genre`, `release_year`, `written_year`, `notoriety_year`, `notable`, `single`, `is_oceanus_folk`, `performers`, `composers`, `lyricists`, `producers`, `num_performers`, `num_composers`, `num_lyricists`, `num_producers`, `recorded_by_labels`, `distributed_by_labels`, `draws_from_count`, `influenced_others_count`
 
-All influence relationships to and from Sailor Shift — who influenced her (26 edges) and who she influenced (7 edges). Answers: *"Who has she been most influenced by over time?"*
+#### `contributors_bridge.csv` (29,882 rows × 11 columns)
 
-**Columns:** Direction, Influence_Type, Sailor_Song, Sailor_Song_Year, Other_Song, Other_Song_Genre, Other_Song_Year, Other_Artist
+One row per contributor–work relationship, covering all PerformerOf, ComposerOf, LyricistOf, ProducerOf, RecordedBy, and DistributedBy edges. A `role_group` column distinguishes creative contributors from label relationships. This table is the primary source for questions about who made what.
 
-### Table 3: `sailor_shift_collaborators.csv` (77 rows)
+**Key columns:** `edge_type`, `role_group`, `source_id`, `source_display_name`, `source_type`, `work_id`, `work_name`, `work_genre`, `work_release_year`
 
-Every collaborator on Sailor Shift's works with their role. Answers: *"Who has she collaborated with?"*
+#### `influence_bridge.csv` (7,407 rows × 13 columns)
 
-**Columns:** Song, Release_Year, Genre, Collaborator, Role
+One row per influence relationship across the entire dataset, covering all five influence edge types (InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples, LyricalReferenceTo). Both source and target node attributes are fully resolved, making this the primary source for genre-to-genre influence flow analysis.
 
-### Table 4: `oceanus_folk_spread.csv` (601 rows)
+**Key columns:** `influence_type`, `source_id`, `source_display_name`, `source_genre`, `source_year`, `target_id`, `target_display_name`, `target_genre`, `target_year`
 
-All influence flows in and out of the Oceanus Folk genre. Tracks how the genre's influence spread over time and which genres were most affected. Answers: *"How has the influence of Oceanus Folk spread through the musical world?"*
+#### `memberof_bridge.csv` (568 rows × 8 columns)
 
-**Columns:** Direction, Influence_Type, OF_Song, OF_Song_Year, OF_Artist, Other_Song, Other_Genre, Other_Year, Other_Artist
+One row per person–group membership, with both person and group attributes fully resolved. Used to trace which artists belong to which musical groups.
 
-### Table 5: `oceanus_folk_timeline.csv` (305 rows)
+**Key columns:** `person_id`, `person_display_name`, `person_type`, `group_id`, `group_display_name`, `group_type`
 
-All Oceanus Folk songs with metadata for building the genre's growth timeline. Flags Sailor Shift's contributions.
+### Summary Tables (use directly in Tableau)
 
-**Columns:** Song, Release_Year, Notable, Single, Artist, Record_Label, Draws_From_Count, Influenced_Others_Count, Is_Sailor_Shift
+#### `sailor_shift_career_v2.csv` (46 rows × 32 columns)
 
-### Table 6: `artist_careers.csv` (872 rows)
+Sailor Shift's full discography — a superset of the works master filtered to her works, with additional columns describing her specific involvement. Crucially, this table distinguishes between works where she contributed **directly** (her own edges) and works where she was involved **via group membership** (e.g. through Ivy Echos). This resolves an undercounting issue in the previous version of the script, which missed 8 group-membership works.
 
-Career profiles for all artists/groups with 3+ songs. Includes song count, genre, career span, influence score, and collaborator count. Supports **rising star comparison** and **prediction** tasks.
+**Additional columns over works_master:** `sailor_involvement_modes` (direct_person_edge / via_group_membership), `sailor_roles` (PerformerOf / LyricistOf etc.), `sailor_linked_groups` (e.g. Ivy Echos), `is_direct_person_work`, `is_group_membership_work`, `collaborators`, `num_distinct_collaborators`
 
-**Columns:** Artist, Node_Type, Num_Songs, Primary_Genre, All_Genres, First_Release, Last_Release, Career_Span, Notable_Songs, Influence_Score, Num_Collaborators, Is_Oceanus_Folk
+#### `sailor_shift_influences_v2.csv` (40 rows × 14 columns)
+
+All influence edges involving Sailor Shift or her works, with a `direction` column classifying each edge as `"Sailor -> Other"` (32 edges — she influenced others) or `"Other -> Sailor"` (8 edges — others influenced her). Both source and target node attributes are fully resolved, supporting timeline and genre breakdown visualisations.
+
+**Key columns:** `direction`, `influence_type`, `source_display_name`, `source_genre`, `source_year`, `target_display_name`, `target_genre`, `target_year`
+
+#### `oceanus_folk_spread_v2.csv` (601 rows × 15 columns)
+
+All influence edges touching at least one Oceanus Folk work, with a `direction` column classifying each edge as `OF -> Other`, `Other -> OF`, or `OF -> OF`. An `other_genre` column isolates the non-Oceanus-Folk genre in each cross-genre influence, simplifying Tableau calculations.
+
+**Key columns:** `direction`, `influence_type`, `source_display_name`, `source_genre`, `source_year`, `target_display_name`, `target_genre`, `target_year`, `other_genre`
+
+#### `oceanus_folk_year_summary.csv` (40 rows × 5 columns)
+
+A year-level summary of the Oceanus Folk genre, designed for timeline visualisations. Each row represents one release year and contains the count of OF works released, notable OF works, outgoing influence edges (OF influencing other genres), and incoming influence edges (other genres influencing OF).
+
+**Key columns:** `year`, `of_works_released`, `of_notable_works`, `of_to_other_influence_edges`, `other_to_of_influence_edges`
+
+#### `artist_careers_v2.csv` (1,370 rows × 16 columns)
+
+Career profiles for all artists and musical groups with 3 or more performed or contributed works. Includes performance counts, genre breadth, career span, notable work count, and an influence reception score (`performed_work_influence_received`) measuring how often their works were referenced by others. Filtered to artists with meaningful careers to avoid noise from one-off contributors.
+
+**Key columns:** `artist_id`, `artist_display_name`, `artist_type`, `stage_name`, `num_performed_works`, `num_all_contributed_works`, `all_role_types`, `primary_genre`, `all_performance_genres`, `first_performance_year`, `last_performance_year`, `career_span_years`, `num_notable_performed_works`, `performed_work_influence_received`, `is_oceanus_folk_artist`
 
 ## Tools Used
 
 | Tool | Purpose |
 |------|---------|
-| **Python 3** (standard library only) | Data wrangling — reshaping graph data into flat tables |
+| **Python 3** with **pandas** | Data wrangling — reshaping graph data into normalised flat tables |
+| **Tableau** | Visual analytics — building interactive charts and dashboards |
 | **Gephi** | Network exploration — discovering patterns, communities, and key entities |
