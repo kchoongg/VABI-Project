@@ -1,0 +1,110 @@
+influence_type,influenced_entity,influenced_entity_genre,ss_work_or_reference,reference_genre,reference_year,influence_degree,via
+CoverOf,Melancholy Circuitry,Americana,Twilight's Threshold,Synthwave,2007,Direct,Sailor Shift
+InStyleOf,Barnacle Heart,Oceanus Folk,Our Inevitable Path,Indie Folk,2017,Direct,Sailor Shift
+InStyleOf,Coral Beats,Oceanus Folk,Sacred Fragments,Synthwave,2003,Direct,Sailor Shift
+CoverOf,Coral Beats,Oceanus Folk,Harvest Dance at Ler Valley,Psychedelic Rock,2010,Direct,Sailor Shift
+InStyleOf,Driftwood Lullaby,Oceanus Folk,Echoes of Forgotten Light,Alternative Rock,2004,Direct,Sailor Shift
+CoverOf,Electric Eel Love,Oceanus Folk,The Crown We Wear,Indie Rock,2022,Direct,Sailor Shift
+InStyleOf,Electric Eel Love,Oceanus Folk,Twelve Bells of Augsburg,Psychedelic Rock,2026,Direct,Sailor Shift
+InterpolatesFrom,Electric Reverie,Oceanus Folk,Reflejo Interior,Americana,1983,Direct,Sailor Shift
+InStyleOf,Electric Reverie,Oceanus Folk,Folklore's Heartbeat,Blues Rock,2020,Direct,Sailor Shift
+InStyleOf,Fog & Fiddle,Oceanus Folk,Provence Aria,Indie Rock,2023,Direct,Sailor Shift
+InterpolatesFrom,Fog & Fiddle,Oceanus Folk,Coastal Whispers of Biscay,Alternative Rock,2031,Direct,Sailor Shift
+InterpolatesFrom,High Tide Heartbeat,Oceanus Folk,Addicted to Your Heartache,Southern Gothic Rock,2004,Direct,Sailor Shift
+InterpolatesFrom,Moon Over the Tide,Oceanus Folk,Divergent Memories,Indie Folk,2017,Direct,Sailor Shift
+LyricalReferenceTo,Moon Over the Tide,Oceanus Folk,Silent Steps in the Forest's Embrace,Avant-Garde Folk,2023,Direct,Sailor Shift
+LyricalReferenceTo,Oceanbound,Oceanus Folk,Bold Without Apology,Indie Rock,2010,Direct,Sailor Shift
+LyricalReferenceTo,Oceanbound,Oceanus Folk,Altitude of Mistakes,Americana,2015,Direct,Sailor Shift
+InterpolatesFrom,Salt-Kissed Rhymes,Oceanus Folk,Caught in the Cricket Crease,Lo-Fi Electronica,2014,Direct,Sailor Shift
+InStyleOf,Salt-Kissed Rhymes,Oceanus Folk,The Void Inside,Dream Pop,2017,Direct,Sailor Shift
+InStyleOf,Saltwater Hymn,Oceanus Folk,Parallel Memories,Dream Pop,2028,Direct,Sailor Shift
+InStyleOf,Salty Dreams,Oceanus Folk,Susurros de Pasión,Synthwave,2004,Direct,Sailor Shift
+CoverOf,Salty Dreams,Oceanus Folk,Partisan's Lament,Indie Pop,2030,Direct,Sailor Shift
+InStyleOf,Stormsong,Oceanus Folk,When the Bar Lights Go Up,Emo/Pop Punk,2000,Direct,Sailor Shift
+DirectlySamples,Stormsong,Oceanus Folk,Exoskeleton Dissolve,Indie Rock,2020,Direct,Sailor Shift
+DirectlySamples,The Kelp Forest Canticles,Oceanus Folk,Hallowed Transaction,Doom Metal,2017,Direct,Sailor Shift
+CoverOf,The Kelp Forest Canticles,Oceanus Folk,Für uns alle zusammen,Alternative Rock,2017,Direct,Sailor Shift
+InterpolatesFrom,Tides of Echos,Oceanus Folk,Weathered Miles,Doom Metal,2023,Direct,Sailor Shift
+InStyleOf,Tides of Echos,Oceanus Folk,The Long Way Home,Dream Pop,2023,Direct,Sailor Shift
+CoverOf,Tidesworn Ballads,Oceanus Folk,Dreamscape of Judgment,Symphonic Metal,2023,Direct,Sailor Shift
+DirectlySamples,Sailor Shift,,Ivy Echos,,,Direct,Sailor Shift
+InStyleOf,Sailor Shift,,The Saltwater Weavers,,,Direct,Sailor Shift
+LyricalReferenceTo,Sailor Shift,,Drowned Harbor,,,Direct,Sailor Shift
+InStyleOf,Sailor Shift,,The Fiddle & The Fjord,,,Direct,Sailor Shift
+LyricalReferenceTo,Daddy's Little Ghost,Alternative Rock,Provence Aria,Indie Rock,2023,Indirect,Provence Aria
+InterpolatesFrom,One More Roll,Americana,Reflejo Interior,Americana,1983,Indirect,Reflejo Interior
+InStyleOf,Passport to Passion,Americana,Reflejo Interior,Americana,1983,Indirect,Reflejo Interior
+CoverOf,Whispers of the Danish Countryside,Americana,Reflejo Interior,Americana,1983,Indirect,Reflejo Interior
+CoverOf,Whispers of Your Memory,Avant-Garde Folk,Addicted to Your Heartache,Southern Gothic Rock,2004,Indirect,Addicted to Your Heartache
+InStyleOf,When Wonder Breaks,Blues Rock,The Crown We Wear,Indie Rock,2022,Indirect,The Crown We Wear
+LyricalReferenceTo,First Light of Reverence,Dream Pop,Altitude of Mistakes,Americana,2015,Indirect,Altitude of Mistakes
+CoverOf,Microscopic Beginnings,Dream Pop,Provence Aria,Indie Rock,2023,Indirect,Provence Aria
+InterpolatesFrom,Poison in Veins,Dream Pop,Sacred Fragments,Synthwave,2003,Indirect,Sacred Fragments
+InStyleOf,Tender Expectations,Dream Pop,Sacred Fragments,Synthwave,2003,Indirect,Sacred Fragments
+InStyleOf,Celestial Tears,Indie Folk,Für uns alle zusammen,Alternative Rock,2017,Indirect,Für uns alle zusammen
+InStyleOf,Divine Compassion's Embrace,Indie Folk,Reflejo Interior,Americana,1983,Indirect,Reflejo Interior
+LyricalReferenceTo,Celestial Whispers,Indie Rock,Bold Without Apology,Indie Rock,2010,Indirect,Bold Without Apology
+InStyleOf,Dressed to the Nines,Indie Rock,Bold Without Apology,Indie Rock,2010,Indirect,Bold Without Apology
+LyricalReferenceTo,Heartbeat Hurdles,Indie Rock,The Crown We Wear,Indie Rock,2022,Indirect,The Crown We Wear
+InterpolatesFrom,Sacred Resonance,Indie Rock,Bold Without Apology,Indie Rock,2010,Indirect,Bold Without Apology
+DirectlySamples,Sovereign Echoes,Indie Rock,Provence Aria,Indie Rock,2023,Indirect,Provence Aria
+InStyleOf,Tea and Rebellion,Indie Rock,Bold Without Apology,Indie Rock,2010,Indirect,Bold Without Apology
+LyricalReferenceTo,Whispers from the Northern Town,Indie Rock,Bold Without Apology,Indie Rock,2010,Indirect,Bold Without Apology
+LyricalReferenceTo,Alleys and Ambition,Jazz Surf Rock,Twilight's Threshold,Synthwave,2007,Indirect,Twilight's Threshold
+InStyleOf,Byte by Byte,Jazz Surf Rock,Twilight's Threshold,Synthwave,2007,Indirect,Twilight's Threshold
+InterpolatesFrom,Lumières de la Ville,Jazz Surf Rock,Twilight's Threshold,Synthwave,2007,Indirect,Twilight's Threshold
+LyricalReferenceTo,Metamorphosis Protocol,Jazz Surf Rock,Twilight's Threshold,Synthwave,2007,Indirect,Twilight's Threshold
+InStyleOf,Rhythm of the Heated Skies,Lo-Fi Electronica,Caught in the Cricket Crease,Lo-Fi Electronica,2014,Indirect,Caught in the Cricket Crease
+InStyleOf,Vacancy of Memories,Lo-Fi Electronica,Caught in the Cricket Crease,Lo-Fi Electronica,2014,Indirect,Caught in the Cricket Crease
+InStyleOf,Chapters Untold,Southern Gothic Rock,Addicted to Your Heartache,Southern Gothic Rock,2004,Indirect,Addicted to Your Heartache
+InStyleOf,Echoes of a Universal Tongue,Southern Gothic Rock,Addicted to Your Heartache,Southern Gothic Rock,2004,Indirect,Addicted to Your Heartache
+InStyleOf,Masked Shadows,Southern Gothic Rock,When the Bar Lights Go Up,Emo/Pop Punk,2000,Indirect,When the Bar Lights Go Up
+LyricalReferenceTo,Seaside Promise,Southern Gothic Rock,Addicted to Your Heartache,Southern Gothic Rock,2004,Indirect,Addicted to Your Heartache
+CoverOf,Silent Confessions,Southern Gothic Rock,Echoes of Forgotten Light,Alternative Rock,2004,Indirect,Echoes of Forgotten Light
+CoverOf,Sunlight and Vows,Southern Gothic Rock,Addicted to Your Heartache,Southern Gothic Rock,2004,Indirect,Addicted to Your Heartache
+InterpolatesFrom,The Interest Rises,Southern Gothic Rock,Echoes of Forgotten Light,Alternative Rock,2004,Indirect,Echoes of Forgotten Light
+CoverOf,Unpack My Heart,Southern Gothic Rock,Addicted to Your Heartache,Southern Gothic Rock,2004,Indirect,Addicted to Your Heartache
+InStyleOf,Approaching Silhouettes,Space Rock,Dreamscape of Judgment,Symphonic Metal,2023,Indirect,Dreamscape of Judgment
+InStyleOf,Thundering Percussion,Space Rock,Provence Aria,Indie Rock,2023,Indirect,Provence Aria
+InStyleOf,Bamboo Whispers,Synthwave,Sacred Fragments,Synthwave,2003,Indirect,Sacred Fragments
+DirectlySamples,Definitions of Together,Synthwave,Exoskeleton Dissolve,Indie Rock,2020,Indirect,Exoskeleton Dissolve
+CoverOf,Slow Burn Desire,Synthwave,Sacred Fragments,Synthwave,2003,Indirect,Sacred Fragments
+InStyleOf,Bea Azure,,Ivy Echos,,,Indirect,Ivy Echos
+LyricalReferenceTo,Bea Azure,,Drowned Harbor,,,Indirect,Drowned Harbor
+LyricalReferenceTo,Cassette Future,,Ivy Echos,,,Indirect,Ivy Echos
+InStyleOf,Copper Canyon Ghosts,,Ivy Echos,,,Indirect,Ivy Echos
+InStyleOf,Cosmic Reverberation,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InStyleOf,Crimson Carriage,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+LyricalReferenceTo,Crimson Carriage,,Ivy Echos,,,Indirect,Ivy Echos
+InStyleOf,Desert Echoes,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InStyleOf,Horizon Fable,,Drowned Harbor,,,Indirect,Drowned Harbor
+LyricalReferenceTo,Horizon Fable,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+LyricalReferenceTo,Iron Cathedral,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InterpolatesFrom,Ivy Lux,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InStyleOf,Jasper Quinn,,Ivy Echos,,,Indirect,Ivy Echos
+InterpolatesFrom,Jaye Finch,,Drowned Harbor,,,Indirect,Drowned Harbor
+InStyleOf,Jude Rivers,,Ivy Echos,,,Indirect,Ivy Echos
+InStyleOf,Lux Ravenna,,Ivy Echos,,,Indirect,Ivy Echos
+InterpolatesFrom,Mariner's Refrain,,Ivy Echos,,,Indirect,Ivy Echos
+LyricalReferenceTo,Mariner's Refrain,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InStyleOf,Orla Seabloom,,The Fiddle & The Fjord,,,Indirect,The Fiddle & The Fjord
+LyricalReferenceTo,Orla Seabloom,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InterpolatesFrom,Rainfall Fiction,,Drowned Harbor,,,Indirect,Drowned Harbor
+LyricalReferenceTo,Rainfall Fiction,,Ivy Echos,,,Indirect,Ivy Echos
+InterpolatesFrom,River Vale,,The Fiddle & The Fjord,,,Indirect,The Fiddle & The Fjord
+LyricalReferenceTo,River Vale,,Drowned Harbor,,,Indirect,Drowned Harbor
+InterpolatesFrom,Rust & Reverie,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+LyricalReferenceTo,Selkie's Hollow,,Ivy Echos,,,Indirect,Ivy Echos
+InStyleOf,Sienna Fox,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InterpolatesFrom,Silver Veil,,Drowned Harbor,,,Indirect,Drowned Harbor
+DirectlySamples,Siren's Call,,Drowned Harbor,,,Indirect,Drowned Harbor
+InterpolatesFrom,Sylas Dune,,Drowned Harbor,,,Indirect,Drowned Harbor
+DirectlySamples,The Brine Choir,,Drowned Harbor,,,Indirect,Drowned Harbor
+InterpolatesFrom,The Hollow Monarchs,,Ivy Echos,,,Indirect,Ivy Echos
+InStyleOf,The Lunar Tides,,Drowned Harbor,,,Indirect,Drowned Harbor
+InStyleOf,The Phantom Operators,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InterpolatesFrom,The Wave Riders,,Drowned Harbor,,,Indirect,Drowned Harbor
+CoverOf,Tidal Reverie,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InterpolatesFrom,Turbo Kill,,Drowned Harbor,,,Indirect,Drowned Harbor
+LyricalReferenceTo,Turbo Kill,,The Saltwater Weavers,,,Indirect,The Saltwater Weavers
+InStyleOf,Violet Engines,,Ivy Echos,,,Indirect,Ivy Echos
