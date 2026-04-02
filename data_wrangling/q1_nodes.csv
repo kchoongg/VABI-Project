@@ -1,0 +1,70 @@
+Node Type,Label,single,release_date,genre,notable,Id,written_date,stage_name,notoriety_date,year
+Song,Bold Without Apology,False,2010.0,Indie Rock,True,876,,,,2010.0
+Album,Hallowed Transaction,,2017.0,Doom Metal,True,2197,,,,2017.0
+Song,Susurros de Pasión,True,2004.0,Synthwave,True,3881,,,2004.0,2004.0
+Song,Altitude of Mistakes,True,2015.0,Americana,True,3986,,,2015.0,2015.0
+Song,Our Inevitable Path,True,2017.0,Indie Folk,True,5574,2017.0,,,2017.0
+Song,When the Bar Lights Go Up,False,2000.0,Emo/Pop Punk,True,6592,,,,2000.0
+Song,Reflejo Interior,False,1983.0,Americana,True,7026,1983.0,,,1983.0
+Song,Echoes of Forgotten Light,True,2004.0,Alternative Rock,True,8207,,,,2004.0
+Song,Für uns alle zusammen,True,2017.0,Alternative Rock,True,9223,2017.0,,,2017.0
+Song,Partisan's Lament,True,2030.0,Indie Pop,True,9848,,,,2030.0
+Song,Dreamscape of Judgment,True,2023.0,Symphonic Metal,True,10016,,,,2023.0
+Song,Twelve Bells of Augsburg,True,2026.0,Psychedelic Rock,True,10534,,,,2026.0
+Song,Parallel Memories,False,2028.0,Dream Pop,True,10903,,,,2028.0
+Song,Divergent Memories,True,2017.0,Indie Folk,True,11254,,,2017.0,2017.0
+Song,Provence Aria,True,2023.0,Indie Rock,True,12237,,,,2023.0
+Song,Coastal Whispers of Biscay,True,2031.0,Alternative Rock,True,12685,,,,2031.0
+Song,Exoskeleton Dissolve,True,2020.0,Indie Rock,True,13014,,,2020.0,2020.0
+Song,Silent Steps in the Forest's Embrace,True,2023.0,Avant-Garde Folk,True,13589,2023.0,,2023.0,2023.0
+Song,Folklore's Heartbeat,True,2020.0,Blues Rock,True,14107,,,2033.0,2020.0
+Album,The Long Way Home,,2023.0,Dream Pop,True,14296,,,,2023.0
+Song,Weathered Miles,True,2023.0,Doom Metal,True,14352,,,,2023.0
+Album,Addicted to Your Heartache,,2004.0,Southern Gothic Rock,True,14658,2000.0,,,2004.0
+Song,Twilight's Threshold,True,2007.0,Synthwave,True,14893,2007.0,,2007.0,2007.0
+Song,The Crown We Wear,True,2022.0,Indie Rock,True,14933,,,,2022.0
+Song,Sacred Fragments,True,2003.0,Synthwave,True,15855,,,2003.0,2003.0
+Song,Harvest Dance at Ler Valley,True,2010.0,Psychedelic Rock,True,16312,,,,2010.0
+Album,Neon Heartbeat,,2031.0,Synthwave,False,16961,2030.0,,,2031.0
+Album,Ballads for the End of Time,,2033.0,Oceanus Folk,True,16989,2032.0,,,2033.0
+Album,Melancholy Circuitry,,2033.0,Americana,True,16999,2032.0,,,2033.0
+Album,Drifting Between the Stars and the Sea,,2034.0,Oceanus Folk,True,17047,2033.0,,,2034.0
+Album,Artificial Sunsets,,2035.0,Oceanus Folk,True,17048,2034.0,,,2035.0
+Album,Electric Reverie,,2038.0,Oceanus Folk,True,17049,2037.0,,,2038.0
+Album,Ballads for the Low Tide,,2037.0,Oceanus Folk,True,17121,2036.0,,,2037.0
+MusicalGroup,The Fiddle & The Fjord,,,,,17192,,,,
+Album,Tides of Echos,,2029.0,Oceanus Folk,True,17231,2028.0,,,2029.0
+Album,Hidden Depths,,2031.0,Oceanus Folk,True,17252,2030.0,,,2031.0
+Person,Sailor Shift,,,,,17255,,,,
+MusicalGroup,Ivy Echos,,,,,17260,,,,
+Album,The Kelp Forest Canticles,,2024.0,Oceanus Folk,True,17261,2023.0,,,2024.0
+Album,Luminescent Tides,,2025.0,Oceanus Folk,True,17262,2024.0,,,2025.0
+Album,Shoreline Sonnets,,2026.0,Oceanus Folk,True,17263,2025.0,,,2026.0
+Album,Tidal Pop Waves,,2028.0,Oceanus Folk,True,17272,2027.0,,,2028.0
+Album,Salty Dreams,,2030.0,Oceanus Folk,True,17273,2029.0,,,2030.0
+Album,The Current & The Chord,,2032.0,Oceanus Folk,True,17274,2031.0,,,2032.0
+Album,Coral Beats,,2034.0,Oceanus Folk,True,17275,2033.0,,,2034.0
+Album,Tides & Ballads,,2036.0,Oceanus Folk,True,17276,2035.0,,,2036.0
+Album,Oceanbound,,2038.0,Oceanus Folk,True,17277,2037.0,,,2038.0
+Album,Echoes of the Deep,,2040.0,Oceanus Folk,True,17278,2039.0,,,2040.0
+Song,High Tide Heartbeat,True,2028.0,Oceanus Folk,False,17279,,,,2028.0
+Song,Electric Eel Love,False,2028.0,Oceanus Folk,True,17280,,,,2028.0
+Song,Sun-Drenched Daydream,False,2028.0,Oceanus Folk,False,17281,,,,2028.0
+Song,Chord of the Deep,False,2028.0,Oceanus Folk,False,17282,,,,2028.0
+Song,Heart of the Habitat,True,2030.0,Oceanus Folk,False,17283,,,,2030.0
+Song,Reef Rhythm,False,2030.0,Oceanus Folk,False,17284,,,,2030.0
+Song,Driftwood Lullaby,False,2030.0,Oceanus Folk,False,17285,,,,2030.0
+Song,Saltwater Hymn,False,2032.0,Oceanus Folk,False,17286,,,,2032.0
+Song,Moon Over the Tide,False,2034.0,Oceanus Folk,True,17287,,,,2034.0
+Song,Into the Current,True,2034.0,Oceanus Folk,False,17288,,,,2034.0
+Song,Barnacle Heart,False,2034.0,Oceanus Folk,False,17289,,,,2034.0
+Song,Fog & Fiddle,False,2036.0,Oceanus Folk,True,17290,,,,2036.0
+Song,The Fisherman's Prayer,True,2036.0,Oceanus Folk,False,17291,,,,2036.0
+Song,Stormsong,True,2038.0,Oceanus Folk,True,17292,,,,2038.0
+Song,Salt in My Veins,False,2040.0,Oceanus Folk,False,17293,,,,2040.0
+Song,The Last Mariner,False,2040.0,Oceanus Folk,False,17294,,,,2040.0
+MusicalGroup,The Saltwater Weavers,,,,,17299,,,,
+MusicalGroup,Drowned Harbor,,,,,17327,,,,
+Album,Tidesworn Ballads,,2031.0,Oceanus Folk,True,17350,2030.0,,,2031.0
+Album,Submerged Sonatas,,2031.0,Oceanus Folk,True,17356,2030.0,,,2031.0
+Song,Seashell Serenade,True,2030.0,Oceanus Folk,True,17410,,,2030.0,2030.0

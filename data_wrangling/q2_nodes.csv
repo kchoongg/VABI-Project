@@ -1,0 +1,88 @@
+Node Type,Label,single,release_date,genre,notable,Id,written_date,stage_name,notoriety_date,year
+Person,Zane Cruz,,,,,16958,,,,
+Person,Iris Moon,,,,,16959,,,,
+MusicalGroup,Violet Engines,,,,,16960,,,,
+Album,Neon Heartbeat,,2031.0,Synthwave,False,16961,2030.0,,,2031.0
+Person,Sophie Bennett,,,,,16983,,Luna Vibe,,
+Person,Michael Harris,,,,,16984,,Axel Blaze,,
+Person,Kara Lee,,,,,16985,,Jade Sky,,
+Person,Ethan Clarke,,,,,16986,,Maverick Storm,,
+MusicalGroup,Tidal Reverie,,,,,16987,,,,
+Album,Ballads for the End of Time,,2033.0,Oceanus Folk,True,16989,2032.0,,,2033.0
+Person,Olivia Carter,,,,,16993,,Echo Wilde,,
+Person,Lucas Bennett,,,,,16994,,,,
+Person,Maya Torres,,,,,16995,,Selene Noir,,
+MusicalGroup,Crimson Carriage,,,,,16996,,,,
+Album,Melancholy Circuitry,,2033.0,Americana,True,16999,2032.0,,,2033.0
+Person,Arlo Sterling,,,,,17041,,,,
+Person,Lyra Blaze,,,,,17042,,,,
+Person,Orion Cruz,,,,,17043,,,,
+Person,Elara May,,,,,17044,,,,
+Person,Cassian Rae,,,,,17045,,,,
+MusicalGroup,The Brine Choir,,,,,17046,,,,
+Album,Drifting Between the Stars and the Sea,,2034.0,Oceanus Folk,True,17047,2033.0,,,2034.0
+Album,Artificial Sunsets,,2035.0,Oceanus Folk,True,17048,2034.0,,,2035.0
+Album,Electric Reverie,,2038.0,Oceanus Folk,True,17049,2037.0,,,2038.0
+Person,Zachary Cole,,,,,17118,,,,
+Person,Lia Grant,,,,,17119,,,,
+MusicalGroup,Selkie's Hollow,,,,,17120,,,,
+Album,Ballads for the Low Tide,,2037.0,Oceanus Folk,True,17121,2036.0,,,2037.0
+Person,Rusty Riggins,,,,,17164,,,,
+Person,Finn McGraw,,,,,17165,,,,
+Person,William Tidewell,,,,,17166,,,,
+Person,Ewan MacCrae,,,,,17189,,,,
+Person,Astrid Nørgaard,,,,,17190,,,,
+Person,Freya Lindholm,,,,,17191,,,,
+Person,Liam O'Sullivan,,,,,17205,,,,
+Person,Fiona Mercer,,,,,17206,,,,
+Person,Kai Reynolds,,,,,17226,,,,
+Person,Aiden Harper,,,,,17227,,,,
+Person,Finn Morgan,,,,,17228,,,,
+Person,Skylar Brooks,,,,,17229,,,,
+MusicalGroup,The Wave Riders,,,,,17230,,,,
+Album,Tides of Echos,,2029.0,Oceanus Folk,True,17231,2028.0,,,2029.0
+Person,Mia Waters,,,,,17248,,,,
+Person,Lila Rivers,,,,,17249,,,,
+MusicalGroup,Siren's Call,,,,,17250,,,,
+Album,Hidden Depths,,2031.0,Oceanus Folk,True,17252,2030.0,,,2031.0
+Person,Sailor Shift,,,,,17255,,,,
+Person,Maya Jensen,,,,,17256,,,,
+Person,"Lila ""Lilly"" Hartman",,,,,17257,,,,
+Person,Jade Thompson,,,,,17258,,,,
+Person,Sophie Ramirez,,,,,17259,,,,
+MusicalGroup,Ivy Echos,,,,,17260,,,,
+Album,The Kelp Forest Canticles,,2024.0,Oceanus Folk,True,17261,2023.0,,,2024.0
+Album,Luminescent Tides,,2025.0,Oceanus Folk,True,17262,2024.0,,,2025.0
+Album,Shoreline Sonnets,,2026.0,Oceanus Folk,True,17263,2025.0,,,2026.0
+Album,Tidal Pop Waves,,2028.0,Oceanus Folk,True,17272,2027.0,,,2028.0
+Album,Salty Dreams,,2030.0,Oceanus Folk,True,17273,2029.0,,,2030.0
+Album,The Current & The Chord,,2032.0,Oceanus Folk,True,17274,2031.0,,,2032.0
+Album,Coral Beats,,2034.0,Oceanus Folk,True,17275,2033.0,,,2034.0
+Album,Tides & Ballads,,2036.0,Oceanus Folk,True,17276,2035.0,,,2036.0
+Album,Oceanbound,,2038.0,Oceanus Folk,True,17277,2037.0,,,2038.0
+Album,Echoes of the Deep,,2040.0,Oceanus Folk,True,17278,2039.0,,,2040.0
+Song,High Tide Heartbeat,True,2028.0,Oceanus Folk,False,17279,,,,2028.0
+Song,Electric Eel Love,False,2028.0,Oceanus Folk,True,17280,,,,2028.0
+Song,Sun-Drenched Daydream,False,2028.0,Oceanus Folk,False,17281,,,,2028.0
+Song,Chord of the Deep,False,2028.0,Oceanus Folk,False,17282,,,,2028.0
+Song,Heart of the Habitat,True,2030.0,Oceanus Folk,False,17283,,,,2030.0
+Song,Reef Rhythm,False,2030.0,Oceanus Folk,False,17284,,,,2030.0
+Song,Driftwood Lullaby,False,2030.0,Oceanus Folk,False,17285,,,,2030.0
+Song,Saltwater Hymn,False,2032.0,Oceanus Folk,False,17286,,,,2032.0
+Song,Moon Over the Tide,False,2034.0,Oceanus Folk,True,17287,,,,2034.0
+Song,Into the Current,True,2034.0,Oceanus Folk,False,17288,,,,2034.0
+Song,Barnacle Heart,False,2034.0,Oceanus Folk,False,17289,,,,2034.0
+Song,Fog & Fiddle,False,2036.0,Oceanus Folk,True,17290,,,,2036.0
+Song,The Fisherman's Prayer,True,2036.0,Oceanus Folk,False,17291,,,,2036.0
+Song,Stormsong,True,2038.0,Oceanus Folk,True,17292,,,,2038.0
+Song,Salt in My Veins,False,2040.0,Oceanus Folk,False,17293,,,,2040.0
+Song,The Last Mariner,False,2040.0,Oceanus Folk,False,17294,,,,2040.0
+Person,Coralia Bellweather,,,,,17296,,,,
+Person,Levi Holloway,,,,,17309,,,,
+Person,Marin Thorne,,,,,17310,,,,
+Person,Jonah Calloway,,,,,17311,,,,
+Person,Beatrice Albright,,,,,17349,,Bea Azure,,
+Album,Tidesworn Ballads,,2031.0,Oceanus Folk,True,17350,2030.0,,,2031.0
+Person,Daniel O'Connell,,,,,17355,,Kael Storm,,
+Album,Submerged Sonatas,,2031.0,Oceanus Folk,True,17356,2030.0,,,2031.0
+Song,Seashell Serenade,True,2030.0,Oceanus Folk,True,17410,,,2030.0,2030.0
