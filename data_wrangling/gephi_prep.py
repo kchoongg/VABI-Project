@@ -8,9 +8,9 @@ Usage:
     python gephi_prep.py
 
 Output files:
-    q1_nodes.csv / q1_edges.csv  — Influences ON Sailor Shift (over time)
-    q2_nodes.csv / q2_edges.csv  — Collaborators & people she influenced
-    q3_nodes.csv / q3_edges.csv  — Her influence on Oceanus Folk community
+    q1a_*_nodes.csv / q1a_*_edges.csv  — Influences ON Sailor Shift (over time)
+    q1b_artists_nodes.csv / q1b_artists_edges.csv  — Collaborators & people she influenced
+    q1c_artists_nodes.csv / q1c_artists_edges.csv  — Her influence on Oceanus Folk community
 """
 
 import pandas as pd
@@ -50,7 +50,7 @@ edges_g = edges.rename(columns={
 # Add a "year" column for Gephi's Timeline feature (uses release_date on songs)
 nodes_g["year"] = nodes_g["release_date"].fillna(nodes_g["written_date"])
 
-# Q1 — Four layered graphs
+# Q1a — Four layered graphs
 SAILOR_ID = nodes[nodes["name"] == "Sailor Shift"]["id"].values[0]
 
 INFLUENCE_TYPES = [
@@ -100,23 +100,23 @@ direct_influence = edges_g[
     (edges_g["Target"].isin(valid_person_ids))
 ][["Source", "Target", "EdgeType"]]
 
-# Sailor → her own songs (creation edges, for context in q1 full graph)
+# Sailor → her own songs (creation edges, for context in q1a full graph)
 sailor_creation = edges_g[
     (edges_g["Source"] == SAILOR_ID) &
     (edges_g["EdgeType"].isin(CREATION_TYPES)) &
     (edges_g["Target"].isin(sailor_song_ids))
 ][["Source", "Target", "EdgeType"]]
 
-print("── Q1: Full graph (Sailor songs → influenced songs/albums) ──")
+print("── Q1a: Full graph (Sailor songs → influenced songs/albums) ──")
 q1_edges = pd.concat([
     sailor_creation,
     song_influence,
     direct_influence
 ]).drop_duplicates()
-save(q1_edges, "q1")
+save(q1_edges, "q1a")
 
-# ── Q1 CLEAN: Collapse sailor songs out — Sailor → influenced songs/albums ───
-print("── Q1 Clean: Sailor → influenced songs/albums ──")
+# ── Q1a CLEAN: Collapse sailor songs out — Sailor → influenced songs/albums ───
+print("── Q1a Clean: Sailor → influenced songs/albums ──")
 song_influence_remapped = song_influence.copy()
 song_influence_remapped["Source"] = SAILOR_ID
 
@@ -124,10 +124,10 @@ q1_clean_edges = pd.concat([
     song_influence_remapped,
     direct_influence
 ]).drop_duplicates(subset=["Source", "Target", "EdgeType"])
-save(q1_clean_edges, "q1_clean")
+save(q1_clean_edges, "q1a_clean")
 
-# ── Q1 EXTENDED: Add creator layer — songs → their artists ───────────────────
-print("── Q1 Extended: Sailor → influenced songs/albums → their artists ──")
+# ── Q1a EXTENDED: Add creator layer — songs → their artists ───────────────────
+print("── Q1a Extended: Sailor → influenced songs/albums → their artists ──")
 influence_target_ids = song_influence["Target"].unique()
 
 creator_edges = edges_g[
@@ -143,10 +143,10 @@ q1_extended_edges = pd.concat([
     influence_tagged,
     creator_edges
 ]).drop_duplicates()
-save(q1_extended_edges, "q1_extended")
+save(q1_extended_edges, "q1a_extended")
 
-# ── Q1 ARTISTS: Collapse all — Sailor directly to artists only ───────────────
-print("── Q1 Artists: Sailor → artists only (no songs/albums) ──")
+# ── Q1a ARTISTS: Collapse all — Sailor directly to artists only ───────────────
+print("── Q1a Artists: Sailor → artists only (no songs/albums) ──")
 
 # Route 1: via songs — map influenced song → its creators, keep EdgeType
 creator_map = edges_g[
@@ -175,22 +175,22 @@ q1_artists_edges = pd.concat([
     direct_tagged
 ]).drop_duplicates(subset=["Source", "Target", "EdgeType"])
 
-save(q1_artists_edges, "q1_artists")
+save(q1_artists_edges, "q1a_artists")
 
-print("\n✅ All 4 Q1 CSVs rebuilt consistently.")
+print("\n✅ All 4 Q1a CSVs rebuilt consistently.")
 print("\nStory layers:")
-print("  q1          — Most granular: which specific songs carried which influences")
+print("  q1a          — Most granular: which specific songs carried which influences")
 print("  q1_clean    — Mid level: what songs/albums Sailor drew from")
 print("  q1_extended — With context: who made those influenced songs")
 print("  q1_artists  — Clearest: just Sailor and the artists who influenced her")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# Q2 — Who has Sailor Shift collaborated with and directly or indirectly influenced?
+# Q1b — Who has Sailor Shift collaborated with and directly or indirectly influenced?
 # ═══════════════════════════════════════════════════════════════════════════════
 #
 # All graphs are artist-only (Person/MusicalGroup) — no song/album nodes.
-# q2 and q2_artists are identical outputs for convenience.
+# Output: q1b_artists_nodes.csv / q1b_artists_edges.csv
 #
 # Three relationship types encoded in the Relationship column:
 #   Collaborator          — shared song credits on Sailor's songs (48 artists)
@@ -259,10 +259,10 @@ collab_creation = edges_g[
     (edges_g["Target"].isin(sailor_songs))
 ][["Source","Target","EdgeType"]]
 
-print("── Q2: Building all graphs ──")
+print("── Q1b: Building all graphs ──")
 
-# ── Q2 CLEAN edges (shared base for all Q2 outputs) ──────────────────────────
-# All Q2 graphs are artist-only — no song/album intermediary nodes
+# ── Q1b CLEAN edges (shared base for all Q1b outputs) ──────────────────────────
+# All Q1b graphs are artist-only — no song/album intermediary nodes
 collab_direct = pd.DataFrame({
     "Source": SAILOR_ID,
     "Target": list(collab_ids),
@@ -288,7 +288,7 @@ q2_clean_edges = pd.concat([
     collab_direct, direct_inf_direct, indirect_direct
 ]).drop_duplicates()
 
-# ── Q2 — Artist-only graph (all relationships, tagged by role) ────────────────
+# ── Q1b — Artist-only graph (all relationships, tagged by role) ────────────────
 print("  Building q2_artists...")
 valid_ids = set(nodes_g[nodes_g["Node Type"].isin(["Person","MusicalGroup"])]["Id"])
 
@@ -306,13 +306,11 @@ q2_artist_edges = q2_clean_edges[
 relevant_ids = set(q2_artist_edges["Source"]) | set(q2_artist_edges["Target"])
 sub_nodes = nodes_q2[nodes_q2["Id"].isin(relevant_ids)].copy()
 
-# Save as both q2_artists and q2 for convenience
-for prefix in ["q2_artists", "q2"]:
-    q2_artist_edges.to_csv(f"{prefix}_edges.csv", index=False)
-    sub_nodes.to_csv(f"{prefix}_nodes.csv", index=False)
-    print(f"  {prefix}: {len(sub_nodes)} nodes, {len(q2_artist_edges)} edges")
+q2_artist_edges.to_csv("q1b_artists_edges.csv", index=False)
+sub_nodes.to_csv("q1b_artists_nodes.csv", index=False)
+print(f"  q2_artists: {len(sub_nodes)} nodes, {len(q2_artist_edges)} edges")
 
-print("\n✅ Q2 CSVs built (artist-only — no songs/albums).")
+print("\n✅ Q1b CSVs built (artist-only — no songs/albums).")
 print("\nRelationship breakdown:")
 print(f"  Collaborators: {len(collab_ids)}")
 print(f"  Directly influenced: {len(direct_inf_ids)}")
@@ -323,11 +321,11 @@ print("  (SailorShift / Collaborator / DirectlyInfluenced / IndirectlyInfluenced
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# Q3 — How has Sailor Shift influenced collaborators of the broader Oceanus Folk community?
+# Q1c — How has Sailor Shift influenced collaborators of the broader Oceanus Folk community?
 # ═══════════════════════════════════════════════════════════════════════════════
 #
 # All graphs are artist-only (Person/MusicalGroup) — no song/album nodes.
-# q3 and q3_artists are identical outputs for convenience.
+# Output: q1c_artists_nodes.csv / q1c_artists_edges.csv
 #
 # Key finding: Sailor's influence on Oceanus Folk is indirect — channelled
 # through 11 collaborators who bridge her world and the OF community.
@@ -395,7 +393,7 @@ direct_of_ids = set(direct_of_to_sailor["Source"].unique())
 
 valid_person_ids = set(nodes_g[nodes_g["Node Type"].isin(["Person","MusicalGroup"])]["Id"])
 
-print("── Q3: Building artist-only graphs ──")
+print("── Q1c: Building artist-only graphs ──")
 print(f"  Oceanus Folk songs: {len(oceanus_songs)}")
 print(f"  Oceanus Folk artists: {len(oceanus_artists)}")
 print(f"  Bridge collaborators (collab + OF): {len(collab_oceanus_ids)}")
@@ -432,7 +430,7 @@ other_of_edges = edges_g[
     (edges_g["EdgeType"].isin(CREATION_TYPES))
 ][["Source","Target","EdgeType"]]
 
-# ── Q3 — All graphs are artist-only (no song/album nodes) ────────────────────
+# ── Q1c — All graphs are artist-only (no song/album nodes) ────────────────────
 # Sailor → bridge collabs (CollaboratedWith edges)
 sailor_to_bridge = pd.DataFrame({
     "Source": SAILOR_ID,
@@ -488,13 +486,11 @@ q3_artist_edges = q3_base_edges[
 relevant_ids = set(q3_artist_edges["Source"]) | set(q3_artist_edges["Target"])
 sub_nodes_q3 = nodes_q3[nodes_q3["Id"].isin(relevant_ids)].copy()
 
-# Save as both q3_artists and q3
-for prefix in ["q3_artists", "q3"]:
-    q3_artist_edges.to_csv(f"{prefix}_edges.csv", index=False)
-    sub_nodes_q3.to_csv(f"{prefix}_nodes.csv", index=False)
-    print(f"  {prefix}: {len(sub_nodes_q3)} nodes, {len(q3_artist_edges)} edges")
+q3_artist_edges.to_csv("q1c_artists_edges.csv", index=False)
+sub_nodes_q3.to_csv("q1c_artists_nodes.csv", index=False)
+print(f"  q3_artists: {len(sub_nodes_q3)} nodes, {len(q3_artist_edges)} edges")
 
-print("\n✅ Q3 CSVs built (artist-only — no songs/albums).")
+print("\n✅ Q1c CSVs built (artist-only — no songs/albums).")
 print("\nNode roles:")
 print(sub_nodes_q3["Relationship"].value_counts().to_string())
 print("\nGephi tips:")
@@ -505,6 +501,6 @@ print("  CollaboratedWith = Sailor↔bridge, SharedOFSong = bridge↔OF communit
 
 
 print("\n✅ All done! Import each pair into Gephi:")
-print("   File > Open  →  select q1_nodes.csv  (choose 'Nodes table')")
-print("   File > Open  →  select q1_edges.csv  (choose 'Edges table')")
-print("   Repeat for q2 and q3 pairs.")
+print("   File > Open  →  select q1a_nodes.csv  (choose 'Nodes table')")
+print("   File > Open  →  select q1a_edges.csv  (choose 'Edges table')")
+print("   Repeat for q1b_artists and q1c_artists pairs.")

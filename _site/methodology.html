@@ -123,16 +123,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-overview" id="toc-data-overview" class="nav-link active" data-scroll-target="#data-overview">Data Overview</a></li>
   <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data Wrangling</a>
   <ul class="collapse">
-  <li><a href="#approach-normalised-bridge-tables" id="toc-approach-normalised-bridge-tables" class="nav-link" data-scroll-target="#approach-normalised-bridge-tables">Approach: Normalised Bridge Tables</a></li>
-  <li><a href="#operations-performed" id="toc-operations-performed" class="nav-link" data-scroll-target="#operations-performed">Operations Performed</a></li>
-  <li><a href="#key-entities-identified" id="toc-key-entities-identified" class="nav-link" data-scroll-target="#key-entities-identified">Key Entities Identified</a></li>
+  <li><a href="#tableau-wrangling-mc1_wrangle.py" id="toc-tableau-wrangling-mc1_wrangle.py" class="nav-link" data-scroll-target="#tableau-wrangling-mc1_wrangle.py">Tableau Wrangling (<code>mc1_wrangle.py</code>)</a></li>
+  <li><a href="#gephi-wrangling-gephi_prep.py" id="toc-gephi-wrangling-gephi_prep.py" class="nav-link" data-scroll-target="#gephi-wrangling-gephi_prep.py">Gephi Wrangling (<code>gephi_prep.py</code>)</a></li>
   </ul></li>
   <li><a href="#output-tables" id="toc-output-tables" class="nav-link" data-scroll-target="#output-tables">Output Tables</a>
   <ul class="collapse">
-  <li><a href="#base-tables-join-in-tableau" id="toc-base-tables-join-in-tableau" class="nav-link" data-scroll-target="#base-tables-join-in-tableau">Base Tables (join in Tableau)</a></li>
-  <li><a href="#summary-tables-use-directly-in-tableau" id="toc-summary-tables-use-directly-in-tableau" class="nav-link" data-scroll-target="#summary-tables-use-directly-in-tableau">Summary Tables (use directly in Tableau)</a></li>
+  <li><a href="#tableau-outputs-mc1_wrangle.py" id="toc-tableau-outputs-mc1_wrangle.py" class="nav-link" data-scroll-target="#tableau-outputs-mc1_wrangle.py">Tableau Outputs (<code>mc1_wrangle.py</code>)</a></li>
+  <li><a href="#gephi-outputs-gephi_prep.py" id="toc-gephi-outputs-gephi_prep.py" class="nav-link" data-scroll-target="#gephi-outputs-gephi_prep.py">Gephi Outputs (<code>gephi_prep.py</code>)</a></li>
   </ul></li>
-  <li><a href="#changes-from-previous-version" id="toc-changes-from-previous-version" class="nav-link" data-scroll-target="#changes-from-previous-version">Changes from Previous Version</a></li>
   <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools Used</a></li>
   </ul>
 </nav>
@@ -191,19 +189,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-wrangling" class="level2">
 <h2 class="anchored" data-anchor-id="data-wrangling">Data Wrangling</h2>
-<p>The graph-structured data (nodes + edges) needed to be <strong>reshaped into flat tables</strong> for Tableau to consume. A Python script (<code>wrangle.py</code>) was written using <strong>pandas</strong> to perform this transformation.</p>
+<p>The graph-structured data (nodes + edges) needed to be <strong>reshaped into flat tables</strong> for Tableau to consume, and into <strong>filtered subgraphs</strong> for Gephi network visualisation. Two Python scripts handle these respectively.</p>
 <p><strong>No data was deleted, modified, imputed, or fabricated.</strong> All values in the output tables originate directly from the source files.</p>
-<section id="approach-normalised-bridge-tables" class="level3">
-<h3 class="anchored" data-anchor-id="approach-normalised-bridge-tables">Approach: Normalised Bridge Tables</h3>
-<p>The revised wrangling script adopts a <strong>normalised bridge table architecture</strong> rather than producing a single large flattened table per question. This approach is safer for Tableau because it avoids row duplication caused by many-to-many relationships (e.g.&nbsp;a song with multiple performers and multiple influences would otherwise multiply rows unpredictably).</p>
+<section id="tableau-wrangling-mc1_wrangle.py" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-wrangling-mc1_wrangle.py">Tableau Wrangling (<code>mc1_wrangle.py</code>)</h3>
+<section id="approach-normalised-bridge-tables" class="level4">
+<h4 class="anchored" data-anchor-id="approach-normalised-bridge-tables">Approach: Normalised Bridge Tables</h4>
+<p>The Tableau wrangling script adopts a <strong>normalised bridge table architecture</strong> rather than producing a single large flattened table per question. This approach is safer for Tableau because it avoids row duplication caused by many-to-many relationships (e.g.&nbsp;a song with multiple performers and multiple influences would otherwise multiply rows unpredictably).</p>
 <p>The pipeline consists of four stages:</p>
 <p><strong>1. Node normalisation</strong> — All node IDs and date fields (<code>release_date</code>, <code>written_date</code>, <code>notoriety_date</code>) are cast to integer types. A <code>display_name</code> field is derived from <code>stage_name</code> where available, falling back to <code>name</code>. Boolean flags (<code>is_work</code>, <code>is_person_or_group</code>, <code>is_oceanus_folk</code>) are added to each node for efficient downstream filtering.</p>
 <p><strong>2. Edge normalisation</strong> — Source and target IDs are cast to integers, and a <code>key</code> column is added for multigraph disambiguation.</p>
 <p><strong>3. Edge enrichment</strong> — A single enriched edge table is built by joining node attributes onto both the source and target of every edge (equivalent to two SQL LEFT JOINs). All subsequent tables are derived from this one enriched table, ensuring consistency.</p>
 <p><strong>4. Table construction</strong> — Specialised functions derive each output table from the enriched edge table using aggregation, pivoting, and filtering.</p>
 </section>
-<section id="operations-performed" class="level3">
-<h3 class="anchored" data-anchor-id="operations-performed">Operations Performed</h3>
+<section id="operations-performed" class="level4">
+<h4 class="anchored" data-anchor-id="operations-performed">Operations Performed</h4>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 45%">
@@ -243,8 +243,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="key-entities-identified" class="level3">
-<h3 class="anchored" data-anchor-id="key-entities-identified">Key Entities Identified</h3>
+<section id="key-entities-identified" class="level4">
+<h4 class="anchored" data-anchor-id="key-entities-identified">Key Entities Identified</h4>
 <p>Through filtering, the following key entities were identified for analysis:</p>
 <ul>
 <li><strong>Sailor Shift</strong> (Person, id=17255) — the central figure of the investigation</li>
@@ -252,122 +252,338 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Ivy Echos</strong> (MusicalGroup) — Sailor Shift’s primary band, found via a MemberOf edge from Sailor Shift’s node</li>
 <li><strong>Oceanus Folk catalogue</strong> — 305 works filtered by genre = “Oceanus Folk”</li>
 </ul>
+<hr>
 </section>
 </section>
-<section id="output-tables" class="level2">
-<h2 class="anchored" data-anchor-id="output-tables">Output Tables</h2>
-<p>The wrangling produces <strong>9 Tableau-ready CSV files</strong> across two tiers: four normalised base tables that can be joined in Tableau’s data source editor, and five pre-aggregated summary tables ready to use directly in worksheets.</p>
-<section id="base-tables-join-in-tableau" class="level3">
-<h3 class="anchored" data-anchor-id="base-tables-join-in-tableau">Base Tables (join in Tableau)</h3>
-<section id="works_master.csv-4611-rows-24-columns" class="level4">
-<h4 class="anchored" data-anchor-id="works_master.csv-4611-rows-24-columns"><code>works_master.csv</code> (4,611 rows × 24 columns)</h4>
-<p>A single flat record for every Song and Album in the dataset. Contributor names (performers, composers, lyricists, producers) and label names are aggregated into semicolon-delimited strings per work, with separate numeric count columns for filtering. Influence counts (<code>draws_from_count</code>, <code>influenced_others_count</code>) are pre-joined from the influence bridge.</p>
-<p><strong>Key columns:</strong> <code>id</code>, <code>work_name</code>, <code>work_type</code>, <code>genre</code>, <code>release_year</code>, <code>written_year</code>, <code>notoriety_year</code>, <code>notable</code>, <code>single</code>, <code>is_oceanus_folk</code>, <code>performers</code>, <code>composers</code>, <code>lyricists</code>, <code>producers</code>, <code>num_performers</code>, <code>num_composers</code>, <code>num_lyricists</code>, <code>num_producers</code>, <code>recorded_by_labels</code>, <code>distributed_by_labels</code>, <code>draws_from_count</code>, <code>influenced_others_count</code></p>
-</section>
-<section id="contributors_bridge.csv-29882-rows-11-columns" class="level4">
-<h4 class="anchored" data-anchor-id="contributors_bridge.csv-29882-rows-11-columns"><code>contributors_bridge.csv</code> (29,882 rows × 11 columns)</h4>
-<p>One row per contributor–work relationship, covering all PerformerOf, ComposerOf, LyricistOf, ProducerOf, RecordedBy, and DistributedBy edges. A <code>role_group</code> column distinguishes creative contributors from label relationships. This table is the primary source for questions about who made what.</p>
-<p><strong>Key columns:</strong> <code>edge_type</code>, <code>role_group</code>, <code>source_id</code>, <code>source_display_name</code>, <code>source_type</code>, <code>work_id</code>, <code>work_name</code>, <code>work_genre</code>, <code>work_release_year</code></p>
-</section>
-<section id="influence_bridge.csv-7407-rows-13-columns" class="level4">
-<h4 class="anchored" data-anchor-id="influence_bridge.csv-7407-rows-13-columns"><code>influence_bridge.csv</code> (7,407 rows × 13 columns)</h4>
-<p>One row per influence relationship across the entire dataset, covering all five influence edge types (InStyleOf, InterpolatesFrom, CoverOf, DirectlySamples, LyricalReferenceTo). Both source and target node attributes are fully resolved, making this the primary source for genre-to-genre influence flow analysis.</p>
-<p><strong>Key columns:</strong> <code>influence_type</code>, <code>source_id</code>, <code>source_display_name</code>, <code>source_genre</code>, <code>source_year</code>, <code>target_id</code>, <code>target_display_name</code>, <code>target_genre</code>, <code>target_year</code></p>
-</section>
-<section id="memberof_bridge.csv-568-rows-8-columns" class="level4">
-<h4 class="anchored" data-anchor-id="memberof_bridge.csv-568-rows-8-columns"><code>memberof_bridge.csv</code> (568 rows × 8 columns)</h4>
-<p>One row per person–group membership, with both person and group attributes fully resolved. Used to trace which artists belong to which musical groups.</p>
-<p><strong>Key columns:</strong> <code>person_id</code>, <code>person_display_name</code>, <code>person_type</code>, <code>group_id</code>, <code>group_display_name</code>, <code>group_type</code></p>
-</section>
-</section>
-<section id="summary-tables-use-directly-in-tableau" class="level3">
-<h3 class="anchored" data-anchor-id="summary-tables-use-directly-in-tableau">Summary Tables (use directly in Tableau)</h3>
-<section id="sailor_shift_career_v2.csv-46-rows-32-columns" class="level4">
-<h4 class="anchored" data-anchor-id="sailor_shift_career_v2.csv-46-rows-32-columns"><code>sailor_shift_career_v2.csv</code> (46 rows × 32 columns)</h4>
-<p>Sailor Shift’s full discography — a superset of the works master filtered to her works, with additional columns describing her specific involvement. Crucially, this table distinguishes between works where she contributed <strong>directly</strong> (her own edges) and works where she was involved <strong>via group membership</strong> (e.g.&nbsp;through Ivy Echos). This resolves an undercounting issue in the previous version of the script, which missed 8 group-membership works.</p>
-<p><strong>Additional columns over works_master:</strong> <code>sailor_involvement_modes</code> (direct_person_edge / via_group_membership), <code>sailor_roles</code> (PerformerOf / LyricistOf etc.), <code>sailor_linked_groups</code> (e.g.&nbsp;Ivy Echos), <code>is_direct_person_work</code>, <code>is_group_membership_work</code>, <code>collaborators</code>, <code>num_distinct_collaborators</code></p>
-</section>
-<section id="sailor_shift_influences_v2.csv-40-rows-14-columns" class="level4">
-<h4 class="anchored" data-anchor-id="sailor_shift_influences_v2.csv-40-rows-14-columns"><code>sailor_shift_influences_v2.csv</code> (40 rows × 14 columns)</h4>
-<p>All influence edges involving Sailor Shift or her works, with a <code>direction</code> column classifying each edge as <code>"Sailor -&gt; Other"</code> (32 edges — she influenced others) or <code>"Other -&gt; Sailor"</code> (8 edges — others influenced her). Both source and target node attributes are fully resolved, supporting timeline and genre breakdown visualisations.</p>
-<p><strong>Key columns:</strong> <code>direction</code>, <code>influence_type</code>, <code>source_display_name</code>, <code>source_genre</code>, <code>source_year</code>, <code>target_display_name</code>, <code>target_genre</code>, <code>target_year</code></p>
-</section>
-<section id="oceanus_folk_spread_v2.csv-601-rows-15-columns" class="level4">
-<h4 class="anchored" data-anchor-id="oceanus_folk_spread_v2.csv-601-rows-15-columns"><code>oceanus_folk_spread_v2.csv</code> (601 rows × 15 columns)</h4>
-<p>All influence edges touching at least one Oceanus Folk work, with a <code>direction</code> column classifying each edge as <code>OF -&gt; Other</code>, <code>Other -&gt; OF</code>, or <code>OF -&gt; OF</code>. An <code>other_genre</code> column isolates the non-Oceanus-Folk genre in each cross-genre influence, simplifying Tableau calculations.</p>
-<p><strong>Key columns:</strong> <code>direction</code>, <code>influence_type</code>, <code>source_display_name</code>, <code>source_genre</code>, <code>source_year</code>, <code>target_display_name</code>, <code>target_genre</code>, <code>target_year</code>, <code>other_genre</code></p>
-</section>
-<section id="oceanus_folk_year_summary.csv-40-rows-5-columns" class="level4">
-<h4 class="anchored" data-anchor-id="oceanus_folk_year_summary.csv-40-rows-5-columns"><code>oceanus_folk_year_summary.csv</code> (40 rows × 5 columns)</h4>
-<p>A year-level summary of the Oceanus Folk genre, designed for timeline visualisations. Each row represents one release year and contains the count of OF works released, notable OF works, outgoing influence edges (OF influencing other genres), and incoming influence edges (other genres influencing OF).</p>
-<p><strong>Key columns:</strong> <code>year</code>, <code>of_works_released</code>, <code>of_notable_works</code>, <code>of_to_other_influence_edges</code>, <code>other_to_of_influence_edges</code></p>
-</section>
-<section id="artist_careers_v2.csv-1370-rows-16-columns" class="level4">
-<h4 class="anchored" data-anchor-id="artist_careers_v2.csv-1370-rows-16-columns"><code>artist_careers_v2.csv</code> (1,370 rows × 16 columns)</h4>
-<p>Career profiles for all artists and musical groups with 3 or more performed or contributed works. Includes performance counts, genre breadth, career span, notable work count, and an influence reception score (<code>performed_work_influence_received</code>) measuring how often their works were referenced by others. Filtered to artists with meaningful careers to avoid noise from one-off contributors.</p>
-<p><strong>Key columns:</strong> <code>artist_id</code>, <code>artist_display_name</code>, <code>artist_type</code>, <code>stage_name</code>, <code>num_performed_works</code>, <code>num_all_contributed_works</code>, <code>all_role_types</code>, <code>primary_genre</code>, <code>all_performance_genres</code>, <code>first_performance_year</code>, <code>last_performance_year</code>, <code>career_span_years</code>, <code>num_notable_performed_works</code>, <code>performed_work_influence_received</code>, <code>is_oceanus_folk_artist</code></p>
-</section>
-</section>
-</section>
-<section id="changes-from-previous-version" class="level2">
-<h2 class="anchored" data-anchor-id="changes-from-previous-version">Changes from Previous Version</h2>
-<p>The revised script differs from the original in the following ways:</p>
+<section id="gephi-wrangling-gephi_prep.py" class="level3">
+<h3 class="anchored" data-anchor-id="gephi-wrangling-gephi_prep.py">Gephi Wrangling (<code>gephi_prep.py</code>)</h3>
+<p>A separate script prepares filtered subgraphs for Gephi network visualisation, one per research question. All outputs are artist-only where possible (Person and MusicalGroup nodes only) to maximise readability. Each question produces a pair of CSV files — <code>_nodes.csv</code> and <code>_edges.csv</code> — importable directly into Gephi.</p>
+<p><strong>Column conventions across all Gephi outputs:</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 19%">
-<col style="width: 40%">
-<col style="width: 40%">
+<col style="width: 38%">
+<col style="width: 61%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Aspect</th>
-<th>Previous version</th>
-<th>Revised version</th>
+<th>Column</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Library</strong></td>
-<td>Python standard library only (<code>csv</code>, <code>collections</code>)</td>
-<td>pandas</td>
+<td><code>Id</code> / <code>Label</code></td>
+<td>Gephi-required node identifier and display name</td>
 </tr>
 <tr class="even">
-<td><strong>Architecture</strong></td>
-<td>One flat table per question</td>
-<td>Normalised bridge tables + summary tables</td>
+<td><code>Source</code> / <code>Target</code></td>
+<td>Gephi-required directed edge endpoints</td>
 </tr>
 <tr class="odd">
-<td><strong>Sailor Shift’s works</strong></td>
-<td>38 works (direct edges only)</td>
-<td>46 works (direct edges + group membership)</td>
+<td><code>EdgeType</code></td>
+<td>The original relationship type from the raw data (renamed from <code>Type</code> to avoid Gephi’s reserved word conflict)</td>
 </tr>
 <tr class="even">
-<td><strong>Influence direction</strong></td>
-<td>String label <code>"Influenced Sailor Shift"</code> / <code>"Sailor Shift Influenced"</code></td>
-<td>Standardised <code>"Sailor -&gt; Other"</code> / <code>"Other -&gt; Sailor"</code></td>
+<td><code>Relationship</code></td>
+<td>Assigned role label for node/edge colouring in Gephi (Q2 and Q3 only)</td>
 </tr>
 <tr class="odd">
-<td><strong>OF direction</strong></td>
-<td>Two separate rows for each direction</td>
-<td>Single row with <code>direction</code> column (<code>OF -&gt; Other</code>, <code>Other -&gt; OF</code>, <code>OF -&gt; OF</code>)</td>
+<td><code>EdgeCategory</code></td>
+<td>Two-value field (<code>influence</code> / <code>creation</code>) for simplified edge colouring (Q1 extended only)</td>
 </tr>
 <tr class="even">
-<td><strong>Artist careers threshold</strong></td>
-<td>3+ performed works only</td>
-<td>3+ performed <strong>or</strong> 3+ contributed works</td>
-</tr>
-<tr class="odd">
-<td><strong>New outputs</strong></td>
-<td>—</td>
-<td><code>works_master.csv</code>, <code>contributors_bridge.csv</code>, <code>influence_bridge.csv</code>, <code>memberof_bridge.csv</code>, <code>oceanus_folk_year_summary.csv</code></td>
-</tr>
-<tr class="even">
-<td><strong>display_name</strong></td>
-<td>Not present</td>
-<td>Derived from <code>stage_name</code>, falling back to <code>name</code></td>
+<td><code>Weight</code></td>
+<td>Number of Sailor’s songs referencing a given artist (Q1 artists only)</td>
 </tr>
 </tbody>
 </table>
+<section id="q1a-who-has-sailor-shift-been-most-influenced-by" class="level4">
+<h4 class="anchored" data-anchor-id="q1a-who-has-sailor-shift-been-most-influenced-by">Q1a — Who has Sailor Shift been most influenced by?</h4>
+<p>Five influence edge types are used throughout: <code>InStyleOf</code>, <code>InterpolatesFrom</code>, <code>DirectlySamples</code>, <code>CoverOf</code>, <code>LyricalReferenceTo</code>. <code>MemberOf</code> is excluded — membership is not equivalent to influence.</p>
+<p>Four graph levels are produced, designed to be used together as a layered narrative:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Output</th>
+<th>Nodes</th>
+<th>Edges</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>q1a</code></td>
+<td>69</td>
+<td>77</td>
+<td>Most granular — Sailor’s own songs as intermediary nodes, with creation and influence edges</td>
+</tr>
+<tr class="even">
+<td><code>q1a_clean</code></td>
+<td>31</td>
+<td>30</td>
+<td>Mid level — Sailor directly connected to the songs/albums she drew from</td>
+</tr>
+<tr class="odd">
+<td><code>q1a_extended</code></td>
+<td>125</td>
+<td>154</td>
+<td>With creator context — adds the artists who made those influenced songs; edges tagged with <code>EdgeCategory</code> (<code>influence</code> / <code>creation</code>)</td>
+</tr>
+<tr class="even">
+<td><code>q1a_artists</code></td>
+<td>99</td>
+<td>98</td>
+<td>Clearest — Sailor directly to artists only, no song/album nodes; <code>Weight</code> = number of her songs referencing that artist</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key finding:</strong> Sailor Shift’s influences are entirely songs and albums — no artist directly influenced her at the person level except through direct edges (<code>InStyleOf</code>, <code>DirectlySamples</code>). The 99 artists in <code>q1a_artists</code> are the creators of the works she drew from, resolved via a two-hop collapse.</p>
+</section>
+<section id="q1b-who-has-she-collaborated-with-and-directly-or-indirectly-influenced" class="level4">
+<h4 class="anchored" data-anchor-id="q1b-who-has-she-collaborated-with-and-directly-or-indirectly-influenced">Q1b — Who has she collaborated with and directly or indirectly influenced?</h4>
+<p>All Q1b output is <strong>artist-only</strong> (Person/MusicalGroup), saved as a single file pair: <code>q1b_artists_nodes.csv</code> / <code>q1b_artists_edges.csv</code>. Three relationship types are encoded in the <code>Relationship</code> node column for colour-coding in Gephi:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Relationship</th>
+<th>Count</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Collaborator</code></td>
+<td>48</td>
+<td>Shared song credits on Sailor’s songs</td>
+</tr>
+<tr class="even">
+<td><code>DirectlyInfluenced</code></td>
+<td>7</td>
+<td>Artists/groups with influence edges pointing TO Sailor herself</td>
+</tr>
+<tr class="odd">
+<td><code>IndirectlyInfluenced</code></td>
+<td>4</td>
+<td>Person/MusicalGroup artists who reference collaborators’ songs (RecordLabels excluded)</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Output</th>
+<th>Nodes</th>
+<th>Edges</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>q1b_artists</code></td>
+<td>60</td>
+<td>59</td>
+<td>Sailor directly connected to all three groups, tagged by Relationship</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key finding:</strong> Nobody references Sailor’s own songs directly in the dataset. Her direct influenced artists are all groups (Cassette Future, Silver Veil, The Phantom Operators, The Hollow Monarchs, Copper Canyon Ghosts) or individuals (Cassian Storm, Claire Holmes) who point to Sailor herself via influence edges.</p>
+</section>
+<section id="q1c-how-has-she-influenced-collaborators-of-the-broader-oceanus-folk-community" class="level4">
+<h4 class="anchored" data-anchor-id="q1c-how-has-she-influenced-collaborators-of-the-broader-oceanus-folk-community">Q1c — How has she influenced collaborators of the broader Oceanus Folk community?</h4>
+<p>All Q1c output is <strong>artist-only</strong> (Person/MusicalGroup), saved as a single file pair: <code>q1c_artists_nodes.csv</code> / <code>q1c_artists_edges.csv</code>. Node roles are encoded in the <code>Relationship</code> column:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Relationship</th>
+<th>Count</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>SailorShift</code></td>
+<td>1</td>
+<td>Sailor Shift</td>
+</tr>
+<tr class="even">
+<td><code>CollabOFArtist</code></td>
+<td>11</td>
+<td>Sailor’s collaborators who are also Oceanus Folk artists — the bridge group</td>
+</tr>
+<tr class="odd">
+<td><code>OFCommunity</code></td>
+<td>3</td>
+<td>OF artists reached via shared songs with bridge collaborators</td>
+</tr>
+<tr class="even">
+<td><code>DirectlyInfluenced</code></td>
+<td>1</td>
+<td>Copper Canyon Ghosts — the only OF artist that directly references Sailor</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 18%">
+<col style="width: 18%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Output</th>
+<th>Nodes</th>
+<th>Edges</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>q1c_artists</code></td>
+<td>16</td>
+<td>45</td>
+<td>Sailor → bridge collaborators → OF community, with <code>CollaboratedWith</code> and <code>SharedOFSong</code> edge types</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key finding:</strong> Sailor Shift’s influence on Oceanus Folk is entirely indirect. No Oceanus Folk songs reference her songs. Her footprint exists through 11 collaborators who are also OF artists, who in turn worked on 34 OF songs and connected to 3 further OF artists. The graph is intentionally small (16 nodes) — this accurately reflects the limited but traceable indirect influence path.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="output-tables" class="level2">
+<h2 class="anchored" data-anchor-id="output-tables">Output Tables</h2>
+<section id="tableau-outputs-mc1_wrangle.py" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-outputs-mc1_wrangle.py">Tableau Outputs (<code>mc1_wrangle.py</code>)</h3>
+<p>The wrangling produces <strong>9 Tableau-ready CSV files</strong> across two tiers: four normalised base tables that can be joined in Tableau’s data source editor, and five pre-aggregated summary tables ready to use directly in worksheets.</p>
+<section id="base-tables-join-in-tableau" class="level4">
+<h4 class="anchored" data-anchor-id="base-tables-join-in-tableau">Base Tables (join in Tableau)</h4>
+<section id="works_master.csv-4611-rows-24-columns" class="level5">
+<h5 class="anchored" data-anchor-id="works_master.csv-4611-rows-24-columns"><code>works_master.csv</code> (4,611 rows × 24 columns)</h5>
+<p>A single flat record for every Song and Album in the dataset. Contributor names (performers, composers, lyricists, producers) and label names are aggregated into semicolon-delimited strings per work, with separate numeric count columns for filtering. Influence counts (<code>draws_from_count</code>, <code>influenced_others_count</code>) are pre-joined from the influence bridge.</p>
+<p><strong>Key columns:</strong> <code>id</code>, <code>work_name</code>, <code>work_type</code>, <code>genre</code>, <code>release_year</code>, <code>written_year</code>, <code>notoriety_year</code>, <code>notable</code>, <code>single</code>, <code>is_oceanus_folk</code>, <code>performers</code>, <code>composers</code>, <code>lyricists</code>, <code>producers</code>, <code>num_performers</code>, <code>num_composers</code>, <code>num_lyricists</code>, <code>num_producers</code>, <code>recorded_by_labels</code>, <code>distributed_by_labels</code>, <code>draws_from_count</code>, <code>influenced_others_count</code></p>
+</section>
+<section id="contributors_bridge.csv-29882-rows-11-columns" class="level5">
+<h5 class="anchored" data-anchor-id="contributors_bridge.csv-29882-rows-11-columns"><code>contributors_bridge.csv</code> (29,882 rows × 11 columns)</h5>
+<p>One row per contributor–work relationship, covering all PerformerOf, ComposerOf, LyricistOf, ProducerOf, RecordedBy, and DistributedBy edges. A <code>role_group</code> column distinguishes creative contributors from label relationships.</p>
+<p><strong>Key columns:</strong> <code>edge_type</code>, <code>role_group</code>, <code>source_id</code>, <code>source_display_name</code>, <code>source_type</code>, <code>work_id</code>, <code>work_name</code>, <code>work_genre</code>, <code>work_release_year</code></p>
+</section>
+<section id="influence_bridge.csv-7407-rows-13-columns" class="level5">
+<h5 class="anchored" data-anchor-id="influence_bridge.csv-7407-rows-13-columns"><code>influence_bridge.csv</code> (7,407 rows × 13 columns)</h5>
+<p>One row per influence relationship across the entire dataset, covering all five influence edge types. Both source and target node attributes are fully resolved.</p>
+<p><strong>Key columns:</strong> <code>influence_type</code>, <code>source_id</code>, <code>source_display_name</code>, <code>source_genre</code>, <code>source_year</code>, <code>target_id</code>, <code>target_display_name</code>, <code>target_genre</code>, <code>target_year</code></p>
+</section>
+<section id="memberof_bridge.csv-568-rows-8-columns" class="level5">
+<h5 class="anchored" data-anchor-id="memberof_bridge.csv-568-rows-8-columns"><code>memberof_bridge.csv</code> (568 rows × 8 columns)</h5>
+<p>One row per person–group membership, with both person and group attributes fully resolved.</p>
+<p><strong>Key columns:</strong> <code>person_id</code>, <code>person_display_name</code>, <code>person_type</code>, <code>group_id</code>, <code>group_display_name</code>, <code>group_type</code></p>
+</section>
+</section>
+<section id="summary-tables-use-directly-in-tableau" class="level4">
+<h4 class="anchored" data-anchor-id="summary-tables-use-directly-in-tableau">Summary Tables (use directly in Tableau)</h4>
+<section id="sailor_shift_career_v2.csv-46-rows-32-columns" class="level5">
+<h5 class="anchored" data-anchor-id="sailor_shift_career_v2.csv-46-rows-32-columns"><code>sailor_shift_career_v2.csv</code> (46 rows × 32 columns)</h5>
+<p>Sailor Shift’s full discography with additional columns describing her specific involvement, distinguishing direct contributions from group membership involvement (resolves an undercounting issue in v1 which missed 8 group-membership works).</p>
+<p><strong>Additional columns over works_master:</strong> <code>sailor_involvement_modes</code>, <code>sailor_roles</code>, <code>sailor_linked_groups</code>, <code>is_direct_person_work</code>, <code>is_group_membership_work</code>, <code>collaborators</code>, <code>num_distinct_collaborators</code></p>
+</section>
+<section id="sailor_shift_influences_v2.csv-40-rows-14-columns" class="level5">
+<h5 class="anchored" data-anchor-id="sailor_shift_influences_v2.csv-40-rows-14-columns"><code>sailor_shift_influences_v2.csv</code> (40 rows × 14 columns)</h5>
+<p>All influence edges involving Sailor Shift or her works, with a <code>direction</code> column classifying each edge as <code>"Sailor -&gt; Other"</code> (32 edges) or <code>"Other -&gt; Sailor"</code> (8 edges).</p>
+</section>
+<section id="oceanus_folk_spread_v2.csv-601-rows-15-columns" class="level5">
+<h5 class="anchored" data-anchor-id="oceanus_folk_spread_v2.csv-601-rows-15-columns"><code>oceanus_folk_spread_v2.csv</code> (601 rows × 15 columns)</h5>
+<p>All influence edges touching at least one Oceanus Folk work, with <code>direction</code> classifying each as <code>OF -&gt; Other</code>, <code>Other -&gt; OF</code>, or <code>OF -&gt; OF</code>.</p>
+</section>
+<section id="oceanus_folk_year_summary.csv-40-rows-5-columns" class="level5">
+<h5 class="anchored" data-anchor-id="oceanus_folk_year_summary.csv-40-rows-5-columns"><code>oceanus_folk_year_summary.csv</code> (40 rows × 5 columns)</h5>
+<p>Year-level summary of the Oceanus Folk genre for timeline visualisations.</p>
+<p><strong>Key columns:</strong> <code>year</code>, <code>of_works_released</code>, <code>of_notable_works</code>, <code>of_to_other_influence_edges</code>, <code>other_to_of_influence_edges</code></p>
+</section>
+<section id="artist_careers_v2.csv-1370-rows-16-columns" class="level5">
+<h5 class="anchored" data-anchor-id="artist_careers_v2.csv-1370-rows-16-columns"><code>artist_careers_v2.csv</code> (1,370 rows × 16 columns)</h5>
+<p>Career profiles for all artists and musical groups with 3 or more contributed works, including performance counts, genre breadth, career span, and influence reception score.</p>
+</section>
+</section>
+</section>
+<section id="gephi-outputs-gephi_prep.py" class="level3">
+<h3 class="anchored" data-anchor-id="gephi-outputs-gephi_prep.py">Gephi Outputs (<code>gephi_prep.py</code>)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>File pair</th>
+<th>Nodes</th>
+<th>Edges</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>q1a_nodes</code> / <code>q1a_edges</code></td>
+<td>69</td>
+<td>77</td>
+<td>Q1a — Full song-level influence graph</td>
+</tr>
+<tr class="even">
+<td><code>q1a_clean_nodes</code> / <code>q1a_clean_edges</code></td>
+<td>31</td>
+<td>30</td>
+<td>Q1a — Sailor to influenced songs/albums</td>
+</tr>
+<tr class="odd">
+<td><code>q1a_extended_nodes</code> / <code>q1a_extended_edges</code></td>
+<td>125</td>
+<td>154</td>
+<td>Q1a — With artist creators of influenced songs</td>
+</tr>
+<tr class="even">
+<td><code>q1a_artists_nodes</code> / <code>q1a_artists_edges</code></td>
+<td>99</td>
+<td>98</td>
+<td>Q1a — Sailor to artists only</td>
+</tr>
+<tr class="odd">
+<td><code>q1b_artists_nodes</code> / <code>q1b_artists_edges</code></td>
+<td>60</td>
+<td>59</td>
+<td>Q1b — Collaborators and influenced artists</td>
+</tr>
+<tr class="even">
+<td><code>q1c_artists_nodes</code> / <code>q1c_artists_edges</code></td>
+<td>16</td>
+<td>45</td>
+<td>Q1c — Sailor’s bridge into Oceanus Folk</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="tools-used" class="level2">
 <h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
@@ -385,7 +601,7 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td><strong>Python 3</strong> with <strong>pandas</strong></td>
-<td>Data wrangling — reshaping graph data into normalised flat tables</td>
+<td>Data wrangling — reshaping graph data into normalised flat tables and filtered Gephi subgraphs</td>
 </tr>
 <tr class="even">
 <td><strong>Tableau</strong></td>
@@ -393,7 +609,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td><strong>Gephi</strong></td>
-<td>Network exploration — discovering patterns, communities, and key entities</td>
+<td>Network exploration — visualising influence, collaboration, and community structure</td>
 </tr>
 </tbody>
 </table>
