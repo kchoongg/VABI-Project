@@ -14,11 +14,11 @@ Outputs:
 - contributors_bridge.csv
 - influence_bridge.csv
 - memberof_bridge.csv
-- sailor_shift_career_v2.csv
-- sailor_shift_influences_v2.csv
-- oceanus_folk_spread_v2.csv
+- sailor_shift_career.csv
+- sailor_shift_influences.csv
+- oceanus_folk_spread.csv
 - oceanus_folk_year_summary.csv
-- artist_careers_v2.csv
+- artist_careers.csv
 """
 
 from __future__ import annotations
@@ -307,11 +307,11 @@ def main():
         "contributors_bridge.csv": contributors_bridge,
         "influence_bridge.csv": influence_bridge,
         "memberof_bridge.csv": memberof_bridge,
-        "sailor_shift_career_v2.csv": sailor_career,
-        "sailor_shift_influences_v2.csv": sailor_inf,
-        "oceanus_folk_spread_v2.csv": of_spread,
+        "sailor_shift_career.csv": sailor_career,
+        "sailor_shift_influences.csv": sailor_inf,
+        "oceanus_folk_spread.csv": of_spread,
         "oceanus_folk_year_summary.csv": of_year,
-        "artist_careers_v2.csv": artist_careers,
+        "artist_careers.csv": artist_careers,
         "ss_direct_indirect_influence.csv": sailor_influence_chain,
     }
     for fname, df in outputs.items():
