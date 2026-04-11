@@ -10,7 +10,9 @@ website:
       - href: proposal.qmd
         text: Proposal
       - href: methodology.qmd
-        text: Methodology
+        text: Data Wrangling
+      - href: visual-analytics-story.qmd
+        text: Visual Analytics Story
 
 format:
   html:

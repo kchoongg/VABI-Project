@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tableau Story – VABI Project</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-067f8ab80d092ae3595f7402c2c9b667.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">VABI Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposal.html"> 
+<span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./methodology.html"> 
+<span class="menu-text">Methodology</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#how-to-use-this-page" id="toc-how-to-use-this-page" class="nav-link" data-scroll-target="#how-to-use-this-page">How to Use This Page</a></li>
+  <li><a href="#interactive-tableau-story" id="toc-interactive-tableau-story" class="nav-link" data-scroll-target="#interactive-tableau-story">Interactive Tableau Story</a></li>
+  <li><a href="#story-walkthrough-and-analytical-insights" id="toc-story-walkthrough-and-analytical-insights" class="nav-link" data-scroll-target="#story-walkthrough-and-analytical-insights">Story Walkthrough and Analytical Insights</a>
+  <ul class="collapse">
+  <li><a href="#evolution-and-global-spread-of-oceanus-folk" id="toc-evolution-and-global-spread-of-oceanus-folk" class="nav-link" data-scroll-target="#evolution-and-global-spread-of-oceanus-folk">1. Evolution and Global Spread of Oceanus Folk</a></li>
+  <li><a href="#defining-and-predicting-rising-stars" id="toc-defining-and-predicting-rising-stars" class="nav-link" data-scroll-target="#defining-and-predicting-rising-stars">2. Defining and Predicting Rising Stars</a></li>
+  </ul></li>
+  <li><a href="#poster-summary" id="toc-poster-summary" class="nav-link" data-scroll-target="#poster-summary">Poster Summary</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#suggested-caption-for-navigation-or-homepage" id="toc-suggested-caption-for-navigation-or-homepage" class="nav-link" data-scroll-target="#suggested-caption-for-navigation-or-homepage">Suggested Caption for Navigation or Homepage</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tableau Story</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This page walks users through the interactive Tableau story developed for the <strong>Oceanus Folk: Then-and-Now</strong> project. The story complements the static poster by allowing users to explore the temporal spread of Oceanus Folk and the characteristics of rising stars through interactive dashboards.</p>
+<p>The Tableau story is designed to answer the following project questions:</p>
+<ol type="1">
+<li><strong>Was Oceanus Folk’s influence intermittent or did it have a gradual rise?</strong></li>
+<li><strong>What genres and top artists have been most influenced by Oceanus Folk?</strong></li>
+<li><strong>How has Oceanus Folk changed with the rise of Sailor Shift, and from which genres does it now draw contemporary inspiration?</strong></li>
+<li><strong>How do three artists compare in their rise in popularity and influence?</strong></li>
+<li><strong>Who are the next likely Oceanus Folk stars over the next five years?</strong></li>
+</ol>
+</section>
+<section id="how-to-use-this-page" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-this-page">How to Use This Page</h2>
+<p>Use the embedded Tableau story below to explore the dashboards directly on the website.</p>
+<ul>
+<li>Click through each story point using the navigation controls in Tableau.</li>
+<li>Hover over marks to view detailed values, years, genres, and artist names.</li>
+<li>Compare patterns across charts rather than reading each graph in isolation.</li>
+<li>Refer to the insight notes below each section for the key interpretations.</li>
+<li>Use the poster image further below for a quick static summary of the full project.</li>
+</ul>
+</section>
+<section id="interactive-tableau-story" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-tableau-story">Interactive Tableau Story</h2>
+<div class="tableau-embed">
+<p><iframe src="https://public.tableau.com/views/Group8OceanusFolk-BeforeandAfter/SailorShiftandOceanusFolkThenandNow?:embed=y&amp;:display_count=yes" width="100%" height="950" frameborder="0" allowfullscreen=""> </iframe></p>
+</div>
+</section>
+<section id="story-walkthrough-and-analytical-insights" class="level2">
+<h2 class="anchored" data-anchor-id="story-walkthrough-and-analytical-insights">Story Walkthrough and Analytical Insights</h2>
+<section id="evolution-and-global-spread-of-oceanus-folk" class="level3">
+<h3 class="anchored" data-anchor-id="evolution-and-global-spread-of-oceanus-folk">1. Evolution and Global Spread of Oceanus Folk</h3>
+<p>This part of the Tableau story addresses how Oceanus Folk spread across time, artists, and genres. Rather than showing a smooth upward line, the dashboards reveal a more uneven pattern of growth.</p>
+<section id="was-the-rise-gradual-or-intermittent" class="level4">
+<h4 class="anchored" data-anchor-id="was-the-rise-gradual-or-intermittent">Was the rise gradual or intermittent?</h4>
+<p>The rise of Oceanus Folk appears to be <strong>intermittent rather than gradual</strong>.</p>
+<ul>
+<li>Growth happens in <strong>distinct bursts</strong>, not as a steady year-on-year climb.</li>
+<li>The genre shows <strong>long quieter periods</strong>, especially in its earlier years, before sharp spikes emerge.</li>
+<li>Major surges suggest that Oceanus Folk spread through <strong>key moments of adoption and influence</strong>, rather than constant organic expansion.</li>
+<li>In the more recent years, outward influence becomes stronger, suggesting that Oceanus Folk has moved from <strong>absorbing inspiration</strong> to <strong>exporting its own sound</strong>.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> Oceanus Folk does not expand in a straight line; it grows in waves, with certain periods acting as turning points in the genre’s wider musical influence.</p>
+</blockquote>
+</section>
+<section id="what-genres-and-artists-were-most-influenced-by-oceanus-folk" class="level4">
+<h4 class="anchored" data-anchor-id="what-genres-and-artists-were-most-influenced-by-oceanus-folk">What genres and artists were most influenced by Oceanus Folk?</h4>
+<p>The dashboards suggest that Oceanus Folk’s impact is <strong>broadly distributed</strong> across multiple artists and nearby genres.</p>
+<ul>
+<li>Influence is <strong>not concentrated in just one breakout artist</strong>.</li>
+<li>Several artists show visible uptake, indicating that Oceanus Folk diffused across a wider ecosystem rather than passing through a single dominant successor.</li>
+<li>Genre-level patterns point especially to <strong>Desert Rock, Indie Folk, and Dream Pop</strong> as key areas of influence.</li>
+<li>This implies that Oceanus Folk resonates most strongly with genres that share <strong>atmospheric sound, emotional storytelling, and reflective tone</strong>.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> Oceanus Folk acts less like a niche genre with one heir and more like a stylistic foundation that multiple artists and adjacent genres build upon.</p>
+</blockquote>
+</section>
+<section id="how-has-oceanus-folk-changed-with-the-rise-of-sailor-shift" class="level4">
+<h4 class="anchored" data-anchor-id="how-has-oceanus-folk-changed-with-the-rise-of-sailor-shift">How has Oceanus Folk changed with the rise of Sailor Shift?</h4>
+<p>The Tableau story also shows that Oceanus Folk has changed internally as it spread outward.</p>
+<ul>
+<li>Contemporary Oceanus Folk is no longer shaped only by traditional folk roots.</li>
+<li>Newer inspiration appears to come from genres such as <strong>Synthwave</strong> and <strong>Space Rock</strong>, alongside more familiar folk-adjacent sounds.</li>
+<li>This points to a genre that is becoming more <strong>hybrid, atmospheric, and experimental</strong> over time.</li>
+<li>Sailor Shift’s rise seems to coincide with this broadening identity, suggesting that her success may have helped normalize genre blending within the Oceanus Folk space.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> With the rise of Sailor Shift, Oceanus Folk evolves from a rooted folk tradition into a more hybrid soundscape that blends organic origins with modern atmospheric and electronic influences.</p>
+</blockquote>
+</section>
+</section>
+<section id="defining-and-predicting-rising-stars" class="level3">
+<h3 class="anchored" data-anchor-id="defining-and-predicting-rising-stars">2. Defining and Predicting Rising Stars</h3>
+<p>This section of the Tableau story shifts from genre diffusion to artist profiling. It looks at what a rising star trajectory tends to look like and which artists seem best positioned to shape the next phase of Oceanus Folk.</p>
+<section id="what-does-a-rising-star-look-like" class="level4">
+<h4 class="anchored" data-anchor-id="what-does-a-rising-star-look-like">What does a rising star look like?</h4>
+<p>The visualisations suggest that a rising star is not defined by one sudden viral moment alone.</p>
+<ul>
+<li>Strong candidates tend to show <strong>consistent notable output over time</strong>.</li>
+<li>Their trajectories suggest <strong>sustained momentum</strong>, not just a single isolated spike.</li>
+<li>They often sit close to <strong>current genre trends</strong>, especially where Oceanus Folk overlaps with adjacent styles like Dream Pop or Indie Folk.</li>
+<li>In other words, rising stars appear to be artists who are both <strong>productive and well-positioned within an evolving sound landscape</strong>.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> A rising star is not just an artist with attention, but one whose output, timing, and stylistic fit place them at the centre of the genre’s next phase.</p>
+</blockquote>
+</section>
+<section id="comparing-three-artist-trajectories" class="level4">
+<h4 class="anchored" data-anchor-id="comparing-three-artist-trajectories">Comparing three artist trajectories</h4>
+<p>The three artist career paths in the story show that there is <strong>no single formula</strong> for musical rise.</p>
+<ul>
+<li>One artist may peak early and then plateau.</li>
+<li>Another may rise gradually but maintain stronger long-term stability.</li>
+<li>A third may break through later, but accelerate rapidly once momentum begins.</li>
+</ul>
+<p>This comparison matters because it shows that influence can emerge in different ways. However, artists with <strong>steady build-up and repeated notable works</strong> often appear more durable than those relying on one short-lived spike.</p>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> Different artists rise differently, but sustained momentum tends to matter more than a one-off breakthrough when predicting long-term influence.</p>
+</blockquote>
+</section>
+<section id="who-are-the-next-oceanus-folk-stars" class="level4">
+<h4 class="anchored" data-anchor-id="who-are-the-next-oceanus-folk-stars">Who are the next Oceanus Folk stars?</h4>
+<p>Based on the prediction view, the strongest next-wave candidates are the artists with both <strong>high scores</strong> and <strong>strong recent work patterns</strong>.</p>
+<ul>
+<li><strong>Bea Azure</strong> and <strong>Kael Storm</strong> stand out as the clearest frontrunners.</li>
+<li><strong>Copper Canyon Group</strong> also performs strongly and remains close behind.</li>
+<li>These artists appear aligned with the dominant contemporary directions of Oceanus Folk, which strengthens the plausibility of their future rise.</li>
+<li>Their profiles suggest that future stars are not random outliers, but artists who already fit the genre’s current momentum and evolution.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Insight:</strong> The next Oceanus Folk stars are the artists who combine strong recent output with stylistic alignment to where the genre is already heading.</p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="poster-summary" class="level2">
+<h2 class="anchored" data-anchor-id="poster-summary">Poster Summary</h2>
+<p>The poster below provides a static overview of the project findings and can be used as a quick visual summary before or after exploring the Tableau story.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/final_poster.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Final project poster summarising the Oceanus Folk visual analytics project"></p>
+</figure>
+</div>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<p>From the Tableau story, users should come away with five main insights:</p>
+<ul>
+<li>Oceanus Folk spread through <strong>bursts of influence</strong>, not smooth gradual growth.</li>
+<li>Its impact is visible across <strong>multiple artists and adjacent genres</strong>, rather than being concentrated in a single successor.</li>
+<li>The genre has evolved into a more <strong>hybrid and experimental form</strong>, especially with the rise of Sailor Shift.</li>
+<li>Rising stars tend to show <strong>sustained momentum, repeated notable work, and alignment with current genre direction</strong>.</li>
+<li>Artists such as <strong>Bea Azure, Kael Storm, and Copper Canyon Group</strong> appear best positioned to shape the next phase of Oceanus Folk.</li>
+</ul>
+</section>
+<section id="suggested-caption-for-navigation-or-homepage" class="level2">
+<h2 class="anchored" data-anchor-id="suggested-caption-for-navigation-or-homepage">Suggested Caption for Navigation or Homepage</h2>
+<p><strong>Explore the Tableau Story</strong> — interact with the dashboards behind Oceanus Folk’s spread, see how the genre changed over time, and discover which artists are likely to lead its next chapter.</p>
+<style>
+.tableau-embed {
+  margin: 1.5rem 0 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+iframe {
+  display: block;
+}
+</style>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,130 @@
+---
+title: "Visual Analytics Story"
+format:
+  html:
+    theme: cosmo
+    toc: false
+    smooth-scroll: true
+    page-layout: full
+---
+
+## Overview
+
+This page brings together the **Gephi network analysis**, the **interactive Tableau story**, and the **project poster** for the **Oceanus Folk: Then-and-Now** project. Together, these visualisations answer the three major project goals:
+
+1. **Profile Sailor Shift's career influence network**
+2. **Show how Oceanus Folk spread through the musical world**
+3. **Characterise rising stars and predict the next Oceanus Folk stars**
+
+## Part 1: Profiling Sailor Shift's Career Influence Network
+
+### Q1A. Who has Sailor Shift been most influenced by over time?
+
+![](Gephi\Q1a\ss's influences from artists only\Q1 - ss's influences from artisits only.png){fig-alt="Gephi network showing Sailor Shift's incoming influence relationships from artists and bands" fig-align="center" width="78%"}
+![Gephi Legend](Gephi\Q1a\ss's influences from artists only\legend.jpg){width="40%"}
+
+Sailor Shift's musical DNA draws from a wide web of artists, **predominantly solo performers** (93.94%) with a few key musical groups like Ivy Echos, Phantom Roots, and The Fiddle & The Fjord. The dominant influence type is **InStyleOf** (35.71%), suggesting SS absorbed the sound and aesthetic of her influences rather than directly copying them. CoverOf edges (25.51%) show she frequently reinterpreted others' works, while InterpolatesFrom (18.37%) and DirectlySamples (9.18%) indicate she also wove fragments of existing music into her own compositions. LyricalReferenceTo connections (11.22%) reveal a storytelling tradition — she didn't just borrow sound, she referenced narratives. The network reveals a **densely connected influence ecosystem** radiating inward toward SS, with artists like Ivy Echos and Drowned Harbor serving as notable hubs.
+
+### Q1B. Who has she collaborated with and directly or indirectly influenced?
+
+![](Gephi\Q1b\ss to artists.png){fig-alt="Gephi network showing Sailor Shift's outward links to artists and bands through collaboration and influence" fig-align="center" width="78%"}
+![Gephi Legend](Gephi\Q1b\legend.jpeg){width="40%"}
+
+Sailor Shift's outward reach is **heavily collaboration-driven** — 67.61% of her connections are Collaborator edges, showing she built relationships through joint work rather than passive influence alone. Musical groups feature more prominently here (21.67%) compared to her influences, with names like Tidal Reverie, The Wave Riders, The Brine Choir, and Violet Engines forming key collaborative hubs. Her IndirectlyInfluenced connections (22.54%) far outweigh DirectlyInfluenced ones (9.86%), meaning SS's impact rippled outward through intermediaries rather than through direct stylistic imitation — a hallmark of a genre-shaping artist whose influence spreads organically through the community.
+
+
+### Q1C. How has she influenced collaborators and the broader Oceanus Folk community?
+![](Gephi\Q1c\ss to artists.png){fig-alt="Gephi network showing Sailor Shift's outward links to artists and bands through collaboration and influence" fig-align="center" width="78%"}
+![Gephi Legend](Gephi\Q1c\legend.jpeg){width="40%"}
+
+This tightly clustered network shows SS's position within the core Oceanus Folk ecosystem — an even 50/50 split between Persons and MusicalGroups. The overwhelming majority of edges are OFCommunity ties (73.33%), representing the genre's internal fabric of shared musical identity. CollabOFArtist connections (24.44%) show artists who collaborated directly with OF musicians, while DirectlyInfluenced edges are rare (2.22%), reinforcing that SS's impact on the broader community operates through collaboration and community membership rather than top-down influence. The dense interconnections among nodes like Ella Parker, Tidal Reverie, Mariner's Refrain, and Sophie Ramirez — with SS sitting at the periphery connecting outward to Copper Canyon Ghosts — suggest SS acts as a **bridge** between the tight-knit OF core and artists outside the genre.
+
+
+## Part 2: Interactive Tableau Story
+
+<div style="position: relative; left: 50%; right: 50%; margin-left: -45vw; margin-right: -45vw; width: 90vw; max-width: 90vw;">
+  <iframe
+    src="https://public.tableau.com/views/Group8OceanusFolk-BeforeandAfter/SailorShiftandOceanusFolkThenandNow?:showVizHome=no&:embed=true"
+    width="100%"
+    height="950"
+    style="border: none;">
+  </iframe>
+</div>
+
+## Part 3: Tableau Insights
+
+Click through the Tableau story sheets to follow along for each question and insights.
+
+### Q2. How has Oceanus Folk spread through the musical world?
+
+#### Was the influence intermittent or gradual?
+
+Based on the blue line, which represents Oceanus Folk’s influence on other genres and artists, its growth is intermittent rather than gradual, occurring in distinct bursts. After a relatively dormant period in the 1990s, Oceanus Folk begins to exert very slight outward influence during the 2004–2006 wave, followed by a stronger and more sustained expansion from the late 2010s into the 2020s, specifically spiking in 2013. Throughout the 2020s to 2030s, Ocenaus Folk's influence remained consistent with a slight peak in influence every 2 years. This can be seen from the peaks in 2020, 2023, 2026 and 2029. But a decline continues from 2030-2040, showing how Oceanus Folks lose influence during those years.
+
+In contrast, the orange line, which captures influence from other genres onto Oceanus Folk, shows an earlier and sharper spike around 2017–2018, peaking at over 61 connections. This indicates a phase where Oceanus Folk was primarily absorbing external influences.
+
+Together, the two lines reveal a clear progression: Oceanus Folk initially develops by drawing heavily from other genres (orange), before transitioning into a phase where it increasingly exports its own influence outward (blue). This highlights a shift from influence recipient to influence driver, reinforcing the idea that the genre evolves through cycles of absorption and dissemination.
+
+#### What genres and artists were most influenced by Oceanus Folk?
+
+The genre exchange graph highlights how Oceanus Folk participates in a two-way flow of influence with other genres. On one hand, Oceanus Folk draws heavily from genres such as Indie Folk, Dream Pop, and Desert Rock, as seen from the strong inward influence. On the other hand, it also contributes back to these same genres, indicating that influence is not one-directional. This reflects a process of genre exchange, where Oceanus Folk continuously absorbs stylistic elements and reinterprets them, rather than simply imitating or dominating other genres.
+
+Oceanus Folk’s outward influence is most evident in genres like Indie Folk, Synthwave, and Dream Pop, which show the highest levels of adoption. At the artist level, influence is widely distributed, with Fixx’d leading with 3 works, followed by Lei Jin, Na Ren, Yang Wan, and Yong Shen at 2 each. The spread across multiple artists suggests that Oceanus Folk functions as a shared creative foundation, rather than being concentrated within a single adopter. Together, this reinforces the idea of genre exchange, where influence is diffused across a network of genres and artists rather than flowing in a single direction.
+
+#### How has Oceanus Folk changed with the rise of Sailor Shift?
+
+With the rise of Sailor Shift, Oceanus Folk has undergone a clear transformation in both its influences and impact over time. As seen in the earlier timeline graph, the 2020–2030 surge in Oceanus Folk’s outward influence closely aligns with Sailor Shift’s rise in career, suggesting that her emergence played a key role in accelerating the genre’s expansion. 
+
+At the same time, Oceanus Folk continues to draw from contemporary genres such as Desert Rock, Indie Folk, and Dream Pop, with additional influences from Synthwave and Space Rock, indicating a shift toward more atmospheric and electronic sounds. Together, this reflects a genre that not only evolves by absorbing diverse inspirations, but also grows in prominence through Sailor Shift’s influence, transitioning into a more hybrid and outward-driving musical force.
+
+### Q3. What does it mean to be a rising star in the music industry?
+
+#### What defines a rising star profile?
+
+A rising star in the music industry is characterised less by longevity and more by rapid accumulation of notable works within a short career span. The graph shows that artists like Sailor Shift fall within the “fast risers” category, achieving above-median output early in their careers, distinguishing them from early-stage artists who have yet to gain traction and established stars who grow more gradually over time. 
+
+This suggests that rising stars are defined by early breakout momentum, where influence and recognition scale quickly rather than steadily. Overall, a rising star profile reflects an artist who can accelerate impact in a compressed timeframe, positioning themselves for long-term influence even before reaching peak career maturity.
+
+#### Comparing the trajectories of three artists
+
+The career trajectories of Sailor Shift, Yang Wan, and The Brine Choir highlight distinct paths to popularity and influence. Sailor Shift exemplifies a fast-rising trajectory, achieving a rapid concentration of notable works shortly after her breakthrough, signalling strong and early influence. In contrast, Yang Wan represents a more established and sustained growth pattern, with influence built steadily over a longer career span. The Brine Choir, meanwhile, reflects a slower and less concentrated rise, with fewer notable works and a more gradual progression.
+
+#### Who are the next Oceanus Folk stars?
+
+Using this characterization, rising stars are best defined by early breakout momentum combined with sustained output, rather than longevity alone. Based on this profile and predictive scoring, Bea Azure, Kael Storm, and Copper Canyon Ghosts emerge as the most likely next Oceanus Folk stars. These artists not only have the highest prediction scores, but also demonstrate strong recent activity and alignment with the fast-riser trajectory, positioning them to lead the genre’s influence over the next five years.
+
+### Bonus Insight: Sailor Shift’s Genre Expansion
+
+Sailor Shift’s career trajectory shows a clear shift from focused beginnings in Oceanus Folk to progressive genre diversification over time. Following her breakthrough around 2028, there is a noticeable increase in both the volume and spread of works across genres such as Synthwave and Americana. This suggests that her influence is not confined to a single genre, but expands outward as her career matures, reinforcing her role as a key driver of Oceanus Folk’s evolution into a more hybrid and cross-genre sound.
+
+## Poster Summary
+
+The poster below provides a static summary of the full project and can be used as a quick overview before or after exploring the interactive story.
+
+![](images/final_poster.jpg){fig-alt="Final project poster summarising the Oceanus Folk visual analytics project" fig-align="center" width="100%"}
+
+## Key Takeaways
+
+- Sailor Shift evolves through **interconnected networks of influence**, not isolated artists
+- Influence is **reciprocal and collaborative**, as shown by Gephi network structures
+- Oceanus Folks' growth is **burst-driven rather than gradual**, with key inflection points over time
+- The genre transitions from **absorbing influence → exporting influence**
+- **Sailor Shift acts as a catalyst**, accelerating both genre spread and transformation
+- Oceanus Folk reflects **genre exchange**, blending elements across multiple styles
+- Influence is **widely distributed**, not concentrated in a single artist or genre
+- Rising stars are defined by **early breakout momentum + sustained output**
+- Future stars align with **current genre trends and high activity levels**
+- Overall, Oceanus Folk functions as a **dynamic ecosystem of shared and evolving influence**
+
+<style>
+.tableau-embed {
+  margin: 1.5rem 0 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+iframe {
+  display: block;
+}
+</style>

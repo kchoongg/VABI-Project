@@ -103,5 +103,194 @@
     "title": "Methodology",
     "section": "Changes from Previous Version",
     "text": "Changes from Previous Version\nThe revised script differs from the original in the following ways:\n\n\n\n\n\n\n\n\nAspect\nPrevious version\nRevised version\n\n\n\n\nLibrary\nPython standard library only (csv, collections)\npandas\n\n\nArchitecture\nOne flat table per question\nNormalised bridge tables + summary tables\n\n\nSailor Shift’s works\n38 works (direct edges only)\n46 works (direct edges + group membership)\n\n\nInfluence direction\nString label \"Influenced Sailor Shift\" / \"Sailor Shift Influenced\"\nStandardised \"Sailor -&gt; Other\" / \"Other -&gt; Sailor\"\n\n\nOF direction\nTwo separate rows for each direction\nSingle row with direction column (OF -&gt; Other, Other -&gt; OF, OF -&gt; OF)\n\n\nArtist careers threshold\n3+ performed works only\n3+ performed or 3+ contributed works\n\n\nNew outputs\n—\nworks_master.csv, contributors_bridge.csv, influence_bridge.csv, memberof_bridge.csv, oceanus_folk_year_summary.csv\n\n\ndisplay_name\nNot present\nDerived from stage_name, falling back to name"
+  },
+  {
+    "objectID": "tableau-story.html",
+    "href": "tableau-story.html",
+    "title": "Tableau Story",
+    "section": "",
+    "text": "This page walks users through the interactive Tableau story developed for the Oceanus Folk: Then-and-Now project. The story complements the static poster by allowing users to explore the temporal spread of Oceanus Folk and the characteristics of rising stars through interactive dashboards.\nThe Tableau story is designed to answer the following project questions:\n\nWas Oceanus Folk’s influence intermittent or did it have a gradual rise?\nWhat genres and top artists have been most influenced by Oceanus Folk?\nHow has Oceanus Folk changed with the rise of Sailor Shift, and from which genres does it now draw contemporary inspiration?\nHow do three artists compare in their rise in popularity and influence?\nWho are the next likely Oceanus Folk stars over the next five years?"
+  },
+  {
+    "objectID": "tableau-story.html#overview",
+    "href": "tableau-story.html#overview",
+    "title": "Tableau Story",
+    "section": "",
+    "text": "This page walks users through the interactive Tableau story developed for the Oceanus Folk: Then-and-Now project. The story complements the static poster by allowing users to explore the temporal spread of Oceanus Folk and the characteristics of rising stars through interactive dashboards.\nThe Tableau story is designed to answer the following project questions:\n\nWas Oceanus Folk’s influence intermittent or did it have a gradual rise?\nWhat genres and top artists have been most influenced by Oceanus Folk?\nHow has Oceanus Folk changed with the rise of Sailor Shift, and from which genres does it now draw contemporary inspiration?\nHow do three artists compare in their rise in popularity and influence?\nWho are the next likely Oceanus Folk stars over the next five years?"
+  },
+  {
+    "objectID": "tableau-story.html#how-to-use-this-page",
+    "href": "tableau-story.html#how-to-use-this-page",
+    "title": "Tableau Story",
+    "section": "How to Use This Page",
+    "text": "How to Use This Page\nUse the embedded Tableau story below to explore the dashboards directly on the website.\n\nClick through each story point using the navigation controls in Tableau.\nHover over marks to view detailed values, years, genres, and artist names.\nCompare patterns across charts rather than reading each graph in isolation.\nRefer to the insight notes below each section for the key interpretations.\nUse the poster image further below for a quick static summary of the full project."
+  },
+  {
+    "objectID": "tableau-story.html#interactive-tableau-story",
+    "href": "tableau-story.html#interactive-tableau-story",
+    "title": "Tableau Story",
+    "section": "Interactive Tableau Story",
+    "text": "Interactive Tableau Story"
+  },
+  {
+    "objectID": "tableau-story.html#story-walkthrough-and-analytical-insights",
+    "href": "tableau-story.html#story-walkthrough-and-analytical-insights",
+    "title": "Tableau Story",
+    "section": "Story Walkthrough and Analytical Insights",
+    "text": "Story Walkthrough and Analytical Insights\n\n1. Evolution and Global Spread of Oceanus Folk\nThis part of the Tableau story addresses how Oceanus Folk spread across time, artists, and genres. Rather than showing a smooth upward line, the dashboards reveal a more uneven pattern of growth.\n\nWas the rise gradual or intermittent?\nThe rise of Oceanus Folk appears to be intermittent rather than gradual.\n\nGrowth happens in distinct bursts, not as a steady year-on-year climb.\nThe genre shows long quieter periods, especially in its earlier years, before sharp spikes emerge.\nMajor surges suggest that Oceanus Folk spread through key moments of adoption and influence, rather than constant organic expansion.\nIn the more recent years, outward influence becomes stronger, suggesting that Oceanus Folk has moved from absorbing inspiration to exporting its own sound.\n\n\nInsight: Oceanus Folk does not expand in a straight line; it grows in waves, with certain periods acting as turning points in the genre’s wider musical influence.\n\n\n\nWhat genres and artists were most influenced by Oceanus Folk?\nThe dashboards suggest that Oceanus Folk’s impact is broadly distributed across multiple artists and nearby genres.\n\nInfluence is not concentrated in just one breakout artist.\nSeveral artists show visible uptake, indicating that Oceanus Folk diffused across a wider ecosystem rather than passing through a single dominant successor.\nGenre-level patterns point especially to Desert Rock, Indie Folk, and Dream Pop as key areas of influence.\nThis implies that Oceanus Folk resonates most strongly with genres that share atmospheric sound, emotional storytelling, and reflective tone.\n\n\nInsight: Oceanus Folk acts less like a niche genre with one heir and more like a stylistic foundation that multiple artists and adjacent genres build upon.\n\n\n\nHow has Oceanus Folk changed with the rise of Sailor Shift?\nThe Tableau story also shows that Oceanus Folk has changed internally as it spread outward.\n\nContemporary Oceanus Folk is no longer shaped only by traditional folk roots.\nNewer inspiration appears to come from genres such as Synthwave and Space Rock, alongside more familiar folk-adjacent sounds.\nThis points to a genre that is becoming more hybrid, atmospheric, and experimental over time.\nSailor Shift’s rise seems to coincide with this broadening identity, suggesting that her success may have helped normalize genre blending within the Oceanus Folk space.\n\n\nInsight: With the rise of Sailor Shift, Oceanus Folk evolves from a rooted folk tradition into a more hybrid soundscape that blends organic origins with modern atmospheric and electronic influences.\n\n\n\n\n2. Defining and Predicting Rising Stars\nThis section of the Tableau story shifts from genre diffusion to artist profiling. It looks at what a rising star trajectory tends to look like and which artists seem best positioned to shape the next phase of Oceanus Folk.\n\nWhat does a rising star look like?\nThe visualisations suggest that a rising star is not defined by one sudden viral moment alone.\n\nStrong candidates tend to show consistent notable output over time.\nTheir trajectories suggest sustained momentum, not just a single isolated spike.\nThey often sit close to current genre trends, especially where Oceanus Folk overlaps with adjacent styles like Dream Pop or Indie Folk.\nIn other words, rising stars appear to be artists who are both productive and well-positioned within an evolving sound landscape.\n\n\nInsight: A rising star is not just an artist with attention, but one whose output, timing, and stylistic fit place them at the centre of the genre’s next phase.\n\n\n\nComparing three artist trajectories\nThe three artist career paths in the story show that there is no single formula for musical rise.\n\nOne artist may peak early and then plateau.\nAnother may rise gradually but maintain stronger long-term stability.\nA third may break through later, but accelerate rapidly once momentum begins.\n\nThis comparison matters because it shows that influence can emerge in different ways. However, artists with steady build-up and repeated notable works often appear more durable than those relying on one short-lived spike.\n\nInsight: Different artists rise differently, but sustained momentum tends to matter more than a one-off breakthrough when predicting long-term influence.\n\n\n\nWho are the next Oceanus Folk stars?\nBased on the prediction view, the strongest next-wave candidates are the artists with both high scores and strong recent work patterns.\n\nBea Azure and Kael Storm stand out as the clearest frontrunners.\nCopper Canyon Group also performs strongly and remains close behind.\nThese artists appear aligned with the dominant contemporary directions of Oceanus Folk, which strengthens the plausibility of their future rise.\nTheir profiles suggest that future stars are not random outliers, but artists who already fit the genre’s current momentum and evolution.\n\n\nInsight: The next Oceanus Folk stars are the artists who combine strong recent output with stylistic alignment to where the genre is already heading."
+  },
+  {
+    "objectID": "tableau-story.html#poster-summary",
+    "href": "tableau-story.html#poster-summary",
+    "title": "Tableau Story",
+    "section": "Poster Summary",
+    "text": "Poster Summary\nThe poster below provides a static overview of the project findings and can be used as a quick visual summary before or after exploring the Tableau story."
+  },
+  {
+    "objectID": "tableau-story.html#key-takeaways",
+    "href": "tableau-story.html#key-takeaways",
+    "title": "Tableau Story",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\nFrom the Tableau story, users should come away with five main insights:\n\nOceanus Folk spread through bursts of influence, not smooth gradual growth.\nIts impact is visible across multiple artists and adjacent genres, rather than being concentrated in a single successor.\nThe genre has evolved into a more hybrid and experimental form, especially with the rise of Sailor Shift.\nRising stars tend to show sustained momentum, repeated notable work, and alignment with current genre direction.\nArtists such as Bea Azure, Kael Storm, and Copper Canyon Group appear best positioned to shape the next phase of Oceanus Folk."
+  },
+  {
+    "objectID": "tableau-story.html#suggested-caption-for-navigation-or-homepage",
+    "href": "tableau-story.html#suggested-caption-for-navigation-or-homepage",
+    "title": "Tableau Story",
+    "section": "Suggested Caption for Navigation or Homepage",
+    "text": "Suggested Caption for Navigation or Homepage\nExplore the Tableau Story — interact with the dashboards behind Oceanus Folk’s spread, see how the genre changed over time, and discover which artists are likely to lead its next chapter."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html",
+    "href": "tableau-story-user-guide.html",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "This user guide explains how to navigate the Tableau story for the Oceanus Folk: Then-and-Now project. The story was built to help users explore Sailor Shift’s influence, the spread of Oceanus Folk, and the identification of rising stars through interactive dashboards.\n\n\n\nThe Tableau story is designed to support the following tasks:\n\nunderstand Sailor Shift’s musical influences and collaboration patterns,\nexamine how Oceanus Folk spread across artists and genres over time,\ncompare artists by influence, career trajectory, and prediction score,\nidentify the most likely next-generation Oceanus Folk stars.\n\n\n\n\nWhen the Tableau story opens, users can move from one story point to the next using the navigation tabs or arrows provided in Tableau.\nEach story point presents a different analytical angle. Users should move through the story in sequence for the clearest narrative flow, though individual dashboards can also be explored independently.\n\n\n\n\n\nHover over marks, nodes, bars, and points to reveal detailed values such as artist names, counts, years, and influence totals.\n\n\n\nClicking a mark may highlight related data or filter other views on the same dashboard, depending on the interaction that has been configured.\n\n\n\nSome dashboards include filters that allow users to narrow the analysis by artist, year, genre, or relationship type. Use these to focus on a particular part of the story.\n\n\n\nIf the view becomes too filtered or highlighted, use Tableau’s reset or revert options to return to the default dashboard state.\n\n\n\n\n\n\nStart here to understand the project context, the role of Sailor Shift, and the purpose of the analysis.\n\n\n\nUse this section to understand why the dataset is difficult to interpret through conventional tables and why visual analytics is useful.\n\n\n\nFocus on the artist network views and supporting charts. These reveal how Sailor Shift was influenced, who she worked with, and how her influence spread through relationships.\n\n\n\nRead this section to understand how the genre changed over time, when growth accelerated, and what external genres shaped its modern form.\n\n\n\nUse the final section to compare artist trajectories and identify who is most likely to become a future leader in Oceanus Folk.\n\n\n\n\n\n\nThis section should be interpreted as a network story rather than a simple popularity chart. A central position does not automatically mean direct control; it may instead indicate bridge-building through collaborations and community ties.\n\n\n\nThis section is best read as a timeline of bursts rather than a steady upward trend. Spikes suggest key moments when the genre absorbed outside influence or began exporting its style more strongly.\n\n\n\nPrediction scores should be treated as indicators, not guarantees. They help identify promising artists based on current patterns in the data.\n\n\n\n\n\nRead the annotations and captions before interacting with a dashboard.\nUse one filter at a time if you want to isolate the effect of a specific variable.\nReset the dashboard before switching to a new question.\nCompare the Tableau story with the project poster for both interactive and static perspectives.\n\n\n\n\n\n\nCheck that the Tableau Public link is correct and that the workbook is publicly accessible.\n\n\n\nIncrease the iframe height in the website embed code or use Tableau’s fullscreen mode.\n\n\n\nUse Tableau’s revert button or refresh the page to restore the original state.\n\n\n\n\nNeed help using the Tableau story? Open the dashboards in order, hover for detailed values, use filters sparingly, and reset the view whenever needed. For the clearest experience, follow the story from Sailor Shift’s network to Oceanus Folk’s spread and then to the rising stars analysis."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#purpose",
+    "href": "tableau-story-user-guide.html#purpose",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "This user guide explains how to navigate the Tableau story for the Oceanus Folk: Then-and-Now project. The story was built to help users explore Sailor Shift’s influence, the spread of Oceanus Folk, and the identification of rising stars through interactive dashboards."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#what-the-story-helps-you-explore",
+    "href": "tableau-story-user-guide.html#what-the-story-helps-you-explore",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "The Tableau story is designed to support the following tasks:\n\nunderstand Sailor Shift’s musical influences and collaboration patterns,\nexamine how Oceanus Folk spread across artists and genres over time,\ncompare artists by influence, career trajectory, and prediction score,\nidentify the most likely next-generation Oceanus Folk stars."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#how-to-navigate-the-story",
+    "href": "tableau-story-user-guide.html#how-to-navigate-the-story",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "When the Tableau story opens, users can move from one story point to the next using the navigation tabs or arrows provided in Tableau.\nEach story point presents a different analytical angle. Users should move through the story in sequence for the clearest narrative flow, though individual dashboards can also be explored independently."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#how-to-interact-with-the-visuals",
+    "href": "tableau-story-user-guide.html#how-to-interact-with-the-visuals",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "Hover over marks, nodes, bars, and points to reveal detailed values such as artist names, counts, years, and influence totals.\n\n\n\nClicking a mark may highlight related data or filter other views on the same dashboard, depending on the interaction that has been configured.\n\n\n\nSome dashboards include filters that allow users to narrow the analysis by artist, year, genre, or relationship type. Use these to focus on a particular part of the story.\n\n\n\nIf the view becomes too filtered or highlighted, use Tableau’s reset or revert options to return to the default dashboard state."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#recommended-reading-order",
+    "href": "tableau-story-user-guide.html#recommended-reading-order",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "Start here to understand the project context, the role of Sailor Shift, and the purpose of the analysis.\n\n\n\nUse this section to understand why the dataset is difficult to interpret through conventional tables and why visual analytics is useful.\n\n\n\nFocus on the artist network views and supporting charts. These reveal how Sailor Shift was influenced, who she worked with, and how her influence spread through relationships.\n\n\n\nRead this section to understand how the genre changed over time, when growth accelerated, and what external genres shaped its modern form.\n\n\n\nUse the final section to compare artist trajectories and identify who is most likely to become a future leader in Oceanus Folk."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#interpreting-the-main-sections",
+    "href": "tableau-story-user-guide.html#interpreting-the-main-sections",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "This section should be interpreted as a network story rather than a simple popularity chart. A central position does not automatically mean direct control; it may instead indicate bridge-building through collaborations and community ties.\n\n\n\nThis section is best read as a timeline of bursts rather than a steady upward trend. Spikes suggest key moments when the genre absorbed outside influence or began exporting its style more strongly.\n\n\n\nPrediction scores should be treated as indicators, not guarantees. They help identify promising artists based on current patterns in the data."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#best-practices-for-users",
+    "href": "tableau-story-user-guide.html#best-practices-for-users",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "Read the annotations and captions before interacting with a dashboard.\nUse one filter at a time if you want to isolate the effect of a specific variable.\nReset the dashboard before switching to a new question.\nCompare the Tableau story with the project poster for both interactive and static perspectives."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#troubleshooting",
+    "href": "tableau-story-user-guide.html#troubleshooting",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "Check that the Tableau Public link is correct and that the workbook is publicly accessible.\n\n\n\nIncrease the iframe height in the website embed code or use Tableau’s fullscreen mode.\n\n\n\nUse Tableau’s revert button or refresh the page to restore the original state."
+  },
+  {
+    "objectID": "tableau-story-user-guide.html#suggested-short-website-text",
+    "href": "tableau-story-user-guide.html#suggested-short-website-text",
+    "title": "Tableau Story User Guide",
+    "section": "",
+    "text": "Need help using the Tableau story? Open the dashboards in order, hover for detailed values, use filters sparingly, and reset the view whenever needed. For the clearest experience, follow the story from Sailor Shift’s network to Oceanus Folk’s spread and then to the rising stars analysis."
+  },
+  {
+    "objectID": "visual-analytics-story.html",
+    "href": "visual-analytics-story.html",
+    "title": "Visual Analytics Story",
+    "section": "",
+    "text": "This page brings together the Gephi network analysis, the interactive Tableau story, and the project poster for the Oceanus Folk: Then-and-Now project. Together, these visualisations answer the three major project goals:\n\nProfile Sailor Shift’s career influence network\nShow how Oceanus Folk spread through the musical world\nCharacterise rising stars and predict the next Oceanus Folk stars"
+  },
+  {
+    "objectID": "visual-analytics-story.html#overview",
+    "href": "visual-analytics-story.html#overview",
+    "title": "Visual Analytics Story",
+    "section": "",
+    "text": "This page brings together the Gephi network analysis, the interactive Tableau story, and the project poster for the Oceanus Folk: Then-and-Now project. Together, these visualisations answer the three major project goals:\n\nProfile Sailor Shift’s career influence network\nShow how Oceanus Folk spread through the musical world\nCharacterise rising stars and predict the next Oceanus Folk stars"
+  },
+  {
+    "objectID": "visual-analytics-story.html#how-to-use-this-page",
+    "href": "visual-analytics-story.html#how-to-use-this-page",
+    "title": "Visual Analytics Story",
+    "section": "How to Use This Page",
+    "text": "How to Use This Page\n\nStart with the Gephi sections to understand Sailor Shift’s direct and indirect network relationships.\nMove to the embedded Tableau story to explore the time-based and predictive dashboards.\nHover over marks in Tableau to see detailed values, artist names, years, and genres.\nUse the poster at the end as a quick static summary of the overall project."
+  },
+  {
+    "objectID": "visual-analytics-story.html#part-1-profiling-sailor-shifts-career-influence-network",
+    "href": "visual-analytics-story.html#part-1-profiling-sailor-shifts-career-influence-network",
+    "title": "Visual Analytics Story",
+    "section": "Part 1: Profiling Sailor Shift’s Career Influence Network",
+    "text": "Part 1: Profiling Sailor Shift’s Career Influence Network\n\nQ1A. Who has Sailor Shift been most influenced by over time?\n \nSailor Shift’s musical DNA draws from a wide web of artists, predominantly solo performers (93.94%) with a few key musical groups like Ivy Echos, Phantom Roots, and The Fiddle & The Fjord. The dominant influence type is InStyleOf (35.71%), suggesting SS absorbed the sound and aesthetic of her influences rather than directly copying them. CoverOf edges (25.51%) show she frequently reinterpreted others’ works, while InterpolatesFrom (18.37%) and DirectlySamples (9.18%) indicate she also wove fragments of existing music into her own compositions. LyricalReferenceTo connections (11.22%) reveal a storytelling tradition — she didn’t just borrow sound, she referenced narratives. The network reveals a densely connected influence ecosystem radiating inward toward SS, with artists like Ivy Echos and Drowned Harbor serving as notable hubs.\n\n\nQ1B. Who has she collaborated with and directly or indirectly influenced?\n \nSailor Shift’s outward reach is heavily collaboration-driven — 67.61% of her connections are Collaborator edges, showing she built relationships through joint work rather than passive influence alone. Musical groups feature more prominently here (21.67%) compared to her influences, with names like Tidal Reverie, The Wave Riders, The Brine Choir, and Violet Engines forming key collaborative hubs. Her IndirectlyInfluenced connections (22.54%) far outweigh DirectlyInfluenced ones (9.86%), meaning SS’s impact rippled outward through intermediaries rather than through direct stylistic imitation — a hallmark of a genre-shaping artist whose influence spreads organically through the community.\n\n\nQ1C. How has she influenced collaborators and the broader Oceanus Folk community?\n \nThis tightly clustered network shows SS’s position within the core Oceanus Folk ecosystem — an even 50/50 split between Persons and MusicalGroups. The overwhelming majority of edges are OFCommunity ties (73.33%), representing the genre’s internal fabric of shared musical identity. CollabOFArtist connections (24.44%) show artists who collaborated directly with OF musicians, while DirectlyInfluenced edges are rare (2.22%), reinforcing that SS’s impact on the broader community operates through collaboration and community membership rather than top-down influence. The dense interconnections among nodes like Ella Parker, Tidal Reverie, Mariner’s Refrain, and Sophie Ramirez — with SS sitting at the periphery connecting outward to Copper Canyon Ghosts — suggest SS acts as a bridge between the tight-knit OF core and artists outside the genre."
+  },
+  {
+    "objectID": "visual-analytics-story.html#part-2-interactive-tableau-story",
+    "href": "visual-analytics-story.html#part-2-interactive-tableau-story",
+    "title": "Visual Analytics Story",
+    "section": "Part 2: Interactive Tableau Story",
+    "text": "Part 2: Interactive Tableau Story"
+  },
+  {
+    "objectID": "visual-analytics-story.html#part-3-tableau-insights",
+    "href": "visual-analytics-story.html#part-3-tableau-insights",
+    "title": "Visual Analytics Story",
+    "section": "Part 3: Tableau Insights",
+    "text": "Part 3: Tableau Insights\nClick through the Tableau story sheets to follow along for each question and insights.\n\nQ2. How has Oceanus Folk spread through the musical world?\n\nWas the influence intermittent or gradual?\nBased on the blue line, which represents Oceanus Folk’s influence on other genres and artists, its growth is intermittent rather than gradual, occurring in distinct bursts. After a relatively dormant period in the 1990s, Oceanus Folk begins to exert very slight outward influence during the 2004–2006 wave, followed by a stronger and more sustained expansion from the late 2010s into the 2020s, specifically spiking in 2013. Throughout the 2020s to 2030s, Ocenaus Folk’s influence remained consistent with a slight peak in influence every 2 years. This can be seen from the peaks in 2020, 2023, 2026 and 2029. But a decline continues from 2030-2040, showing how Oceanus Folks lose influence during those years.\nIn contrast, the orange line, which captures influence from other genres onto Oceanus Folk, shows an earlier and sharper spike around 2017–2018, peaking at over 61 connections. This indicates a phase where Oceanus Folk was primarily absorbing external influences.\nTogether, the two lines reveal a clear progression: Oceanus Folk initially develops by drawing heavily from other genres (orange), before transitioning into a phase where it increasingly exports its own influence outward (blue). This highlights a shift from influence recipient to influence driver, reinforcing the idea that the genre evolves through cycles of absorption and dissemination.\n\n\nWhat genres and artists were most influenced by Oceanus Folk?\nThe genre exchange graph highlights how Oceanus Folk participates in a two-way flow of influence with other genres. On one hand, Oceanus Folk draws heavily from genres such as Indie Folk, Dream Pop, and Desert Rock, as seen from the strong inward influence. On the other hand, it also contributes back to these same genres, indicating that influence is not one-directional. This reflects a process of genre exchange, where Oceanus Folk continuously absorbs stylistic elements and reinterprets them, rather than simply imitating or dominating other genres.\nOceanus Folk’s outward influence is most evident in genres like Indie Folk, Synthwave, and Dream Pop, which show the highest levels of adoption. At the artist level, influence is widely distributed, with Fixx’d leading with 3 works, followed by Lei Jin, Na Ren, Yang Wan, and Yong Shen at 2 each. The spread across multiple artists suggests that Oceanus Folk functions as a shared creative foundation, rather than being concentrated within a single adopter. Together, this reinforces the idea of genre exchange, where influence is diffused across a network of genres and artists rather than flowing in a single direction.\n\n\nHow has Oceanus Folk changed with the rise of Sailor Shift?\nWith the rise of Sailor Shift, Oceanus Folk has undergone a clear transformation in both its influences and impact over time. As seen in the earlier timeline graph, the 2020–2030 surge in Oceanus Folk’s outward influence closely aligns with Sailor Shift’s rise in career, suggesting that her emergence played a key role in accelerating the genre’s expansion.\nAt the same time, Oceanus Folk continues to draw from contemporary genres such as Desert Rock, Indie Folk, and Dream Pop, with additional influences from Synthwave and Space Rock, indicating a shift toward more atmospheric and electronic sounds. Together, this reflects a genre that not only evolves by absorbing diverse inspirations, but also grows in prominence through Sailor Shift’s influence, transitioning into a more hybrid and outward-driving musical force.\n\n\n\nQ3. What does it mean to be a rising star in the music industry?\n\nWhat defines a rising star profile?\nA rising star in the music industry is characterised less by longevity and more by rapid accumulation of notable works within a short career span. The graph shows that artists like Sailor Shift fall within the “fast risers” category, achieving above-median output early in their careers, distinguishing them from early-stage artists who have yet to gain traction and established stars who grow more gradually over time.\nThis suggests that rising stars are defined by early breakout momentum, where influence and recognition scale quickly rather than steadily. Overall, a rising star profile reflects an artist who can accelerate impact in a compressed timeframe, positioning themselves for long-term influence even before reaching peak career maturity.\n\n\nComparing the trajectories of three artists\nThe career trajectories of Sailor Shift, Yang Wan, and The Brine Choir highlight distinct paths to popularity and influence. Sailor Shift exemplifies a fast-rising trajectory, achieving a rapid concentration of notable works shortly after her breakthrough, signalling strong and early influence. In contrast, Yang Wan represents a more established and sustained growth pattern, with influence built steadily over a longer career span. The Brine Choir, meanwhile, reflects a slower and less concentrated rise, with fewer notable works and a more gradual progression.\n\n\nWho are the next Oceanus Folk stars?\nUsing this characterization, rising stars are best defined by early breakout momentum combined with sustained output, rather than longevity alone. Based on this profile and predictive scoring, Bea Azure, Kael Storm, and Copper Canyon Ghosts emerge as the most likely next Oceanus Folk stars. These artists not only have the highest prediction scores, but also demonstrate strong recent activity and alignment with the fast-riser trajectory, positioning them to lead the genre’s influence over the next five years.\n\n\n\nBonus Insight: Sailor Shift’s Genre Expansion\nSailor Shift’s career trajectory shows a clear shift from focused beginnings in Oceanus Folk to progressive genre diversification over time. Following her breakthrough around 2028, there is a noticeable increase in both the volume and spread of works across genres such as Synthwave and Americana. This suggests that her influence is not confined to a single genre, but expands outward as her career matures, reinforcing her role as a key driver of Oceanus Folk’s evolution into a more hybrid and cross-genre sound."
+  },
+  {
+    "objectID": "visual-analytics-story.html#poster-summary",
+    "href": "visual-analytics-story.html#poster-summary",
+    "title": "Visual Analytics Story",
+    "section": "Poster Summary",
+    "text": "Poster Summary\nThe poster below provides a static summary of the full project and can be used as a quick overview before or after exploring the interactive story."
+  },
+  {
+    "objectID": "visual-analytics-story.html#key-takeaways",
+    "href": "visual-analytics-story.html#key-takeaways",
+    "title": "Visual Analytics Story",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nSailor Shift evolves through interconnected networks of influence, not isolated artists\nInfluence is reciprocal and collaborative, as shown by Gephi network structures\nOceanus Folks’ growth is burst-driven rather than gradual, with key inflection points over time\nThe genre transitions from absorbing influence → exporting influence\nSailor Shift acts as a catalyst, accelerating both genre spread and transformation\nOceanus Folk reflects genre exchange, blending elements across multiple styles\nInfluence is widely distributed, not concentrated in a single artist or genre\nRising stars are defined by early breakout momentum + sustained output\nFuture stars align with current genre trends and high activity levels\nOverall, Oceanus Folk functions as a dynamic ecosystem of shared and evolving influence"
+  },
+  {
+    "objectID": "index.html#group-8-team-members",
+    "href": "index.html#group-8-team-members",
+    "title": "VABI Project",
+    "section": "Group 8 Team Members",
+    "text": "Group 8 Team Members"
   }
 ]

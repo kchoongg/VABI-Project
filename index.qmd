@@ -20,7 +20,7 @@ This project uses visual analytics to explore a knowledge graph dataset compiled
 
 ---
 ::: {.section-header}
-## Team
+## Group 8 Team Members
 :::
 
 ::: {.team-grid}
@@ -31,6 +31,10 @@ This project uses visual analytics to explore a knowledge graph dataset compiled
 
 ::: {.team-member}
 **Kristen Choong**
+:::
+
+::: {.team-member}
+**Yang Kang Yan**
 :::
 
 :::
