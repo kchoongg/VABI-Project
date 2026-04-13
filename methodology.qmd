@@ -1,5 +1,5 @@
 ---
-title: "Methodology"
+title: "Data Wrangling"
 ---
 
 ## Data Overview
